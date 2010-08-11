@@ -4,7 +4,7 @@
  */
 
 package midgard.events;
-
+import java.util.Vector;
 /**
  *
  * @author fenrrir
@@ -13,7 +13,7 @@ public interface IEventHandler {
     void registerEventListener(IListener listener);
     void removeEventListener(IListener listener);
     void fireEvent(IEvent event);
-    IEvent [] getEventHistory(IEvent evet);
+    Vector getEventHistory(IEvent event);
 
 
 }
