@@ -5,13 +5,36 @@
 
 package midgard.componentmodel;
 
+import midgard.events.IEvent;
+import midgard.events.IListener;
+
 /**
  *
  * @author fenrrir
  */
-public abstract class ProxyComponent implements IComponent {
+public class ProxyComponent implements IComponent {
     
     private IComponent concreteComponent;
+
+    public void newEventArrived(IEvent event) {
+        concreteComponent.newEventArrived(event);
+    }
+
+    public void removeEventListener(IListener listener) {
+        concreteComponent.removeEventListener(listener);
+    }
+
+    public void registerEventListener(IListener listener) {
+        concreteComponent.registerEventListener(listener);
+    }
+
+    public IEvent[] getEventHistory(IEvent evet) {
+        return concreteComponent.getEventHistory(evet);
+    }
+
+    public void fireEvent(IEvent event) {
+        concreteComponent.fireEvent(event);
+    }
 
     public ProxyComponent(IComponent concreteComponent) {
         this.concreteComponent = concreteComponent;
