@@ -5,10 +5,13 @@
 
 package midgard.componentmodel;
 
+import midgard.events.IEventHandler;
+import midgard.events.IListener;
+
 /**
  *
  * @author fenrrir
  */
-public interface IComponent extends IBaseComponent, ILifeCycle {
+public interface IComponent extends IBaseComponent, ILifeCycle, IEventHandler, IListener {
 
 }
