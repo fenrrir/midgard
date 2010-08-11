@@ -5,6 +5,8 @@
 
 package midgard.componentmodel;
 
+import java.util.Vector;
+
 import midgard.events.IEvent;
 import midgard.events.IListener;
 
@@ -28,8 +30,8 @@ public class ProxyComponent implements IComponent {
         concreteComponent.registerEventListener(listener);
     }
 
-    public IEvent[] getEventHistory(IEvent evet) {
-        return concreteComponent.getEventHistory(evet);
+    public Vector getEventHistory(IEvent event) {
+        return concreteComponent.getEventHistory(event);
     }
 
     public void fireEvent(IEvent event) {
@@ -48,12 +50,12 @@ public class ProxyComponent implements IComponent {
         return concreteComponent.getProvidedInterfaces();
     }
 
-    public void disconnect(IComponent component) {
-        concreteComponent.disconnect(component);
+    public void disconnect(String interfaceName, IComponent component) {
+        concreteComponent.disconnect(interfaceName, component);
     }
 
-    public void connect(IComponent component) {
-        concreteComponent.connect(component);
+    public void connect(String interfaceName, IComponent component) {
+        concreteComponent.connect(interfaceName, component);
     }
 
     public void resume() {

@@ -10,8 +10,8 @@ package midgard.componentmodel;
  * @author fenrrir
  */
 public interface IBaseComponent {
-    void connect(IComponent component);
-    void disconnect(IComponent component);
+    void connect(String interfaceName, IComponent component);
+    void disconnect(String interfaceName, IComponent component);
     String [] getRequiredInterfaces();
     String [] getProvidedInterfaces();
 
