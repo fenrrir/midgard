@@ -1,0 +1,6 @@
+MIDlet-Name: Midgard
+MIDlet-Version: 0.0.1
+MIDlet-Vendor: Rodrigo Pinheiro Marques de Araújo
+MIDlet-1: Test, , midgard.Test
+MicroEdition-Profile: IMP-1.0
+MicroEdition-Configuration: CLDC-1.1
