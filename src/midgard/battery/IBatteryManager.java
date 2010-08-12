@@ -11,7 +11,7 @@ import midgard.componentmodel.IComponent;
  *
  * @author fenrrir
  */
-public interface IBatteryMonitor extends IComponent {
+public interface IBatteryManager extends IComponent {
     double getAvailableCapacity();
     int getBatteryLevel();
     long getTime();

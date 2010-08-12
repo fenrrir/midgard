@@ -4,7 +4,7 @@
  */
 
 package midgard.battery;
-import midgard.battery.IBatteryMonitor;
+import midgard.battery.IBatteryManager;
 import midgard.componentmodel.Component;
 import midgard.events.IEvent;
 
@@ -12,9 +12,9 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class Monitor extends Component implements IBatteryMonitor {
+public class Manager extends Component implements IBatteryManager {
 
-    public Monitor() {
+    public Manager() {
     }
 
     public void destroy() {

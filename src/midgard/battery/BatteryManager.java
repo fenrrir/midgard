@@ -12,11 +12,11 @@ import midgard.componentmodel.ProxyComponent;
  *
  * @author fenrrir
  */
-public class BatteryMonitor extends ProxyComponent implements IBatteryMonitor{
+public class BatteryManager extends ProxyComponent implements IBatteryManager{
 
-    private IBatteryMonitor concreteComponent;
+    private IBatteryManager concreteComponent;
 
-    public BatteryMonitor(IBatteryMonitor concreteComponent) {
+    public BatteryManager(IBatteryManager concreteComponent) {
         super((IComponent) concreteComponent );
         this.concreteComponent = concreteComponent;
     }
