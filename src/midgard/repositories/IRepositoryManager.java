@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import java.util.Vector;
 import midgard.componentmodel.IComponent;
 
 /**
@@ -15,5 +16,7 @@ public interface IRepositoryManager extends IComponent {
     void open(); //clash
     void clear();
     void close();
+    Vector list();
+    IComponent get(String name);
 
 }

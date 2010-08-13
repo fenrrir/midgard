@@ -5,7 +5,9 @@
 
 package midgard.repositories;
 
+import java.util.Vector;
 import midgard.componentmodel.Component;
+import midgard.componentmodel.IComponent;
 
 /**
  *
@@ -20,6 +22,14 @@ public class DefaultAdapterProfileRepositoryManager extends Component implements
     }
 
     public void open() {
+    }
+
+    public IComponent get(String name) {
+        return null;
+    }
+
+    public Vector list() {
+        return null;
     }
 
 
