@@ -18,5 +18,6 @@ public interface IComponentProfile extends IComponent {
     public Vector getComponentNames();
     public Vector getInterfaceNames();
     public Vector getComponentsFromInterface();
+    public IComponent getImplementationOfInterface(String name);
 
 }
