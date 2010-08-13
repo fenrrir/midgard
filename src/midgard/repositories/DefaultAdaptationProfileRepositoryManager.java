@@ -13,7 +13,7 @@ import midgard.componentmodel.IComponent;
  *
  * @author fenrrir
  */
-public class DefaultAdapterProfileRepositoryManager extends Component implements IAdapterProfileRepositoryManager {
+public class DefaultAdaptationProfileRepositoryManager extends Component implements IAdaptationProfileRepositoryManager {
 
     public void clear() {
     }

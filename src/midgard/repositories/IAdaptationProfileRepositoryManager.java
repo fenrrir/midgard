@@ -9,6 +9,6 @@ package midgard.repositories;
  *
  * @author fenrrir
  */
-public interface IAdapterProfileRepositoryManager extends IRepositoryManager{
+public interface IAdaptationProfileRepositoryManager extends IRepositoryManager{
 
 }
