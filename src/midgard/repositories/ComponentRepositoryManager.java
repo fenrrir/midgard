@@ -21,7 +21,7 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
         this.concreteComponent = concreteComponent;
     }
 
-    public ComponentRepositoryManager getDefault(){
+    public static ComponentRepositoryManager getDefault(){
         return new ComponentRepositoryManager(new DefaultComponentRepositoryManager());
     }
 
