@@ -32,5 +32,27 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
         return null;
     }
 
+    public IComponent getComponent(String name) {
+        return null;
+    }
+
+    public Vector getComponentNames() {
+        return null;
+    }
+
+    public Vector getComponentsFromInterface() {
+        return null;
+    }
+
+    public IComponent getImplementationOfInterface(String name) {
+        return null;
+    }
+
+    public Vector getInterfaceNames() {
+        return null;
+    }
+
+    
+
 
 }
