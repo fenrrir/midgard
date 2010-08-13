@@ -29,6 +29,10 @@ public class ProxyComponent implements IProxyComponent {
         return concreteComponent;
     }
 
+    public String getName(){
+        return this.getClass().getName();
+    }
+    
     public void newEventArrived(IEvent event) {
         concreteComponent.newEventArrived(event);
     }

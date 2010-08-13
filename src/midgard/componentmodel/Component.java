@@ -28,6 +28,10 @@ public class Component implements IComponent {
         params = null;
     }
 
+    public String getName(){
+        return this.getClass().getName();
+    }
+
     public Hashtable getConnectedComponents() {
         if (components == null)
             components = new Hashtable();
