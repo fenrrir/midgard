@@ -6,12 +6,14 @@
 package midgard.components;
 
 import java.util.Vector;
-import midgard.componentmodel.IComponent;
 
 /**
  *
  * @author fenrrir
  */
-public interface IComponentProfile extends IComponentContainer {
-    public String getProfileName();
+public interface IComponentProfileContainer {
+    public String getContainerName();
+    public Vector getProfiles();
+    public IComponentProfile getProfileByName(String name);
+
 }
