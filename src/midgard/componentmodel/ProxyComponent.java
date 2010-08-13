@@ -16,8 +16,14 @@ import midgard.events.IListener;
  * @author fenrrir
  */
 public class ProxyComponent implements IComponent {
+
     
     private IComponent concreteComponent;
+
+    public ProxyComponent(IComponent concreteComponent) {
+        this.concreteComponent = concreteComponent;
+    }
+
 
     public void newEventArrived(IEvent event) {
         concreteComponent.newEventArrived(event);
@@ -35,13 +41,23 @@ public class ProxyComponent implements IComponent {
         return concreteComponent.getEventHistory(event);
     }
 
+
+
+    public Vector getListeners() {
+        return concreteComponent.getListeners();
+    }
+
+
+
+    public Hashtable getCacheFiredEvents() {
+        return concreteComponent.getCacheFiredEvents();
+    }
+
     public void fireEvent(IEvent event) {
         concreteComponent.fireEvent(event);
     }
 
-    public ProxyComponent(IComponent concreteComponent) {
-        this.concreteComponent = concreteComponent;
-    }
+
 
     public String[] getRequiredInterfaces() {
         return concreteComponent.getRequiredInterfaces();
@@ -58,6 +74,17 @@ public class ProxyComponent implements IComponent {
     public void connect(String interfaceName, IComponent component) {
         concreteComponent.connect(interfaceName, component);
     }
+
+
+
+    public Hashtable getConnectedComponents() {
+        return concreteComponent.getConnectedComponents();
+    }
+
+
+
+
+
 
     public void resume() {
         concreteComponent.resume();

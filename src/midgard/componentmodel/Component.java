@@ -28,20 +28,20 @@ public class Component implements IComponent {
         params = null;
     }
 
-    private Hashtable getComponents() {
+    public Hashtable getConnectedComponents() {
         if (components == null)
             components = new Hashtable();
         return components;
     }
 
 
-    private Hashtable getEvents() {
+    public Hashtable getCacheFiredEvents() {
         if (events == null)
             events = new Hashtable();
         return events;
     }
 
-    private Vector getListeners() {
+    public Vector getListeners() {
         if (listeners == null)
             listeners = new Vector();
         return listeners;
@@ -57,19 +57,19 @@ public class Component implements IComponent {
 
     public void connect(String interfaceName, IComponent component) {
         Vector v;
-        if (getComponents().containsKey(interfaceName)){
-            v = (Vector) getComponents().get(interfaceName);
+        if (getConnectedComponents().containsKey(interfaceName)){
+            v = (Vector) getConnectedComponents().get(interfaceName);
             v.addElement(component);
         }else{
             v = new Vector();
             v.addElement(component);
-            getComponents().put(interfaceName, v);
+            getConnectedComponents().put(interfaceName, v);
         }
     }
 
     public void disconnect(String interfaceName,  IComponent component) {
-        if (getComponents().containsKey(interfaceName)){
-            Vector v = (Vector) getComponents().get(interfaceName);
+        if (getConnectedComponents().containsKey(interfaceName)){
+            Vector v = (Vector) getConnectedComponents().get(interfaceName);
             v.removeElement(component);
         }
     }
@@ -83,8 +83,8 @@ public class Component implements IComponent {
     }
 
     public Vector getEventHistory(IEvent event) {
-        if (getEvents().containsKey(new Float(event.getType()))){
-            return (Vector) getEvents().get(new Float ( event.getType()));
+        if (getCacheFiredEvents().containsKey(new Float(event.getType()))){
+            return (Vector) getCacheFiredEvents().get(new Float ( event.getType()));
         }
         return new Vector();
    
@@ -100,15 +100,15 @@ public class Component implements IComponent {
 
     public void fireEvent(IEvent event) {
         Vector v;
-        if (getEvents().containsKey(new Float(event.getType()))){
-            v = (Vector) getEvents().get(event);
-            if (getEvents().size()  < 5){
+        if (getCacheFiredEvents().containsKey(new Float(event.getType()))){
+            v = (Vector) getCacheFiredEvents().get(event);
+            if (getCacheFiredEvents().size()  < 5){
                 v.addElement(event);
             }
             
         }else{
             v = new Vector();
-            getEvents().put(new Float(event.getType()), v);
+            getCacheFiredEvents().put(new Float(event.getType()), v);
             v.addElement(event);
 
         }

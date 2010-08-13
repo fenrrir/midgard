@@ -5,6 +5,8 @@
 
 package midgard.componentmodel;
 
+import java.util.Hashtable;
+
 /**
  *
  * @author fenrrir
@@ -12,6 +14,7 @@ package midgard.componentmodel;
 public interface IBaseComponent {
     void connect(String interfaceName, IComponent component);
     void disconnect(String interfaceName, IComponent component);
+    Hashtable getConnectedComponents();
     String [] getRequiredInterfaces();
     String [] getProvidedInterfaces();
 
