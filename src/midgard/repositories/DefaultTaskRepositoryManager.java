@@ -8,6 +8,7 @@ package midgard.repositories;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
+import midgard.tasks.ITask;
 
 /**
  *
@@ -26,6 +27,10 @@ public class DefaultTaskRepositoryManager extends Component implements ITaskRepo
 
     public IComponent get(String name) {
         return null;
+    }
+
+    public ITask getTask(String name) {
+        return (ITask) get(name);
     }
 
     public Vector list() {
