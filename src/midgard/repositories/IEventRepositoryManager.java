@@ -5,10 +5,13 @@
 
 package midgard.repositories;
 
+import midgard.events.ICustomEvent;
+
 /**
  *
  * @author fenrrir
  */
 public interface IEventRepositoryManager extends IRepositoryManager {
+    public ICustomEvent getEvent(String name);
 
 }

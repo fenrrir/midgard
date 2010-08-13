@@ -16,6 +16,7 @@ public class TaskRepositoryManager extends RepositoryManager  implements ITaskRe
 
     public TaskRepositoryManager(ITaskRepositoryManager concreteComponent) {
         super(concreteComponent);
+        this.concreteComponent = concreteComponent;
     }
 
     public ITask getTask(String name){
