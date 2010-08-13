@@ -5,6 +5,7 @@
 
 package midgard.componentmodel;
 
+import java.util.Hashtable;
 import java.util.Vector;
 
 import midgard.events.IEvent;
@@ -76,6 +77,22 @@ public class ProxyComponent implements IComponent {
 
     public void destroy() {
         concreteComponent.destroy();
+    }
+
+    public void setConfigurationParameters(Hashtable params) {
+        concreteComponent.setConfigurationParameters(params);
+    }
+
+    public void setConfigurationParameter(String name, Object value) {
+        concreteComponent.setConfigurationParameter(name, value);
+    }
+
+    public Hashtable getConfigurationParameters() {
+        return concreteComponent.getConfigurationParameters();
+    }
+
+    public Object getConfigurationParameter(String name) {
+        return concreteComponent.getConfigurationParameter(name);
     }
 
 

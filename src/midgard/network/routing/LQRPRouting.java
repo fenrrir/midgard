@@ -21,25 +21,4 @@ public class LQRPRouting extends Component implements IRouting {
     public RoutingTable getRoutingTable() {
         return new RoutingTable();
     }
-
-    public void destroy() {
-    }
-
-    public void initialize() {
-    }
-
-    public void load() {
-    }
-
-    public void pause() {
-    }
-
-    public void resume() {
-    }
-
-    public void newEventArrived(IEvent event) {
-    }
-
-
-
 }

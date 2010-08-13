@@ -14,24 +14,5 @@ import midgard.events.IEvent;
  */
 public class NetworkSensor extends Sensor{
 
-    public void newEventArrived(IEvent event) {
-    }
-
-    public void destroy() {
-    }
-
-    public void initialize() {
-    }
-
-    public void load() {
-    }
-
-    public void pause() {
-    }
-
-    public void resume() {
-    }
-
-
-
+   
 }

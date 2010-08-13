@@ -17,27 +17,6 @@ public class AODVRouting extends Component implements IRouting {
     public AODVRouting() {
     }
 
-    public void destroy() {
-    }
-
-    public void initialize() {
-    }
-
-    public void load() {
-    }
-
-    public void pause() {
-    }
-
-    public void resume() {
-    }
-
-    public void newEventArrived(IEvent event) {
-    }
-    
-    
-
-
     public int countNeighbors() {
         return 0;
     }

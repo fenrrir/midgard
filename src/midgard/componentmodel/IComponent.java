@@ -12,6 +12,10 @@ import midgard.events.IListener;
  *
  * @author fenrrir
  */
-public interface IComponent extends IBaseComponent, ILifeCycle, IEventHandler, IListener {
+public interface IComponent extends IBaseComponent, 
+                                    ILifeCycle,
+                                    IEventHandler,
+                                    IListener,
+                                    IConfiguration{
 
 }

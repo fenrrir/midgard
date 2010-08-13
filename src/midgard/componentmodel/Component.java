@@ -15,33 +15,61 @@ import midgard.events.IListener;
  *
  * @author fenrrir
  */
-public abstract class Component implements IComponent {
-    private Hashtable components, events;
+public class Component implements IComponent {
+    private Hashtable components, events, params;
     private Vector listeners;
     private String[] requiredInterfaces = {};
     private String[] providedInterfaces = {};
 
     public Component() {
-        components = new Hashtable();
-        events = new Hashtable();
-        listeners = new Vector();
+        components = null;
+        events = null;
+        listeners = null;
+        params = null;
     }
+
+    private Hashtable getComponents() {
+        if (components == null)
+            components = new Hashtable();
+        return components;
+    }
+
+
+    private Hashtable getEvents() {
+        if (events == null)
+            events = new Hashtable();
+        return events;
+    }
+
+    private Vector getListeners() {
+        if (listeners == null)
+            listeners = new Vector();
+        return listeners;
+    }
+
+    private Hashtable getParams() {
+        if (params == null)
+            params = new Hashtable();
+        return params;
+    }
+
+
 
     public void connect(String interfaceName, IComponent component) {
         Vector v;
-        if (components.containsKey(interfaceName)){
-            v = (Vector) components.get(interfaceName);
+        if (getComponents().containsKey(interfaceName)){
+            v = (Vector) getComponents().get(interfaceName);
             v.addElement(component);
         }else{
             v = new Vector();
             v.addElement(component);
-            components.put(interfaceName, v);
+            getComponents().put(interfaceName, v);
         }
     }
 
     public void disconnect(String interfaceName,  IComponent component) {
-        if (components.containsKey(interfaceName)){
-            Vector v = (Vector) components.get(interfaceName);
+        if (getComponents().containsKey(interfaceName)){
+            Vector v = (Vector) getComponents().get(interfaceName);
             v.removeElement(component);
         }
     }
@@ -55,43 +83,80 @@ public abstract class Component implements IComponent {
     }
 
     public Vector getEventHistory(IEvent event) {
-        if (events.containsKey(new Float(event.getType()))){
-            return (Vector) events.get(new Float ( event.getType()));
+        if (getEvents().containsKey(new Float(event.getType()))){
+            return (Vector) getEvents().get(new Float ( event.getType()));
         }
         return new Vector();
    
     }
 
     public void registerEventListener(IListener listener) {
-        listeners.addElement(listener);
+        getListeners().addElement(listener);
     }
 
     public void removeEventListener(IListener listener) {
-        listeners.removeElement(listener);
+        getListeners().removeElement(listener);
     }
 
     public void fireEvent(IEvent event) {
         Vector v;
-        if (events.containsKey(new Float(event.getType()))){
-            v = (Vector) events.get(event);
-            if (events.size()  < 5){
+        if (getEvents().containsKey(new Float(event.getType()))){
+            v = (Vector) getEvents().get(event);
+            if (getEvents().size()  < 5){
                 v.addElement(event);
             }
             
         }else{
             v = new Vector();
-            events.put(new Float(event.getType()), v);
+            getEvents().put(new Float(event.getType()), v);
             v.addElement(event);
 
         }
 
 
         IListener listener;
-        for (int i=0; i < listeners.size(); i++){
-            listener = (IListener) listeners.elementAt(i);
+        for (int i=0; i < getListeners().size(); i++){
+            listener = (IListener) getListeners().elementAt(i);
             listener.newEventArrived(event);
         }
     }
+
+    public void destroy() {
+    }
+
+    public void initialize() {
+    }
+
+    public void load() {
+    }
+
+    public void pause() {
+    }
+
+    public void resume() {
+    }
+
+    public void newEventArrived(IEvent event) {
+    }
+
+    public Object getConfigurationParameter(String name) {
+        return getParams().get(name);
+    }
+
+    public Hashtable getConfigurationParameters() {
+        return getParams();
+    }
+
+    public void setConfigurationParameter(String name, Object value) {
+        getParams().put(name, value);
+    }
+
+    public void setConfigurationParameters(Hashtable params) {
+        this.params = params;
+    }
+
+
+
 
 
 

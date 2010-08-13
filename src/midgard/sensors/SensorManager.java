@@ -95,7 +95,5 @@ public class SensorManager extends Sensor{
         batt.resume();
     }
 
-    public void newEventArrived(IEvent event) {
-    }
-
+   
 }

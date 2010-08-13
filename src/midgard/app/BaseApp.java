@@ -3,15 +3,12 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
-
-import midgard.events.IEvent;
+package midgard.app;
 
 /**
  *
  * @author fenrrir
  */
-public class LightSensor extends Sensor{
+public class BaseApp {
 
-   
 }
