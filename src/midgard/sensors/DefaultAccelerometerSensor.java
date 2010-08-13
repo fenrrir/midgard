@@ -11,6 +11,6 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class DefaultAccelerometerSensor extends Sensor {
+public class DefaultAccelerometerSensor extends Sensor implements IAccelerometerSensor{
 
 }

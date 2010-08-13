@@ -11,6 +11,6 @@ import midgard.componentmodel.Component;
  *
  * @author fenrrir
  */
-public abstract class Sensor extends Component {
+public abstract class Sensor extends Component implements ISensor{
 
 }

@@ -12,7 +12,7 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class DefaultBatterySensor extends Sensor{
+public class DefaultBatterySensor extends Sensor implements IBatterySensor{
 
     public IBatteryManager getManager(){
         //TODO preciso usar resolvedor de nomes aqui

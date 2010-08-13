@@ -11,7 +11,7 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class DefaultLightSensor extends Sensor{
+public class DefaultLightSensor extends Sensor implements ILightSensor{
 
    
 }

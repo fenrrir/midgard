@@ -11,6 +11,6 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class DefaultThemperatureSensor extends Sensor{
+public class DefaultThemperatureSensor extends Sensor implements IThemperatureSensor{
 
 }

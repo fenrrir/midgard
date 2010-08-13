@@ -12,7 +12,7 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class DefaultNetworkSensor extends Sensor{
+public class DefaultNetworkSensor extends Sensor implements INetworkSensor{
 
    
 }
