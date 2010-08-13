@@ -15,7 +15,7 @@ import midgard.events.IListener;
  *
  * @author fenrrir
  */
-public class ProxyComponent implements IComponent {
+public class ProxyComponent implements IProxyComponent {
 
     
     private IComponent concreteComponent;
@@ -24,6 +24,10 @@ public class ProxyComponent implements IComponent {
         this.concreteComponent = concreteComponent;
     }
 
+
+    public IComponent getConcreteComponent(){
+        return concreteComponent;
+    }
 
     public void newEventArrived(IEvent event) {
         concreteComponent.newEventArrived(event);
