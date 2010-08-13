@@ -13,7 +13,7 @@ import midgard.naming.INameService;
  */
 public class MicroKernel {
 
-    private MicroKernel instance = null;
+    private static MicroKernel instance = null;
 
     private MicroKernel(){
     }
@@ -22,7 +22,7 @@ public class MicroKernel {
         return null;
     }
 
-    public MicroKernel getInstance(){
+    public static MicroKernel getInstance(){
         if (instance == null)
             instance = new MicroKernel();
         return instance;
