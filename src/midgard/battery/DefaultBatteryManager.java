@@ -12,9 +12,9 @@ import midgard.events.IEvent;
  *
  * @author fenrrir
  */
-public class Manager extends Component implements IBatteryManager {
+public class DefaultBatteryManager extends Component implements IBatteryManager {
 
-    public Manager() {
+    public DefaultBatteryManager() {
     }
 
    
