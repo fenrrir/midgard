@@ -4,6 +4,7 @@
  */
 
 package midgard.events;
+import java.util.Hashtable;
 import java.util.Vector;
 /**
  *
@@ -12,6 +13,8 @@ import java.util.Vector;
 public interface IEventHandler {
     void registerEventListener(IListener listener);
     void removeEventListener(IListener listener);
+    Vector getListeners(); // internal data for swap components
+    Hashtable getCacheFiredEvents(); // internal data for swap components
     void fireEvent(IEvent event);
     Vector getEventHistory(IEvent event);
 
