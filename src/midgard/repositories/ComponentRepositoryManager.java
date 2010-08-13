@@ -21,6 +21,10 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
         this.concreteComponent = concreteComponent;
     }
 
+    public ComponentRepositoryManager getDefault(){
+        return new ComponentRepositoryManager(new DefaultComponentRepositoryManager());
+    }
+
     public Vector getInterfaceNames() {
         return concreteComponent.getInterfaceNames();
     }
