@@ -33,11 +33,11 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
     }
 
     public IComponent getComponent(String name) {
-        return null;
+        return get(name);
     }
 
     public Vector getComponentNames() {
-        return null;
+        return list();
     }
 
     public Vector getComponentsFromInterface() {

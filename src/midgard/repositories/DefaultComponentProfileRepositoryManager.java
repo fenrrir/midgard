@@ -8,6 +8,7 @@ package midgard.repositories;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
+import midgard.components.IComponentProfile;
 
 /**
  *
@@ -31,4 +32,18 @@ public class DefaultComponentProfileRepositoryManager extends Component implemen
     public Vector list() {
         return null;
     }
+
+    public String getContainerName() {
+        return getName();
+    }
+
+    public IComponentProfile getProfileByName(String name) {
+        return (IComponentProfile) get(name);
+    }
+
+    public Vector getProfiles() {
+        return list();
+    }
+
+
 }

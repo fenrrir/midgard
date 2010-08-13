@@ -5,10 +5,12 @@
 
 package midgard.repositories;
 
+import midgard.components.IComponentProfileContainer;
+
 /**
  *
  * @author fenrrir
  */
-public interface IComponentProfileRepositoryManager extends IRepositoryManager{
+public interface IComponentProfileRepositoryManager extends IRepositoryManager, IComponentProfileContainer{
 
 }
