@@ -5,18 +5,18 @@
 
 package midgard.network.routing;
 
-import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
+import midgard.services.IService;
+import midgard.services.ProxyService;
 
 /**
  *
  * @author fenrrir
  */
-public class RoutingManager extends ProxyComponent implements IRoutingManager{
+public class RoutingManager extends ProxyService implements IRoutingManager{
     private IRoutingManager concreteComponent;
 
     public RoutingManager(IRoutingManager concreteComponent) {
-        super((IComponent) concreteComponent);
+        super((IService) concreteComponent);
         this.concreteComponent = concreteComponent;
     }
 

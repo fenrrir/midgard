@@ -6,13 +6,16 @@
 package midgard.network;
 
 import midgard.network.routing.RoutingManager;
-import midgard.services.IService;
+import midgard.services.Service;
 
 /**
  *
  * @author fenrrir
  */
-public interface INetworkManager extends IService {
-    RoutingManager getRoutingManager();
+public class DefaultNetworkManager extends Service implements INetworkManager{
+
+    public RoutingManager getRoutingManager() {
+        return null;
+    }
 
 }

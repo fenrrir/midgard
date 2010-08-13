@@ -5,14 +5,13 @@
 
 package midgard.network.routing;
 
-import midgard.componentmodel.Component;
-import midgard.events.IEvent;
+import midgard.services.Service;
 
 /**
  *
  * @author fenrrir
  */
-public class AODVRouting extends Component implements IRouting {
+public class AODVRouting extends Service implements IRouting {
 
     public AODVRouting() {
     }

@@ -5,12 +5,12 @@
 
 package midgard.network.routing;
 
-import midgard.componentmodel.IComponent;
+import midgard.services.IService;
 
 /**
  *
  * @author fenrrir
  */
-public interface IRoutingManager extends IComponent {
+public interface IRoutingManager extends IService {
     IRouting getRouting();
 }

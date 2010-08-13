@@ -4,15 +4,13 @@
  */
 
 package midgard.battery;
-import midgard.battery.IBatteryManager;
-import midgard.componentmodel.Component;
-import midgard.events.IEvent;
+import midgard.services.Service;
 
 /**
  *
  * @author fenrrir
  */
-public class DefaultBatteryManager extends Component implements IBatteryManager {
+public class DefaultBatteryManager extends Service implements IBatteryManager {
 
     public DefaultBatteryManager() {
     }

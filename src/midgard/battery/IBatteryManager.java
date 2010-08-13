@@ -5,13 +5,13 @@
 
 package midgard.battery;
 
-import midgard.componentmodel.IComponent;
+import midgard.services.IService;
 
 /**
  *
  * @author fenrrir
  */
-public interface IBatteryManager extends IComponent {
+public interface IBatteryManager extends IService {
     double getAvailableCapacity();
     int getBatteryLevel();
     long getTime();

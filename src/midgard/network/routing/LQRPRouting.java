@@ -5,14 +5,13 @@
 
 package midgard.network.routing;
 
-import midgard.componentmodel.Component;
-import midgard.events.IEvent;
+import midgard.services.Service;
 
 /**
  *
  * @author fenrrir
  */
-public class LQRPRouting extends Component implements IRouting {
+public class LQRPRouting extends Service implements IRouting {
 
     public int countNeighbors() {
         return 0;
