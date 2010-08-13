@@ -13,7 +13,7 @@ import midgard.services.IService;
  *
  * @author fenrrir
  */
-public interface IComponentManager extends IService {
+public interface IComponentManager extends IService, IComponentContainer {
 
     public void initializeComponent(IComponent component);
     public void loadComponent(IComponent component);

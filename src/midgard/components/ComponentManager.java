@@ -5,6 +5,7 @@
 
 package midgard.components;
 
+import java.util.Vector;
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.services.IService;
@@ -48,6 +49,26 @@ public class ComponentManager extends ProxyService implements IComponentManager 
 
     public void changeImplementation(IProxyComponent proxy, IComponent old, IComponent comp) {
         concreteComponent.changeImplementation(proxy, old, comp);
+    }
+
+    public Vector getInterfaceNames() {
+        return concreteComponent.getInterfaceNames();
+    }
+
+    public IComponent getImplementationOfInterface(String name) {
+        return concreteComponent.getImplementationOfInterface(name);
+    }
+
+    public Vector getComponentsFromInterface() {
+        return concreteComponent.getComponentsFromInterface();
+    }
+
+    public Vector getComponentNames() {
+        return concreteComponent.getComponentNames();
+    }
+
+    public IComponent getComponent(String name) {
+        return concreteComponent.getComponent(name);
     }
 
 
