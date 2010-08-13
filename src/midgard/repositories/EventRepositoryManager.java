@@ -9,19 +9,9 @@ package midgard.repositories;
  *
  * @author fenrrir
  */
-public class EventRepositoryManager extends RepositoryManager {
+public class EventRepositoryManager extends RepositoryManager  implements IEventRepositoryManager{
 
-    public EventRepositoryManager(IRepositoryManager concreteComponent) {
+    public EventRepositoryManager(IEventRepositoryManager concreteComponent) {
         super(concreteComponent);
     }
-
-    public void clear() {
-    }
-
-    public void close() {
-    }
-
-    public void open() {
-    }
-
 }

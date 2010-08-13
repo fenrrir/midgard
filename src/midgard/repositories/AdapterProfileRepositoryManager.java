@@ -9,20 +9,9 @@ package midgard.repositories;
  *
  * @author fenrrir
  */
-public class AdapterProfileRepositoryManager extends RepositoryManager{
+public class AdapterProfileRepositoryManager extends RepositoryManager implements IAdapterProfileRepositoryManager{
 
-    public AdapterProfileRepositoryManager(IRepositoryManager concreteComponent) {
+    public AdapterProfileRepositoryManager(IAdapterProfileRepositoryManager concreteComponent) {
         super(concreteComponent);
     }
-
-    public void clear() {
-    }
-
-    public void close() {
-    }
-
-    public void open() {
-    }
-
-
 }

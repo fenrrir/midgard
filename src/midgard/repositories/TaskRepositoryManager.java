@@ -9,19 +9,9 @@ package midgard.repositories;
  *
  * @author fenrrir
  */
-public class TaskRepositoryManager extends RepositoryManager {
+public class TaskRepositoryManager extends RepositoryManager  implements ITaskRepositoryManager{
 
-    public TaskRepositoryManager(IRepositoryManager concreteComponent) {
+    public TaskRepositoryManager(ITaskRepositoryManager concreteComponent) {
         super(concreteComponent);
     }
-
-    public void clear() {
-    }
-
-    public void close() {
-    }
-
-    public void open() {
-    }
-
 }

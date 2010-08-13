@@ -17,7 +17,20 @@ public abstract class RepositoryManager extends ProxyComponent implements IRepos
 
     public RepositoryManager(IRepositoryManager concreteComponent) {
         super((IComponent) concreteComponent);
-        this.concreteComponent = concreteComponent;
     }
+
+    public void open() {
+        concreteComponent.open();
+    }
+
+    public void close() {
+        concreteComponent.close();
+    }
+
+    public void clear() {
+        concreteComponent.clear();
+    }
+
+
 
 }

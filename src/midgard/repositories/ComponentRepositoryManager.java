@@ -9,20 +9,9 @@ package midgard.repositories;
  *
  * @author fenrrir
  */
-public class ComponentRepositoryManager extends RepositoryManager{
+public class ComponentRepositoryManager extends RepositoryManager implements IComponentRepositoryManager{
 
-    public ComponentRepositoryManager(IRepositoryManager concreteComponent) {
+    public ComponentRepositoryManager(IComponentRepositoryManager concreteComponent) {
         super(concreteComponent);
     }
-
-    public void clear() {
-    }
-
-    public void close() {
-    }
-
-    public void open() {
-    }
-
-
 }
