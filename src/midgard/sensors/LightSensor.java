@@ -5,13 +5,17 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
+import midgard.componentmodel.IComponent;
+import midgard.componentmodel.ProxyComponent;
 
 /**
  *
  * @author fenrrir
  */
-public class LightSensor extends Sensor{
+public class LightSensor extends ProxyComponent implements ILightSensor{
 
-   
+    public LightSensor(ILightSensor concreteComponent) {
+        super( (IComponent) concreteComponent );
+    }
+
 }

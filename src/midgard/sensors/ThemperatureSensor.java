@@ -5,12 +5,18 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
+import midgard.componentmodel.IComponent;
+import midgard.componentmodel.ProxyComponent;
 
 /**
  *
  * @author fenrrir
  */
-public class ThemperatureSensor extends Sensor{
+public class ThemperatureSensor extends ProxyComponent implements IThemperatureSensor {
+
+    public ThemperatureSensor(IThemperatureSensor concreteComponent) {
+        super( (IComponent) concreteComponent);
+    }
+
 
 }

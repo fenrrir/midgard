@@ -5,12 +5,18 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
+import midgard.componentmodel.IComponent;
+import midgard.componentmodel.ProxyComponent;
 
 /**
  *
  * @author fenrrir
  */
-public class AccelerometerSensor extends Sensor {
+public class AccelerometerSensor extends ProxyComponent implements IAccelerometerSensor{
+
+    public AccelerometerSensor(IAccelerometerSensor concreteComponent) {
+        super(concreteComponent);
+    }
+
 
 }

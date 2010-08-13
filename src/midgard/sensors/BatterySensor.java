@@ -5,18 +5,18 @@
 
 package midgard.sensors;
 
-import midgard.battery.IBatteryManager;
-import midgard.events.IEvent;
+import midgard.componentmodel.IComponent;
+import midgard.componentmodel.ProxyComponent;
 
 /**
  *
  * @author fenrrir
  */
-public class BatterySensor extends Sensor{
+public class BatterySensor extends ProxyComponent implements IBatterySensor{
 
-    public IBatteryManager getManager(){
-        //TODO preciso usar resolvedor de nomes aqui
-        return null;
+    public BatterySensor(IBatterySensor concreteComponent) {
+        super( (IComponent) concreteComponent);
     }
+
 
 }

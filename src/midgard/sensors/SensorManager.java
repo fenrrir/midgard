@@ -14,19 +14,19 @@ import midgard.events.IEvent;
 public class SensorManager extends Sensor{
     private static SensorManager instance = null;
 
-    private AccelerometerSensor acc;
-    private LightSensor light;
-    private BatterySensor batt;
-    private NetworkSensor net;
-    private ThemperatureSensor themp;
+    private DefaultAccelerometerSensor acc;
+    private DefaultLightSensor light;
+    private DefaultBatterySensor batt;
+    private DefaultNetworkSensor net;
+    private DefaultThemperatureSensor themp;
 
 
     private SensorManager() {
-        this.acc = new AccelerometerSensor();
-        this.light = new LightSensor();
-        this.batt = new BatterySensor();
-        this.net = new NetworkSensor();
-        this.themp = new ThemperatureSensor();
+        this.acc = new DefaultAccelerometerSensor();
+        this.light = new DefaultLightSensor();
+        this.batt = new DefaultBatterySensor();
+        this.net = new DefaultNetworkSensor();
+        this.themp = new DefaultThemperatureSensor();
     }
 
     public SensorManager getInstance(){
@@ -35,23 +35,23 @@ public class SensorManager extends Sensor{
         return instance;
     }
 
-    public AccelerometerSensor getAccelerometerSensor() {
+    public DefaultAccelerometerSensor getAccelerometerSensor() {
         return acc;
     }
 
-    public BatterySensor getBatterySensor() {
+    public DefaultBatterySensor getBatterySensor() {
         return batt;
     }
 
-    public LightSensor getLight() {
+    public DefaultLightSensor getLight() {
         return light;
     }
 
-    public NetworkSensor getNetworkSensor() {
+    public DefaultNetworkSensor getNetworkSensor() {
         return net;
     }
 
-    public ThemperatureSensor getThemperatureSensor() {
+    public DefaultThemperatureSensor getThemperatureSensor() {
         return themp;
     }
 

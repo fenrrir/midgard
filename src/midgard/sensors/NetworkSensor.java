@@ -5,14 +5,18 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
-
+import midgard.componentmodel.IComponent;
+import midgard.componentmodel.ProxyComponent;
 
 /**
  *
  * @author fenrrir
  */
-public class NetworkSensor extends Sensor{
+public class NetworkSensor extends ProxyComponent implements INetworkSensor{
 
-   
+    public NetworkSensor(INetworkSensor concreteComponent) {
+        super(concreteComponent);
+    }
+
+
 }
