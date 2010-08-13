@@ -5,10 +5,13 @@
 
 package midgard.sensors;
 
+import midgard.battery.IBatteryManager;
+
 /**
  *
  * @author fenrrir
  */
 public interface IBatterySensor extends ISensor{
+    public IBatteryManager getManager();
 
 }

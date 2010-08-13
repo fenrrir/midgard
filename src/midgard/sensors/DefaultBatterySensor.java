@@ -6,7 +6,8 @@
 package midgard.sensors;
 
 import midgard.battery.IBatteryManager;
-import midgard.events.IEvent;
+import midgard.kernel.MicroKernel;
+import midgard.naming.INameService;
 
 /**
  *
@@ -15,8 +16,8 @@ import midgard.events.IEvent;
 public class DefaultBatterySensor extends Sensor implements IBatterySensor{
 
     public IBatteryManager getManager(){
-        //TODO preciso usar resolvedor de nomes aqui
-        return null;
+        INameService naming = MicroKernel.getInstance().getNameService();
+        return (IBatteryManager) naming.resolveName("BatteryManager");
     }
 
 }

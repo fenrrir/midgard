@@ -5,94 +5,40 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
+import midgard.kernel.MicroKernel;
+import midgard.naming.INameService;
+import midgard.services.Service;
 
 /**
  *
  * @author fenrrir
  */
-public class SensorManager extends Sensor{
-    private static SensorManager instance = null;
-
-    private DefaultAccelerometerSensor acc;
-    private DefaultLightSensor light;
-    private DefaultBatterySensor batt;
-    private DefaultNetworkSensor net;
-    private DefaultThemperatureSensor themp;
-
-
-    private SensorManager() {
-        this.acc = new DefaultAccelerometerSensor();
-        this.light = new DefaultLightSensor();
-        this.batt = new DefaultBatterySensor();
-        this.net = new DefaultNetworkSensor();
-        this.themp = new DefaultThemperatureSensor();
+public class SensorManager extends Service{
+    
+   
+    public static IAccelerometerSensor getAccelerometerSensor() {
+        INameService naming = MicroKernel.getInstance().getNameService();
+        return (IAccelerometerSensor) naming.resolveName("AccelerometerSensor");
     }
 
-    public SensorManager getInstance(){
-        if (instance == null)
-            return new SensorManager();
-        return instance;
+    public static IBatterySensor getBatterySensor() {
+        INameService naming = MicroKernel.getInstance().getNameService();
+        return (IBatterySensor) naming.resolveName("BatterySensor");
     }
 
-    public DefaultAccelerometerSensor getAccelerometerSensor() {
-        return acc;
+    public static ILightSensor getLight() {
+        INameService naming = MicroKernel.getInstance().getNameService();
+        return (ILightSensor) naming.resolveName("LightSensor");
     }
 
-    public DefaultBatterySensor getBatterySensor() {
-        return batt;
+    public static INetworkSensor getNetworkSensor() {
+        INameService naming = MicroKernel.getInstance().getNameService();
+        return (INetworkSensor) naming.resolveName("NetworkSensor");
     }
 
-    public DefaultLightSensor getLight() {
-        return light;
-    }
-
-    public DefaultNetworkSensor getNetworkSensor() {
-        return net;
-    }
-
-    public DefaultThemperatureSensor getThemperatureSensor() {
-        return themp;
-    }
-
-    public void destroy() {
-        acc.destroy();
-        themp.destroy();
-        net.destroy();
-        light.destroy();
-        batt.destroy();
-    }
-
-    public void initialize() {
-        acc.initialize();
-        themp.initialize();
-        net.initialize();
-        light.initialize();
-        batt.initialize();
-    }
-
-    public void load() {
-        acc.load();
-        themp.load();
-        net.load();
-        light.load();
-        batt.load();
-    }
-
-    public void pause() {
-        acc.pause();
-        themp.pause();
-        net.pause();
-        light.pause();
-        batt.pause();
-    }
-
-    public void resume() {
-        acc.resume();
-        themp.resume();
-        net.resume();
-        light.resume();
-        batt.resume();
+    public static IThemperatureSensor getThemperatureSensor() {
+        INameService naming = MicroKernel.getInstance().getNameService();
+        return (IThemperatureSensor) naming.resolveName("ThemperatureSensor");
     }
 
    
