@@ -22,6 +22,10 @@ public class MicroKernel {
         return null;
     }
 
+    public ClassLoader getClassLoader(){
+        return ClassLoader.getInstance();
+    }
+
     public static MicroKernel getInstance(){
         if (instance == null)
             instance = new MicroKernel();
