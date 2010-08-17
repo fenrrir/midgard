@@ -16,8 +16,11 @@ import midgard.services.Service;
  */
 public class DefaultNameService extends Service implements INameService {
 
-    private String [] requiredInterfaces = {"ComponentRepositoryManager"};
     private IComponentRepositoryManager repository = null;
+
+    public String[] getRequiredInterfaces(){
+        return new String [] {"IComponentRepositoryManager"};
+    }
 
      public void setConfigurationParameter(String name, Object value){
         if (name.equals("IComponentRepositoryManager")){

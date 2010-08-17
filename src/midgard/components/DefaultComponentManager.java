@@ -19,8 +19,12 @@ import midgard.services.Service;
  */
 public class DefaultComponentManager extends Service implements IComponentManager{
 
-    private String [] requiredInterfaces = {"ComponentRepositoryManager"};
     private IComponentRepositoryManager repository = null;
+
+
+    public String[] getRequiredInterfaces(){
+        return new String [] {"IComponentRepositoryManager"};
+    }
 
 
     public void setConfigurationParameter(String name, Object value){
