@@ -71,8 +71,8 @@ public class DefaultComponentManager extends Service implements IComponentManage
         return repository.getImplementationOfInterface(name);
     }
 
-    public Vector getComponentsFromInterface() {
-        return repository.getComponentsFromInterface();
+    public Vector getComponentsFromInterface(String name) {
+        return repository.getComponentsFromInterface(name);
     }
 
     public Vector getComponentNames() {

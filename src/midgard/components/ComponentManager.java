@@ -18,8 +18,18 @@ import midgard.services.ProxyService;
 public class ComponentManager extends ProxyService implements IComponentManager {
     private IComponentManager concreteComponent;
 
+    public ComponentManager() {
+    }
+
+    
+
     public ComponentManager(IComponentManager concreteComponent) {
         super(concreteComponent);
+        this.concreteComponent = concreteComponent;
+    }
+
+    public void setConcreteComponent(IComponentManager concreteComponent){
+        super.setConcreteComponent(concreteComponent);
         this.concreteComponent = concreteComponent;
     }
 
@@ -59,8 +69,8 @@ public class ComponentManager extends ProxyService implements IComponentManager 
         return concreteComponent.getImplementationOfInterface(name);
     }
 
-    public Vector getComponentsFromInterface() {
-        return concreteComponent.getComponentsFromInterface();
+    public Vector getComponentsFromInterface(String name) {
+        return concreteComponent.getComponentsFromInterface(name);
     }
 
     public Vector getComponentNames() {
