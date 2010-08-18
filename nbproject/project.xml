@@ -79,7 +79,7 @@
             <compilation-unit>
                 <package-root>src</package-root>
                 <classpath mode="boot">${sunspot.bootclasspath}</classpath>
-                <classpath mode="compile">${sunspot.classpath}</classpath>
+                <classpath mode="compile">/home/fenrrir/.SunSPOT/sdk/lib/multihop_common.jar:/home/fenrrir/.SunSPOT/sdk/lib/transducer_device.jar:/home/fenrrir/.SunSPOT/sdk/lib/spotlib_device.jar:/home/fenrrir/.SunSPOT/sdk/lib/spotlib_common.jar:/home/fenrrir/Ufrn/Mestrado/Dissertação/java/json.jar</classpath>
                 <built-to>build</built-to>
                 <source-level>1.4</source-level>
             </compilation-unit>
