@@ -15,7 +15,7 @@ import midgard.componentmodel.IComponent;
 public interface IComponentContainer {
     public Vector getComponentNames();
     public Vector getInterfaceNames();
-    public Vector getComponentsFromInterface();
+    public Vector getComponentsFromInterface(String name);
     public IComponent getImplementationOfInterface(String name);
     public IComponent getComponent(String name);
 
