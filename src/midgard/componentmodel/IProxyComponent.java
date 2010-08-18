@@ -11,5 +11,6 @@ package midgard.componentmodel;
  */
 public interface IProxyComponent extends IComponent {
     public IComponent getConcreteComponent();
+    public void setConcreteComponent(IComponent component);
 
 }

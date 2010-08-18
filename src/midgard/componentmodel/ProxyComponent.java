@@ -20,8 +20,15 @@ public class ProxyComponent implements IProxyComponent {
     
     private IComponent concreteComponent;
 
+    public ProxyComponent(){
+    }
+
     public ProxyComponent(IComponent concreteComponent) {
         this.concreteComponent = concreteComponent;
+    }
+
+    public void setConcreteComponent(IComponent component){
+        this.concreteComponent = component;
     }
 
 
