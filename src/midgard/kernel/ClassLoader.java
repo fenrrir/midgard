@@ -24,16 +24,16 @@ public class ClassLoader extends Component{
         return instance;
     }
 
-    public Class getClassByName(String name) throws ClassNotFoundException{
+    public static Class getClassByName(String name) throws ClassNotFoundException{
         return Class.forName(name);
     }
 
-    public Object newInstanceOf(Class cls) throws IllegalAccessException,
+    public static Object newInstanceOf(Class cls) throws IllegalAccessException,
                                                   InstantiationException{
         return cls.newInstance();
     }
 
-    public Object newInstanceOf(String name) throws IllegalAccessException, 
+    public static Object newInstanceOf(String name) throws IllegalAccessException,
                                                     InstantiationException,
                                                     ClassNotFoundException{
         Class cls = getClassByName(name);
