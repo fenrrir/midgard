@@ -2,13 +2,26 @@ package midgard;
 
 import javax.microedition.midlet.MIDlet;
 import javax.microedition.midlet.MIDletStateChangeException;
+import midgard.componentmodel.IComponent;
+import midgard.components.ComponentManager;
+import midgard.repositories.ComponentRepositoryManager;
+import midgard.repositories.DefaultComponentRepositoryManager;
 
 
 public class Test extends MIDlet {
 
     protected void startApp() throws MIDletStateChangeException {
-        System.out.println("Hello World");
-        // TODO
+        IComponent proxy, concrete;
+      
+        ComponentRepositoryManager manager = ComponentRepositoryManager.getDefault();
+        manager.open();
+        proxy = manager.getProxyOf("IComponentManager");
+        concrete = manager.getImplementationOfInterface("IComponentManager");
+        System.out.println(proxy.getName());
+        System.out.println(concrete.getName());
+        //System.out.println("Hello World");
+            // TODO
+      
     }
 
     protected void pauseApp() {
