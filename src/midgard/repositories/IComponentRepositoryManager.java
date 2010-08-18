@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import midgard.componentmodel.IProxyComponent;
 import midgard.components.IComponentContainer;
 
 /**
@@ -12,5 +13,6 @@ import midgard.components.IComponentContainer;
  * @author fenrrir
  */
 public interface IComponentRepositoryManager extends IRepositoryManager, IComponentContainer {
+    public IProxyComponent getProxyOf(String name);
 
 }

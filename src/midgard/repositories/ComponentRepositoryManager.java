@@ -7,6 +7,7 @@ package midgard.repositories;
 
 import java.util.Vector;
 import midgard.componentmodel.IComponent;
+import midgard.componentmodel.IProxyComponent;
 import midgard.components.IComponentContainer;
 
 /**
@@ -18,6 +19,11 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
 
     public ComponentRepositoryManager(IComponentRepositoryManager concreteComponent) {
         super(concreteComponent);
+        this.concreteComponent = concreteComponent;
+    }
+
+    public void setConcreteComponent(IComponentRepositoryManager concreteComponent){
+        super.setConcreteComponent(concreteComponent);
         this.concreteComponent = concreteComponent;
     }
 
@@ -33,8 +39,8 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
         return concreteComponent.getImplementationOfInterface(name);
     }
 
-    public Vector getComponentsFromInterface() {
-        return concreteComponent.getComponentsFromInterface();
+    public Vector getComponentsFromInterface(String name) {
+        return concreteComponent.getComponentsFromInterface(name);
     }
 
     public Vector getComponentNames() {
@@ -43,6 +49,10 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
 
     public IComponent getComponent(String name) {
         return concreteComponent.getComponent(name);
+    }
+
+    public IProxyComponent getProxyOf(String name) {
+        return concreteComponent.getProxyOf(name);
     }
 
     
