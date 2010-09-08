@@ -11,9 +11,8 @@ import midgard.componentmodel.IComponent;
  *
  * @author fenrrir
  */
-public interface ITask extends IComponent{
+public interface ITask extends IComponent, Runnable{
 
-    public void run();
     public boolean onBoot();
     public boolean onEvent();
     public IComponent connectAtComponent();
