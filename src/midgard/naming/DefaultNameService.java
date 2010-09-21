@@ -5,9 +5,8 @@
 
 package midgard.naming;
 
-import java.util.Hashtable;
 import midgard.componentmodel.IComponent;
-import midgard.repositories.IComponentRepositoryManager;
+import midgard.components.IComponentManager;
 import midgard.services.Service;
 
 /**
@@ -16,29 +15,20 @@ import midgard.services.Service;
  */
 public class DefaultNameService extends Service implements INameService {
 
-    private IComponentRepositoryManager repository = null;
+    private IComponentManager componentManager = null;
 
     public String[] getRequiredInterfaces(){
-        return new String [] {"IComponentRepositoryManager"};
+        return new String [] {"IComponentManager"};
     }
 
-     public void setConfigurationParameter(String name, Object value){
-        if (name.equals("IComponentRepositoryManager")){
-            repository = (IComponentRepositoryManager) value;
-        }
-    }
-
-    public void setConfigurationParameters(Hashtable params){
-        super.setConfigurationParameters(params);
-        if (params.containsKey("IComponentRepositoryManager")){
-            setConfigurationParameter("IComponentRepositoryManager",
-                                      params.get("IComponentRepositoryManager"));
-        }
-
+    public void initialize() {
+        super.initialize();
+        componentManager = (IComponentManager)
+                getConnectedComponents().get("IComponentManager");
     }
 
     public IComponent resolveName(String name) {
-        return repository.getComponent(name);
+        return componentManager.resolveComponent(name);
     }
 
 }
