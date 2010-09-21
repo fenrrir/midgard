@@ -16,6 +16,7 @@ import midgard.services.IService;
 public interface IComponentManager extends IService, IComponentContainer {
 
     public void initializeComponent(IComponent component);
+    public IComponent resolveComponent(String name);
     public void loadComponent(IComponent component);
     public void resumeComponent(IComponent component);
     public void pauseComponent(IComponent component);

@@ -61,6 +61,12 @@ public class ComponentManager extends ProxyService implements IComponentManager 
         concreteComponent.changeImplementation(proxy, old, comp);
     }
 
+    public IComponent resolveComponent(String name) {
+        return concreteComponent.resolveComponent(name);
+    }
+    
+
+
     public Vector getInterfaceNames() {
         return concreteComponent.getInterfaceNames();
     }
