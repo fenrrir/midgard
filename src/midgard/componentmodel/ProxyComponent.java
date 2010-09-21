@@ -96,6 +96,18 @@ public class ProxyComponent implements IProxyComponent {
         return concreteComponent.getConnectedComponents();
     }
 
+    public boolean isPaused() {
+        return concreteComponent.isPaused();
+    }
+
+    public boolean isLoaded() {
+        return concreteComponent.isLoaded();
+    }
+
+    public boolean isInitialized() {
+        return concreteComponent.isInitialized();
+    }
+
 
 
 

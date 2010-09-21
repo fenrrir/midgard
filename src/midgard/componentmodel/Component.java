@@ -16,6 +16,7 @@ import midgard.events.IListener;
  * @author fenrrir
  */
 public class Component implements IComponent {
+    private boolean  loaded, initialized, paused;
     private Hashtable components, events, params;
     private Vector listeners;
     private String[] requiredInterfaces = {};
@@ -27,6 +28,20 @@ public class Component implements IComponent {
         listeners = null;
         params = null;
     }
+
+    public boolean isInitialized() {
+        return initialized;
+    }
+
+    public boolean isLoaded() {
+        return loaded;
+    }
+
+    public boolean isPaused() {
+        return paused;
+    }
+
+    
 
     public String getName(){
         return this.getClass().getName();
@@ -61,20 +76,14 @@ public class Component implements IComponent {
 
     public void connect(String interfaceName, IComponent component) {
         Vector v;
-        if (getConnectedComponents().containsKey(interfaceName)){
-            v = (Vector) getConnectedComponents().get(interfaceName);
-            v.addElement(component);
-        }else{
-            v = new Vector();
-            v.addElement(component);
-            getConnectedComponents().put(interfaceName, v);
+        if (!getConnectedComponents().containsKey(interfaceName)){
+            getConnectedComponents().put(interfaceName, component);
         }
     }
 
     public void disconnect(String interfaceName,  IComponent component) {
         if (getConnectedComponents().containsKey(interfaceName)){
-            Vector v = (Vector) getConnectedComponents().get(interfaceName);
-            v.removeElement(component);
+            getConnectedComponents().remove(interfaceName);
         }
     }
 
@@ -126,18 +135,24 @@ public class Component implements IComponent {
     }
 
     public void destroy() {
+        initialized = loaded = false;
+
     }
 
     public void initialize() {
+        initialized = true;
     }
 
     public void load() {
+        loaded = true;
     }
 
     public void pause() {
+        paused = true;
     }
 
     public void resume() {
+        paused = false;
     }
 
     public void newEventArrived(IEvent event) {

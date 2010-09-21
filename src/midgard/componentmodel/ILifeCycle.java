@@ -15,5 +15,7 @@ public interface ILifeCycle {
     void pause();
     void resume();
     void destroy();
-
+    public boolean isInitialized();
+    public boolean isPaused();
+    public boolean isLoaded();
 }
