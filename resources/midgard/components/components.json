@@ -1,0 +1,29 @@
+{
+    "midgard.components.IComponentManager": {
+        "proxy" : "midgard.components.ComponentManager",
+        "implementations" :
+          [
+            "midgard.components.DefaultComponentManager"
+          ]
+    },
+    "midgard.repositories.IComponentRepositoryManager": {
+        "proxy" : "midgard.repositories.ComponentRepositoryManager",
+        "implementations" :
+          [
+            "midgard.repositories.DefaultComponentRepositoryManager"
+          ]
+    },
+    "midgard.app.IAppManager" : {
+        "proxy" : "midgard.app.AppManager",
+        "implementations" :
+         [
+            "midgard.app.DefaultAppManager"
+         ]
+    },
+    "midgard.app.IApp" : {
+        "implementations" :
+            [ "midgard.app.TestApp"]
+    }
+
+
+}
