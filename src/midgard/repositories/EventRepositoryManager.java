@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import midgard.componentmodel.IComponent;
 import midgard.events.ICustomEvent;
 
 /**
@@ -14,9 +15,11 @@ import midgard.events.ICustomEvent;
 public class EventRepositoryManager extends RepositoryManager  implements IEventRepositoryManager{
     private IEventRepositoryManager concreteComponent;
 
-    public EventRepositoryManager(IEventRepositoryManager concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent = concreteComponent;
+
+
+    public void setConcreteComponent(IComponent concreteComponent){
+        super.setConcreteComponent(concreteComponent);
+        this.concreteComponent = (IEventRepositoryManager) concreteComponent;
     }
 
     public ICustomEvent getEvent(String name) {

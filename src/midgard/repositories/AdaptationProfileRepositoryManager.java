@@ -5,13 +5,17 @@
 
 package midgard.repositories;
 
+import midgard.componentmodel.IComponent;
+
 /**
  *
  * @author fenrrir
  */
 public class AdaptationProfileRepositoryManager extends RepositoryManager implements IAdaptationProfileRepositoryManager{
+    private IAdaptationProfileRepositoryManager concreteComponent;
 
-    public AdaptationProfileRepositoryManager(IAdaptationProfileRepositoryManager concreteComponent) {
-        super(concreteComponent);
+    public void setConcreteComponent(IComponent concreteComponent){
+        super.setConcreteComponent(concreteComponent);
+        this.concreteComponent = (IAdaptationProfileRepositoryManager) concreteComponent;
     }
 }

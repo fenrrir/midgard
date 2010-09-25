@@ -16,6 +16,11 @@ import midgard.componentmodel.ProxyComponent;
 public abstract class RepositoryManager extends ProxyComponent implements IRepositoryManager{
     private IRepositoryManager concreteComponent;
 
+    public RepositoryManager() {
+    }
+
+    
+
     public Vector list() {
         return concreteComponent.list();
     }
@@ -24,9 +29,9 @@ public abstract class RepositoryManager extends ProxyComponent implements IRepos
         return concreteComponent.get(name);
     }
 
-    public RepositoryManager(IRepositoryManager concreteComponent) {
-        super((IComponent) concreteComponent);
-        this.concreteComponent = concreteComponent;
+    public void setConcreteComponent(IComponent concreteComponent){
+        super.setConcreteComponent(concreteComponent);
+        this.concreteComponent = (IRepositoryManager) concreteComponent;
     }
 
     public void open() {

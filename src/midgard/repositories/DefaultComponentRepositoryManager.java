@@ -12,6 +12,7 @@ import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.kernel.ClassLoader;
+import midgard.naming.DNS;
 import midgard.utils.FileUtils;
 import org.json.me.JSONArray;
 import org.json.me.JSONException;
@@ -25,6 +26,9 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
     private final String REPO = "/midgard/components/components.json";
     private JSONObject json;
     private Hashtable table;
+
+    
+
 
     public void clear() {
         table.clear();
@@ -42,6 +46,7 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
 
     public void open() {
         table = new Hashtable();
+        table.put(getName(), this);
         try {
             json = new JSONObject(FileUtils.readFile(REPO));
         } catch (JSONException ex) {
@@ -50,17 +55,19 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
     }
     
     public IComponent get(String name) {
-        if (table.contains(name))
+        if (table.containsKey(name))
             return (IComponent) table.get(name);
         else{
             try {
                 Object obj = ClassLoader.newInstanceOf(name);
+                System.out.println("Instantiating object from class " + name);
                 table.put(name, obj);
                 return (IComponent) obj;
             } catch (IllegalAccessException ex) {
                 ex.printStackTrace();
                 return null;
             } catch (InstantiationException ex) {
+                System.err.println("InstantiationException with class" + name);
                 ex.printStackTrace();
                 return null;
             } catch (ClassNotFoundException ex) {

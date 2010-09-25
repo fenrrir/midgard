@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import midgard.componentmodel.IComponent;
 import midgard.tasks.ITask;
 
 /**
@@ -14,9 +15,11 @@ import midgard.tasks.ITask;
 public class TaskRepositoryManager extends RepositoryManager  implements ITaskRepositoryManager{
     private ITaskRepositoryManager concreteComponent;
 
-    public TaskRepositoryManager(ITaskRepositoryManager concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent = concreteComponent;
+    
+
+    public void setConcreteComponent(IComponent concreteComponent){
+        super.setConcreteComponent(concreteComponent);
+        this.concreteComponent = (ITaskRepositoryManager) concreteComponent;
     }
 
     public ITask getTask(String name){

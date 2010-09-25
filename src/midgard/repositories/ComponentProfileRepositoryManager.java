@@ -6,6 +6,7 @@
 package midgard.repositories;
 
 import java.util.Vector;
+import midgard.componentmodel.IComponent;
 import midgard.components.IComponentProfile;
 
 /**
@@ -16,9 +17,11 @@ public class ComponentProfileRepositoryManager extends RepositoryManager impleme
     private IComponentProfileRepositoryManager concreteComponent;
 
 
-    public ComponentProfileRepositoryManager(IComponentProfileRepositoryManager concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent = concreteComponent;
+
+
+    public void setConcreteComponent(IComponent concreteComponent){
+        super.setConcreteComponent(concreteComponent);
+        this.concreteComponent = (IComponentProfileRepositoryManager) concreteComponent;
     }
 
     public Vector getProfiles() {

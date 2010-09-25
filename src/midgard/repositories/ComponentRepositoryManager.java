@@ -17,18 +17,15 @@ import midgard.components.IComponentContainer;
 public class ComponentRepositoryManager extends RepositoryManager implements IComponentRepositoryManager, IComponentContainer{
     private IComponentRepositoryManager concreteComponent;
 
-    public ComponentRepositoryManager(IComponentRepositoryManager concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent = concreteComponent;
-    }
-
-    public void setConcreteComponent(IComponentRepositoryManager concreteComponent){
+    public void setConcreteComponent(IComponent concreteComponent){
         super.setConcreteComponent(concreteComponent);
-        this.concreteComponent = concreteComponent;
+        this.concreteComponent = (IComponentRepositoryManager) concreteComponent;
     }
 
     public static ComponentRepositoryManager getDefault(){
-        return new ComponentRepositoryManager(new DefaultComponentRepositoryManager());
+        ComponentRepositoryManager manager = new ComponentRepositoryManager();
+        manager.setConcreteComponent(new DefaultComponentRepositoryManager());
+        return manager;
     }
 
     public Vector getInterfaceNames() {
