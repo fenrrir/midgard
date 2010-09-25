@@ -18,7 +18,7 @@ public class DefaultNameService extends Service implements INameService {
     private IComponentManager componentManager = null;
 
     public String[] getRequiredInterfaces(){
-        return new String [] {"IComponentManager"};
+        return new String [] {DNS.ICOMPONENTMANAGER};
     }
 
     public void initialize() {
