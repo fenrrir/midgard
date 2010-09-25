@@ -61,7 +61,7 @@ public class NanoHttp extends Component implements IHTTPServer{
      * Register a new Web Application
      */
     public void addView(URLView view) {
-        if (!handlers.contains(view.getUri())){
+        if (!handlers.containsKey(view.getUri())){
             handlers.put(view.getUri(), view);
         }
     }

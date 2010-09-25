@@ -8,6 +8,7 @@ package midgard.web;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import midgard.componentmodel.IComponent;
 import midgard.componentmodel.ProxyComponent;
 
 /**
@@ -17,9 +18,9 @@ import midgard.componentmodel.ProxyComponent;
 public class HTTPServer extends ProxyComponent implements IHTTPServer{
     private IHTTPServer concreteComponent;
 
-    public void setConcreteComponent(IHTTPServer component){
+    public void setConcreteComponent(IComponent component){
         super.setConcreteComponent(component);
-        concreteComponent = component;
+        concreteComponent = (IHTTPServer) component;
     }
 
     public void handleRequest(InputStream ins, OutputStream outs) throws IOException {

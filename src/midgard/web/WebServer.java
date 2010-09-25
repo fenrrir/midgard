@@ -5,6 +5,7 @@
 
 package midgard.web;
 
+import midgard.componentmodel.IComponent;
 import midgard.componentmodel.ProxyComponent;
 
 /**
@@ -15,9 +16,9 @@ public class WebServer extends ProxyComponent implements IWebServer{
     private IWebServer concreteComponent;
 
 
-    public void setConcreteComponent(IWebServer component){
+    public void setConcreteComponent(IComponent component){
         super.setConcreteComponent(component);
-        concreteComponent = component;
+        concreteComponent = (IWebServer) component;
     }
 
     public void run() {
