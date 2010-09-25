@@ -11,7 +11,6 @@ import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.kernel.ClassLoader;
 import midgard.naming.DNS;
-import midgard.repositories.IComponentRepositoryManager;
 import midgard.services.Service;
 
 /**
@@ -71,13 +70,17 @@ public class DefaultComponentManager extends Service implements IComponentManage
 
     public void initializeComponent(IComponent component) {
         if (!component.isInitialized()) {
+            System.err.println(getName() + " initialize");
             component.initialize();
+            System.err.println(getName() + " posInitilized");
         }
     }
 
-    public void loadComponent(IComponent component) {
+    public void loadComponent(IComponent component) {     
         if (!component.isLoaded()) {
+            System.err.println(getName() + " load");
             component.load();
+            System.err.println(getName() + " posLoad");
         }
     }
 

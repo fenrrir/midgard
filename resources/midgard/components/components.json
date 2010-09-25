@@ -6,11 +6,11 @@
             "midgard.components.DefaultComponentManager"
           ]
     },
-    "midgard.repositories.IComponentRepositoryManager": {
-        "proxy" : "midgard.repositories.ComponentRepositoryManager",
+    "midgard.components.IComponentRepositoryManager": {
+        "proxy" : "midgard.components.ComponentRepositoryManager",
         "implementations" :
           [
-            "midgard.repositories.DefaultComponentRepositoryManager"
+            "midgard.components.DefaultComponentRepositoryManager"
           ]
     },
     "midgard.app.IAppManager" : {

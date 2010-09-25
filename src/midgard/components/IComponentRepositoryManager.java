@@ -3,10 +3,11 @@
  * and open the template in the editor.
  */
 
-package midgard.repositories;
+package midgard.components;
 
 import midgard.componentmodel.IProxyComponent;
 import midgard.components.IComponentContainer;
+import midgard.repositories.IRepositoryManager;
 
 /**
  *

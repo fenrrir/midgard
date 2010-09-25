@@ -4,8 +4,8 @@ import javax.microedition.midlet.MIDlet;
 import javax.microedition.midlet.MIDletStateChangeException;
 import midgard.componentmodel.IComponent;
 import midgard.components.ComponentManager;
-import midgard.repositories.ComponentRepositoryManager;
-import midgard.repositories.DefaultComponentRepositoryManager;
+import midgard.components.ComponentRepositoryManager;
+import midgard.components.DefaultComponentRepositoryManager;
 
 
 public class Test extends MIDlet {

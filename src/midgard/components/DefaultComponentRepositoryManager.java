@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package midgard.repositories;
+package midgard.components;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -60,7 +60,7 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
         else{
             try {
                 Object obj = ClassLoader.newInstanceOf(name);
-                System.out.println("Instantiating object from class " + name);
+                System.err.println("Instantiating object from class " + name);
                 table.put(name, obj);
                 return (IComponent) obj;
             } catch (IllegalAccessException ex) {

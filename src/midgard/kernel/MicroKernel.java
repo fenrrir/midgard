@@ -10,8 +10,8 @@ import midgard.components.ComponentManager;
 import midgard.components.IComponentManager;
 import midgard.naming.DNS;
 import midgard.naming.INameService;
-import midgard.repositories.ComponentRepositoryManager;
-import midgard.repositories.IComponentRepositoryManager;
+import midgard.components.ComponentRepositoryManager;
+import midgard.components.IComponentRepositoryManager;
 
 /**
  *

@@ -15,6 +15,6 @@ public class DNS {
     public final static String ITHREADEDAPP = "midgard.app.IApp";
     public final static String IAPPMANAGER = "midgard.app.IAppManager";
     public final static String IAPPREPOSITORYMANAGER = "midgard.app.IAppRepositoryManager";
-    public final static String ICOMPONENTREPOSITORYMANAGER = "midgard.repositories.IComponentRepositoryManager";
+    public final static String ICOMPONENTREPOSITORYMANAGER = "midgard.components.IComponentRepositoryManager";
     public final static String INAMESERVICE = "midgard.naming.INameService";
 }

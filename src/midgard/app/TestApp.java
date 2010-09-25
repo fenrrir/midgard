@@ -13,26 +13,26 @@ public class TestApp extends App{
 
     public void destroy() {
         super.destroy();
-        System.out.print(getName() + " destroy");
+        System.err.println(getName() + " destroy");
     }
 
     public void initialize() {
         super.initialize();
-        System.out.print(getName() + " initialize");
+        System.err.println("@@@@@ " + getName() + " initialize");
     }
 
     public void load() {
         super.load();
-        System.out.print(getName() + " load");
+        System.err.println("@@@@@@ " + getName() + " load");
     }
 
     public void pause() {
         super.pause();
-        System.out.print(getName() + " pause");
+        System.err.println(getName() + " pause");
     }
 
     public void resume() {
         super.resume();
-        System.out.print(getName() + " resume");
+        System.err.println(getName() + " resume");
     }
 }
