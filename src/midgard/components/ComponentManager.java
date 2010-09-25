@@ -28,9 +28,9 @@ public class ComponentManager extends ProxyService implements IComponentManager 
         this.concreteComponent = concreteComponent;
     }
 
-    public void setConcreteComponent(IComponentManager concreteComponent){
+    public void setConcreteComponent(IComponent concreteComponent){
         super.setConcreteComponent(concreteComponent);
-        this.concreteComponent = concreteComponent;
+        this.concreteComponent = (IComponentManager) concreteComponent;
     }
 
     public void resumeComponent(IComponent component) {
