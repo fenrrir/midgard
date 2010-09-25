@@ -13,4 +13,9 @@ import midgard.componentmodel.Component;
  */
 public class Service extends Component {
 
+    public Service() {
+    }
+
+    
+
 }
