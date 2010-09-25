@@ -18,7 +18,7 @@ import midgard.events.IListener;
 public class ProxyComponent implements IProxyComponent {
 
     
-    private IComponent concreteComponent;
+    private IComponent concreteComponent = null;
 
     public ProxyComponent(){
     }
@@ -97,15 +97,21 @@ public class ProxyComponent implements IProxyComponent {
     }
 
     public boolean isPaused() {
-        return concreteComponent.isPaused();
+        if (concreteComponent != null)
+            return concreteComponent.isPaused();
+        return false;
     }
 
     public boolean isLoaded() {
-        return concreteComponent.isLoaded();
+        if (concreteComponent != null)
+            return concreteComponent.isLoaded();
+        return false;
     }
 
     public boolean isInitialized() {
-        return concreteComponent.isInitialized();
+        if (concreteComponent != null)
+            return concreteComponent.isInitialized();
+        return false;
     }
 
 
