@@ -9,6 +9,6 @@ package midgard.app;
  *
  * @author fenrrir
  */
-public class BaseApp {
+public interface IThreadedApp extends IApp, Runnable {
 
 }
