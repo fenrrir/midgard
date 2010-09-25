@@ -40,4 +40,14 @@ public class ClassLoader extends Component{
         return cls.newInstance();
     }
 
+    public static boolean isInterface(String name){
+        try {
+            Class cls = getClassByName(name);
+            return cls.isInterface();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
 }
