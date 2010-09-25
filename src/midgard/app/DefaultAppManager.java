@@ -20,10 +20,7 @@ import org.json.me.JSONObject;
  */
 public class DefaultAppManager extends Service implements IAppManager {
 
-    private final String REPO = "/apps.json";
-    private Vector names;
-    private JSONObject json;
-    private IComponentManager componentManager = null;
+    private IAppRepositoryManager repository = null;
 
     public DefaultAppManager() {
     }
@@ -31,87 +28,41 @@ public class DefaultAppManager extends Service implements IAppManager {
 
 
     public String[] getRequiredInterfaces() {
-        return new String[]{DNS.ICOMPONENTMANAGER};
+        return new String[]{DNS.IAPPREPOSITORYMANAGER};
     }
 
     public void connect(String interfaceName, IComponent component) {
         super.connect(interfaceName, component);
-        componentManager = (IComponentManager) component;
-
+        repository = (IAppRepositoryManager) component;
     }
 
-    private void loadData() {
-        try {
-            String name, classname;
-            names = new Vector();
-            json = new JSONObject(FileUtils.readFile(REPO));
-            Enumeration e = json.keys();
-            while (e.hasMoreElements()) {
-                name = (String) e.nextElement();
-                classname = json.getJSONObject(name).getString("class");
-                names.addElement(classname);
-            }
-        } catch (JSONException ex) {
-            ex.printStackTrace();
-        }
-    }
 
-    private void eraseData(){
-        names.removeAllElements();
-        names = null;
-        json = null;
-    }
 
     public void initialize() {
         super.initialize();
-        loadData();
+        repository.open();
     }
-
-    public void destroy() {
-        super.destroy();
-        eraseData();
-    }
-
-    public void pause() {
-        super.pause();
-        eraseData();
-    }
-
-    public void resume() {
-        super.resume();
-        loadData();
-    }
-
-
 
     public void destroryApps() {
+
         IApp app;
+        Vector names = repository.getInstalledAppNames();
 
         for (int i = 0; i < names.size(); i++) {
-            app = getApp((String) names.elementAt(i));
+            app = repository.getApp((String) names.elementAt(i));
             app.destroy();
 
         }
-    }
-
-    public IApp getApp(String name) {
-        return (IApp) componentManager.resolveComponent(name);
-    }
-
-    public Vector getAppNames() {
-        return names;
-    }
-
-    public IThreadedApp getThreadedApp(String name) {
-        return (IThreadedApp) componentManager.resolveComponent(name);
     }
 
     public void loadAndInitializeApps() {
         IApp app;
         Thread thread;
 
+        Vector names = repository.getInstalledAppNames();
+
         for (int i = 0; i < names.size(); i++) {
-            app = getApp((String) names.elementAt(i));
+            app = repository.getApp((String) names.elementAt(i));
             if (app instanceof ThreadedApp){
                 thread = new Thread( (Runnable) app);
                 thread.start();
@@ -122,8 +73,10 @@ public class DefaultAppManager extends Service implements IAppManager {
     public void pauseApps() {
         IApp app;
 
+        Vector names = repository.getInstalledAppNames();
+
         for (int i = 0; i < names.size(); i++) {
-            app = getApp((String) names.elementAt(i));
+            app = repository.getApp((String) names.elementAt(i));
             app.pause();
 
         }
@@ -132,8 +85,10 @@ public class DefaultAppManager extends Service implements IAppManager {
     public void resumeApps() {
         IApp app;
 
+        Vector names = repository.getInstalledAppNames();
+
         for (int i = 0; i < names.size(); i++) {
-            app = getApp((String) names.elementAt(i));
+            app = repository.getApp((String) names.elementAt(i));
             app.resume();
 
         }

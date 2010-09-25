@@ -39,18 +39,6 @@ public class AppManager extends ProxyService implements IAppManager {
         concreteComponent.loadAndInitializeApps();
     }
 
-    public IThreadedApp getThreadedApp(String name) {
-        return concreteComponent.getThreadedApp(name);
-    }
-
-    public Vector getAppNames() {
-        return concreteComponent.getAppNames();
-    }
-
-    public IApp getApp(String name) {
-        return concreteComponent.getApp(name);
-    }
-
     public void destroryApps() {
         concreteComponent.destroryApps();
     }

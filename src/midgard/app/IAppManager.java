@@ -13,9 +13,6 @@ import midgard.services.IService;
  * @author fenrrir
  */
 public interface IAppManager extends IService {
-    public Vector getAppNames();
-    public IApp getApp(String name);
-    public IThreadedApp getThreadedApp(String name);
     public void loadAndInitializeApps();
     public void pauseApps();
     public void resumeApps();
