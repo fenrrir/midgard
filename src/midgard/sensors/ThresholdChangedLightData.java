@@ -9,10 +9,10 @@ package midgard.sensors;
  *
  * @author fenrrir
  */
-public class ThresholdChangedLightObject {
+public class ThresholdChangedLightData {
     public int low, high;
 
-    public ThresholdChangedLightObject(int low, int high) {
+    public ThresholdChangedLightData(int low, int high) {
         this.low = low;
         this.high = high;
     }

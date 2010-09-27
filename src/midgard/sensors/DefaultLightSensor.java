@@ -52,7 +52,7 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.ILight
      */
     public void thresholdChanged(ILightSensor light, int low, int high) {
         System.err.println("thresholdChanged " + light + " " + low + " " + high);
-        Object content = new ThresholdChangedLightObject(low, high);
+        Object content = new ThresholdChangedLightData(low, high);
         fireEvent( new ThresholdChangedLightEvent(content) );
         // ignore
     }
