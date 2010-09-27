@@ -5,18 +5,12 @@
 
 package midgard.sensors;
 
-import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
+
 
 /**
  *
  * @author fenrrir
  */
-public class NetworkSensor extends ProxyComponent implements INetworkSensor{
-
-    public NetworkSensor(INetworkSensor concreteComponent) {
-        super(concreteComponent);
-    }
-
+public class NetworkSensor extends ProxySensor implements INetworkSensor{
 
 }

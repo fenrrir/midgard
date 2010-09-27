@@ -5,7 +5,7 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
+
 
 
 /**
@@ -13,6 +13,15 @@ import midgard.events.IEvent;
  * @author fenrrir
  */
 public class DefaultNetworkSensor extends Sensor implements INetworkSensor{
+
+    public void collect() {
+    }
+
+    public void disableSensor() {
+    }
+
+    public void initSensor() {
+    }
 
    
 }

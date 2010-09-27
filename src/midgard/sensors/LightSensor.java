@@ -12,10 +12,5 @@ import midgard.componentmodel.ProxyComponent;
  *
  * @author fenrrir
  */
-public class LightSensor extends ProxyComponent implements ILightSensor{
-
-    public LightSensor(ILightSensor concreteComponent) {
-        super( (IComponent) concreteComponent );
-    }
-
+public class LightSensor extends ProxySensor implements ILightSensor{
 }

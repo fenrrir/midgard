@@ -5,12 +5,21 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
+
 
 /**
  *
  * @author fenrrir
  */
 public class DefaultAccelerometerSensor extends Sensor implements IAccelerometerSensor{
+
+    public void collect() {
+    }
+
+    public void disableSensor() {
+    }
+
+    public void initSensor() {
+    }
 
 }

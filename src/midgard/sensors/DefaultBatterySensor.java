@@ -20,4 +20,15 @@ public class DefaultBatterySensor extends Sensor implements IBatterySensor{
         return (IBatteryManager) naming.resolveName("BatteryManager");
     }
 
+    public void collect() {
+    }
+
+    public void disableSensor() {
+    }
+
+    public void initSensor() {
+    }
+
+
+
 }

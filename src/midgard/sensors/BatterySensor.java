@@ -7,18 +7,17 @@ package midgard.sensors;
 
 import midgard.battery.IBatteryManager;
 import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
 
 /**
  *
  * @author fenrrir
  */
-public class BatterySensor extends ProxyComponent implements IBatterySensor{
+public class BatterySensor extends ProxySensor implements IBatterySensor{
     private IBatterySensor concreteComponent;
 
-    public BatterySensor(IBatterySensor concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent = concreteComponent;
+    public void setConcreteComponent(IComponent concreteComponent) {
+        super.setConcreteComponent(concreteComponent);
+        this.concreteComponent = (IBatterySensor) concreteComponent;
     }
 
     public IBatteryManager getManager() {

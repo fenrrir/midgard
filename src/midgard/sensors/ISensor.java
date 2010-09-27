@@ -12,5 +12,8 @@ import midgard.componentmodel.IComponent;
  * @author fenrrir
  */
 public interface ISensor extends IComponent{
+    public void initSensor();
+    public void disableSensor();
+    public void collect();
 
 }

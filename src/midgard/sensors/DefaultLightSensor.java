@@ -57,39 +57,17 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.ILight
         // ignore
     }
 
-    public void initialize() {
-        super.initialize();
-        initSensor();
-
-    }
-
-    private void initSensor(){
+    public void initSensor(){
         lightSensor = EDemoBoard.getInstance().getLightSensor();
         lightSensor.addILightSensorThresholdListener(this); // register us as a listener
         lightSensor.setThresholds(10, 700);   //TODO: user conf thresholds
         lightSensor.enableThresholdEvents(true);            // turn on notification
     }
 
-    private void disableSensor(){
+    public void disableSensor(){
         lightSensor.removeILightSensorThresholdListener(this);
         lightSensor.enableThresholdEvents(false);
         lightSensor = null;
     }
-
-    public void destroy() {
-        super.destroy();
-        disableSensor();
-    }
-
-    public void pause() {
-        super.pause();
-        disableSensor();
-    }
-
-    public void resume() {
-        super.resume();
-        initSensor();
-    }
-
 
 }
