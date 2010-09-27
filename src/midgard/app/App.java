@@ -18,7 +18,7 @@ import midgard.sensors.events.BatteryEvent;
 import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.NetworkEvent;
 import midgard.sensors.events.RoutingEvent;
-import midgard.sensors.events.ThemperatureEvent;
+import midgard.sensors.events.TemperatureEvent;
 
 /**
  *
@@ -78,15 +78,15 @@ public class App extends Component implements IApp {
         throw new NotImplementedListener();
     }
 
-    public void handleThemperatureEvent(ThemperatureEvent event) throws NotImplementedListener {
+    public void handleThemperatureEvent(TemperatureEvent event) throws NotImplementedListener {
         throw new NotImplementedListener();
     }
 
     public void newEventArrived(IEvent event)  {
         try {
             super.newEventArrived(event);
-            if (event instanceof ThemperatureEvent) {
-                handleThemperatureEvent((ThemperatureEvent) event);
+            if (event instanceof TemperatureEvent) {
+                handleThemperatureEvent((TemperatureEvent) event);
             } else if (event instanceof RoutingEvent) {
                 handleRoutingEvent((RoutingEvent) event);
             } else if (event instanceof NetworkEvent) {

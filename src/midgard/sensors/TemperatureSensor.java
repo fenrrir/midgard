@@ -12,9 +12,9 @@ import midgard.componentmodel.ProxyComponent;
  *
  * @author fenrrir
  */
-public class ThemperatureSensor extends ProxyComponent implements IThemperatureSensor {
+public class TemperatureSensor extends ProxyComponent implements ITemperatureSensor {
 
-    public ThemperatureSensor(IThemperatureSensor concreteComponent) {
+    public TemperatureSensor(ITemperatureSensor concreteComponent) {
         super( (IComponent) concreteComponent);
     }
 

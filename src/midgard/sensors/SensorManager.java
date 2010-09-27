@@ -36,9 +36,9 @@ public class SensorManager extends Service{
         return (INetworkSensor) naming.resolveName("NetworkSensor");
     }
 
-    public static IThemperatureSensor getThemperatureSensor() {
+    public static ITemperatureSensor getThemperatureSensor() {
         INameService naming = MicroKernel.getInstance().getNameService();
-        return (IThemperatureSensor) naming.resolveName("ThemperatureSensor");
+        return (ITemperatureSensor) naming.resolveName("ThemperatureSensor");
     }
 
    

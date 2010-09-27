@@ -11,9 +11,9 @@ import midgard.events.Event;
  *
  * @author fenrrir
  */
-public class ThemperatureEvent extends Event {
+public class TemperatureEvent extends Event {
 
-    public ThemperatureEvent(Object content) {
+    public TemperatureEvent(Object content) {
         super(content);
     }
 

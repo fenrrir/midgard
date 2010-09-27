@@ -5,12 +5,10 @@
 
 package midgard.sensors;
 
-import midgard.events.IEvent;
-
 /**
  *
  * @author fenrrir
  */
-public class DefaultThemperatureSensor extends Sensor implements IThemperatureSensor{
+public interface ITemperatureSensor extends ISensor{
 
 }
