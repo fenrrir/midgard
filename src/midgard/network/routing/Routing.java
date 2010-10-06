@@ -15,9 +15,9 @@ import midgard.componentmodel.ProxyComponent;
 public class Routing extends ProxyComponent implements IRouting {
     private IRouting concreteComponent;
 
-    public Routing(IRouting concreteComponent) {
-        super( (IComponent) concreteComponent );
-        this.concreteComponent = concreteComponent;
+    public void setConcreteComponent(IComponent concreteComponent) {
+        super.setConcreteComponent( concreteComponent );
+        this.concreteComponent = (IRouting) concreteComponent;
     }
 
 
