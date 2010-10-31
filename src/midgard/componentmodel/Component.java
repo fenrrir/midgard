@@ -113,8 +113,9 @@ public class Component implements IComponent {
 
     public void fireEvent(IEvent event) {
         Vector v;
-        if (getCacheFiredEvents().containsKey(new Float(event.getType()))){
-            v = (Vector) getCacheFiredEvents().get(event);
+        Float key = new Float(event.getType());
+        if (getCacheFiredEvents().containsKey(key)){
+            v = (Vector) getCacheFiredEvents().get(key);
             if (getCacheFiredEvents().size()  < 5){
                 v.addElement(event);
             }

@@ -17,12 +17,7 @@ public class DefaultAppManager extends Service implements IAppManager {
 
     private IAppRepositoryManager repository = null;
 
-    public DefaultAppManager() {
-    }
-
-
-
-    public String[] getRequiredInterfaces() {
+     public String[] getRequiredInterfaces() {
         return new String[]{DNS.IAPPREPOSITORYMANAGER};
     }
 

@@ -8,6 +8,7 @@ package midgard.app;
 import java.util.Vector;
 import midgard.componentmodel.IComponent;
 import midgard.repositories.RepositoryManager;
+import midgard.sensors.light.ThresholdChangedLightData;
 
 /**
  *
@@ -41,6 +42,34 @@ public class AppRepositoryManager extends RepositoryManager implements IAppRepos
     public Vector listSensors() {
         return concreteComponent.listSensors();
     }
+
+    public long getSleepTime() {
+        return concreteComponent.getSleepTime();
+    }
+
+    public ThresholdChangedLightData getLightThreshold() {
+        return concreteComponent.getLightThreshold();
+    }
+
+
+
+    public Vector listAppLabels() {
+        return concreteComponent.listAppLabels();
+    }
+
+    public Vector getSensorsForAppLabel(String name) {
+        return concreteComponent.getSensorsForAppLabel(name);
+    }
+
+    public IApp getAppFromLabel(String name) {
+        return concreteComponent.getAppFromLabel(name);
+    }
+
+
+
+
+    
+
 
         
 }

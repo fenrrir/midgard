@@ -5,6 +5,8 @@
 
 package midgard.app;
 
+import midgard.sensors.events.LightEvent;
+
 /**
  *
  * @author fenrrir
@@ -35,4 +37,10 @@ public class TestApp extends App{
         super.resume();
         System.err.println(getName() + " resume");
     }
+
+    public void handleLightEvent(LightEvent event) throws NotImplementedListener {
+        System.err.println("Evento de luz recebido");
+    }
+
+
 }

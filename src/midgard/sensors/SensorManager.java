@@ -5,46 +5,60 @@
 
 package midgard.sensors;
 
+import midgard.componentmodel.IComponent;
 import midgard.sensors.accelerometer.IAccelerometerSensor;
 import midgard.sensors.temperature.ITemperatureSensor;
 import midgard.sensors.battery.IBatterySensor;
 import midgard.sensors.network.INetworkSensor;
 import midgard.sensors.light.ILightSensor;
-import midgard.kernel.MicroKernel;
-import midgard.naming.INameService;
-import midgard.services.Service;
+import midgard.services.ProxyService;
 
 /**
  *
  * @author fenrrir
  */
-public class SensorManager extends Service{
-    
-   
-    public static IAccelerometerSensor getAccelerometerSensor() {
-        INameService naming = MicroKernel.getInstance().getNameService();
-        return (IAccelerometerSensor) naming.resolveName("AccelerometerSensor");
+public class SensorManager extends ProxyService implements ISensorManager{
+    private ISensorManager concreteComponent;
+
+    public void setConcreteComponent(IComponent component) {
+        super.setConcreteComponent(component);
+        this.concreteComponent = (ISensorManager) concreteComponent;
     }
 
-    public static IBatterySensor getBatterySensor() {
-        INameService naming = MicroKernel.getInstance().getNameService();
-        return (IBatterySensor) naming.resolveName("BatterySensor");
+    public ITemperatureSensor getThemperatureSensor() {
+        return concreteComponent.getThemperatureSensor();
     }
 
-    public static ILightSensor getLight() {
-        INameService naming = MicroKernel.getInstance().getNameService();
-        return (ILightSensor) naming.resolveName("LightSensor");
+    public INetworkSensor getNetworkSensor() {
+        return concreteComponent.getNetworkSensor();
     }
 
-    public static INetworkSensor getNetworkSensor() {
-        INameService naming = MicroKernel.getInstance().getNameService();
-        return (INetworkSensor) naming.resolveName("NetworkSensor");
+    public ILightSensor getLight() {
+        return concreteComponent.getLight();
     }
 
-    public static ITemperatureSensor getThemperatureSensor() {
-        INameService naming = MicroKernel.getInstance().getNameService();
-        return (ITemperatureSensor) naming.resolveName("ThemperatureSensor");
+    public IBatterySensor getBatterySensor() {
+        return concreteComponent.getBatterySensor();
     }
 
+    public IAccelerometerSensor getAccelerometerSensor() {
+        return concreteComponent.getAccelerometerSensor();
+    }
+
+    public void initSensor() {
+        concreteComponent.initSensor();
+    }
+
+    public void disableSensor() {
+        concreteComponent.disableSensor();
+    }
+
+    public void collect() {
+        concreteComponent.collect();
+    }
+
+    public void run() {
+        concreteComponent.run();
+    }
    
 }

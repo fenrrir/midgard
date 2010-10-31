@@ -43,6 +43,4 @@ public class AppManager extends ProxyService implements IAppManager {
         concreteComponent.destroryApps();
     }
 
-
-
 }

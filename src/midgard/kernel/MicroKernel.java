@@ -12,6 +12,7 @@ import midgard.naming.DNS;
 import midgard.naming.INameService;
 import midgard.components.ComponentRepositoryManager;
 import midgard.components.IComponentRepositoryManager;
+import midgard.sensors.ISensorManager;
 
 /**
  *
@@ -70,6 +71,10 @@ public class MicroKernel {
         IAppManager appManager =  (IAppManager)
                         componentManager.resolveComponent(DNS.IAPPMANAGER);
         appManager.loadAndInitializeApps();
+
+        ISensorManager sensorManager = (ISensorManager)
+                        componentManager.resolveComponent(ISensorManager.class.getName());
+        sensorManager.startService();
 
     }
 

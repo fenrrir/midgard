@@ -8,6 +8,8 @@ import com.sun.spot.sensorboard.EDemoBoard;
 import com.sun.spot.sensorboard.peripheral.ILightSensor;
 import com.sun.spot.sensorboard.peripheral.ILightSensorThresholdListener;
 import java.io.IOException;
+import midgard.app.IAppRepositoryManager;
+import midgard.componentmodel.IComponent;
 import midgard.sensors.Sensor;
 import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.ThresholdChangedLightEvent;
@@ -19,7 +21,21 @@ import midgard.sensors.events.ThresholdExceededLightEvent;
  */
 public class DefaultLightSensor extends Sensor implements midgard.sensors.light.ILightSensor, ILightSensorThresholdListener {
 
+    private IAppRepositoryManager appRepositoryManager;
     private com.sun.spot.sensorboard.peripheral.ILightSensor lightSensor;
+
+    public void connect(String interfaceName, IComponent component) {
+        super.connect(interfaceName, component);
+        if (interfaceName.equals(IAppRepositoryManager.class.getName())){
+            appRepositoryManager = (IAppRepositoryManager) component;
+        }
+    }
+
+    public String[] getRequiredInterfaces() {
+        return new String [] {IAppRepositoryManager.class.getName()};
+    }
+
+
 
     public void collect() {
         try {
@@ -55,14 +71,24 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
         System.err.println("thresholdChanged " + light + " " + low + " " + high);
         Object content = new ThresholdChangedLightData(low, high);
         fireEvent( new ThresholdChangedLightEvent(content) );
-        // ignore
     }
 
     public void initSensor(){
+        int high, low;
+        ThresholdChangedLightData thresholdChangedLightData;
         lightSensor = EDemoBoard.getInstance().getLightSensor();
-        lightSensor.addILightSensorThresholdListener(this); // register us as a listener
-        lightSensor.setThresholds(10, 700);   //TODO: user conf thresholds
-        lightSensor.enableThresholdEvents(true);            // turn on notification
+
+        thresholdChangedLightData = appRepositoryManager.getLightThreshold();
+        high = thresholdChangedLightData.high;
+        low = thresholdChangedLightData.low;
+        if (!( high == low && low == -1 )){
+            lightSensor.addILightSensorThresholdListener(this); // register us as a listener
+            lightSensor.setThresholds(low, high);   
+            lightSensor.enableThresholdEvents(true);            // turn on notification
+        }
+        else{
+            System.err.println("Light threshold not seted");
+        }
     }
 
     public void disableSensor(){
