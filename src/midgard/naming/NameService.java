@@ -17,10 +17,12 @@ import midgard.services.ProxyService;
 public class NameService extends ProxyService implements INameService {
     private INameService concreteComponent;
 
-    public NameService(INameService concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent = concreteComponent;
+    public void setConcreteComponent(IComponent component) {
+        super.setConcreteComponent(component);
+        this.concreteComponent = (INameService)component;
     }
+
+    
 
     public IComponent resolveName(String name) {
         return concreteComponent.resolveName(name);
