@@ -11,10 +11,17 @@ import midgard.componentmodel.Component;
  *
  * @author fenrrir
  */
-public class Service extends Component {
+public class Service extends Component implements IService {
 
     public Service() {
     }
+
+    public void startService() {
+    }
+
+    public void stopService() {
+    }
+
 
     
 

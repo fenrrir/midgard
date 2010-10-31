@@ -5,6 +5,7 @@
 
 package midgard.battery;
 
+import midgard.componentmodel.IComponent;
 import midgard.services.IService;
 import midgard.services.ProxyService;
 
@@ -16,10 +17,12 @@ public class BatteryManager extends ProxyService implements IBatteryManager{
 
     private IBatteryManager concreteComponent;
 
-    public BatteryManager(IBatteryManager concreteComponent) {
-        super((IService) concreteComponent );
-        this.concreteComponent = concreteComponent;
+    public void setConcreteComponent(IComponent component) {
+        super.setConcreteComponent(component);
+        concreteComponent = (IBatteryManager) component;
     }
+
+    
 
 
 

@@ -6,13 +6,13 @@
 package midgard.web;
 
 import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
+import midgard.services.ProxyService;
 
 /**
  *
  * @author fenrrir
  */
-public class WebServer extends ProxyComponent implements IWebServer{
+public class WebServer extends ProxyService implements IWebServer{
     private IWebServer concreteComponent;
 
 

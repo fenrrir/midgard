@@ -5,6 +5,7 @@
 
 package midgard.services;
 
+import midgard.componentmodel.IComponent;
 import midgard.componentmodel.ProxyComponent;
 
 /**
@@ -18,9 +19,19 @@ public class ProxyService extends ProxyComponent implements IProxyService{
     public ProxyService(){
     }
 
-    public ProxyService(IService concreteComponent) {
-        super(concreteComponent);
-        this.concreteComponent =  concreteComponent;
+    public void setConcreteComponent(IComponent component) {
+        super.setConcreteComponent(component);
+        this.concreteComponent = (IService) component;
     }
+
+    public void stopService() {
+        concreteComponent.stopService();
+    }
+
+    public void startService() {
+        concreteComponent.startService();
+    }
+
+
 
 }

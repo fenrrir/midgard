@@ -5,6 +5,7 @@
 
 package midgard.network;
 
+import midgard.componentmodel.IComponent;
 import midgard.network.routing.RoutingManager;
 import midgard.services.IService;
 import midgard.services.ProxyService;
@@ -16,10 +17,12 @@ import midgard.services.ProxyService;
 public class NetworkManager extends ProxyService implements INetworkManager{
     private INetworkManager concreteComponent;
 
-    public NetworkManager(INetworkManager concreteComponent) {
-        super((IService) concreteComponent);
-        this.concreteComponent = concreteComponent;
+    public void setConcreteComponent(IComponent component) {
+        super.setConcreteComponent(component);
+        this.concreteComponent = (INetworkManager) component;
     }
+
+    
 
     public RoutingManager getRoutingManager() {
         return concreteComponent.getRoutingManager();

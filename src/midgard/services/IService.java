@@ -13,4 +13,6 @@ import midgard.componentmodel.IComponent;
  */
 public interface IService extends IComponent {
 
+    public void startService();
+    public void stopService();
 }
