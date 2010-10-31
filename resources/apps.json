@@ -4,7 +4,23 @@
  */
 
 {
-    "Test": {
-        "class" : "midgard.app.TestApp"
+    "apps" : {
+        "Test": {
+            "class" : "midgard.app.TestApp",
+            "sensors" : [
+                            "midgard.sensors.light.ILightSensor",
+                            "midgard.sensors.temperature.ITemperatureSensor"
+                        ]
+        }
+    },
+    "sleep" : 10000,
+    "lightThreshold" : {
+        "max" : 700,
+        "min" : 100
+    },
+    "temperatureThreshold" : {
+        "max" : 100,
+        "min" : 0
     }
+
 }

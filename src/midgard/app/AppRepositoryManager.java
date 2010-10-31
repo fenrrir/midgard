@@ -9,6 +9,7 @@ import java.util.Vector;
 import midgard.componentmodel.IComponent;
 import midgard.repositories.RepositoryManager;
 import midgard.sensors.light.ThresholdChangedLightData;
+import midgard.sensors.temperature.ThresholdChangedTemperatureData;
 
 /**
  *
@@ -50,6 +51,12 @@ public class AppRepositoryManager extends RepositoryManager implements IAppRepos
     public ThresholdChangedLightData getLightThreshold() {
         return concreteComponent.getLightThreshold();
     }
+
+    public ThresholdChangedTemperatureData getTemperatureThreshold() {
+        return concreteComponent.getTemperatureThreshold();
+    }
+
+
 
 
 

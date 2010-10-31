@@ -9,7 +9,7 @@ package midgard.app;
  *
  * @author fenrrir
  */
-public class NotImplementedListener extends Exception {
+public class NotImplementedListener extends RuntimeException {
 
     /**
      * Creates a new instance of <code>NotImplementedListener</code> without detail message.

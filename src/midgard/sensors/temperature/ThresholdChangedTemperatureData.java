@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors.light;
+package midgard.sensors.temperature;
 
 import midgard.sensors.ThresholdChangedData;
 
@@ -11,9 +11,9 @@ import midgard.sensors.ThresholdChangedData;
  *
  * @author fenrrir
  */
-public class ThresholdChangedLightData extends ThresholdChangedData{
+public class ThresholdChangedTemperatureData extends ThresholdChangedData{
 
-    public ThresholdChangedLightData(int low, int high) {
+    public ThresholdChangedTemperatureData(int low, int high) {
         super(low, high);
     }
 

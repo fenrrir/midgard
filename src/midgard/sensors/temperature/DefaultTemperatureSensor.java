@@ -4,12 +4,12 @@
  */
 package midgard.sensors.temperature;
 
-import midgard.sensors.temperature.ITemperatureSensor;
-import midgard.sensors.temperature.TemperatureSensorData;
 import com.sun.spot.sensorboard.EDemoBoard;
 import com.sun.spot.sensorboard.peripheral.ITemperatureInput;
 import com.sun.spot.sensorboard.peripheral.ITemperatureInputThresholdListener;
 import java.io.IOException;
+import midgard.app.IAppRepositoryManager;
+import midgard.componentmodel.IComponent;
 import midgard.sensors.Sensor;
 import midgard.sensors.events.TemperatureEvent;
 import midgard.sensors.events.ThresholdExceededTemperatureEvent;
@@ -20,6 +20,7 @@ import midgard.sensors.events.ThresholdExceededTemperatureEvent;
  */
 public class DefaultTemperatureSensor extends Sensor implements ITemperatureSensor, ITemperatureInputThresholdListener {
     private ITemperatureInput tempSensor;
+    private IAppRepositoryManager appRepositoryManager;
 
     public void collect() {
 
@@ -38,6 +39,17 @@ public class DefaultTemperatureSensor extends Sensor implements ITemperatureSens
         
     }
 
+    public void connect(String interfaceName, IComponent component) {
+        super.connect(interfaceName, component);
+        if (interfaceName.equals(IAppRepositoryManager.class.getName())){
+            appRepositoryManager = (IAppRepositoryManager) component;
+        }
+    }
+
+    public String[] getRequiredInterfaces() {
+        return new String [] {IAppRepositoryManager.class.getName()};
+    }
+
     public void thresholdChanged(ITemperatureInput temp, double low, double high, boolean inCelsius) {
         System.err.println("Temperature threshold changed"); //ignore this
     }
@@ -50,10 +62,23 @@ public class DefaultTemperatureSensor extends Sensor implements ITemperatureSens
 
     
     public void initSensor(){
+        int high, low;
+        ThresholdChangedTemperatureData thresholdChangedTemperatureData;
+
         tempSensor = EDemoBoard.getInstance().getADCTemperature();
-        tempSensor.addITemperatureInputThresholdListener(this);
-        tempSensor.setThresholds(10, 30, true);
-        tempSensor.enableThresholdEvents(true);
+
+        thresholdChangedTemperatureData = appRepositoryManager.getTemperatureThreshold();
+        high = thresholdChangedTemperatureData.high;
+        low = thresholdChangedTemperatureData.low;
+
+        if (!( high == low && low == -1 )){
+            tempSensor.addITemperatureInputThresholdListener(this);
+            tempSensor.setThresholds(10, 30, true);
+            tempSensor.enableThresholdEvents(true);
+        }
+        else{
+            System.err.println("Temperature threshold not seted");
+        }
     }
     
     public void disableSensor(){

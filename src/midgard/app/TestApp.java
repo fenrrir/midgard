@@ -6,6 +6,7 @@
 package midgard.app;
 
 import midgard.sensors.events.LightEvent;
+import midgard.sensors.events.TemperatureEvent;
 
 /**
  *
@@ -38,9 +39,16 @@ public class TestApp extends App{
         System.err.println(getName() + " resume");
     }
 
-    public void handleLightEvent(LightEvent event) throws NotImplementedListener {
+    public void handleLightEvent(LightEvent event) {
         System.err.println("Evento de luz recebido");
     }
+
+    public void handleTemperatureEvent(TemperatureEvent event) {
+        System.err.println("Evento de temperatura recebido");
+    }
+
+
+  
 
 
 }

@@ -12,6 +12,7 @@ import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
 import midgard.naming.DNS;
 import midgard.sensors.light.ThresholdChangedLightData;
+import midgard.sensors.temperature.ThresholdChangedTemperatureData;
 import midgard.utils.FileUtils;
 import midgard.utils.JSONUtils;
 import org.json.me.JSONArray;
@@ -206,6 +207,21 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         return new ThresholdChangedLightData(min, max);
 
     }
+
+    public ThresholdChangedTemperatureData getTemperatureThreshold() {
+        int max;
+        int min;
+        try {
+            JSONObject lightConf = json.getJSONObject("temperatureThreshold");
+            max = lightConf.getInt("max");
+            min = lightConf.getInt("min");
+        } catch (JSONException ex) {
+            max = min = -1; //invalid
+        }
+        return new ThresholdChangedTemperatureData(min, max);
+    }
+
+
 
 
 }

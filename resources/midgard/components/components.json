@@ -30,6 +30,27 @@
          [
             "midgard.app.DefaultAppRepositoryManager"
          ]
+    },
+    "midgard.sensors.ISensorManager" : {
+        "proxy" : "midgard.sensors.SensorManager",
+        "implementations" :
+         [
+            "midgard.sensors.DefaultSensorManager"
+         ]
+    },
+    "midgard.sensors.light.ILightSensor" : {
+        "proxy" : "midgard.sensors.light.LightSensor",
+        "implementations" :
+         [
+            "midgard.sensors.light.DefaultLightSensor"
+         ]
+    },
+    "midgard.sensors.temperature.ITemperatureSensor" : {
+        "proxy" : "midgard.sensors.temperature.TemperatureSensor",
+        "implementations" :
+         [
+            "midgard.sensors.temperature.DefaultTemperatureSensor"
+         ]
     }
 
 

@@ -8,6 +8,7 @@ package midgard.app;
 import java.util.Vector;
 import midgard.repositories.IRepositoryManager;
 import midgard.sensors.light.ThresholdChangedLightData;
+import midgard.sensors.temperature.ThresholdChangedTemperatureData;
 
 /**
  *
@@ -24,5 +25,6 @@ public interface IAppRepositoryManager extends IRepositoryManager{
     public Vector listSensors();
     public long getSleepTime();
     public ThresholdChangedLightData getLightThreshold();
+    public ThresholdChangedTemperatureData getTemperatureThreshold();
     
 }

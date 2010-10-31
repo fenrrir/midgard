@@ -32,7 +32,7 @@ public interface IApp extends IComponent  {
     void handleBatteryEvent(BatteryEvent event) throws NotImplementedListener;
     void handleNetworkEvent(NetworkEvent event) throws NotImplementedListener;
     void handleLightEvent(LightEvent event) throws NotImplementedListener;
-    void handleThemperatureEvent(TemperatureEvent event) throws NotImplementedListener;
+    void handleTemperatureEvent(TemperatureEvent event) throws NotImplementedListener;
     void handleAccelerometerEvent(AccelerometerEvent event) throws NotImplementedListener;
     void handleRoutingEvent(RoutingEvent event) throws NotImplementedListener;
 

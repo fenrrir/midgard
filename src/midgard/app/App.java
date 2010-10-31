@@ -58,27 +58,27 @@ public class App extends Component implements IApp {
         return (IComponent) resolveName("midgard.tasks.ITaskManager");
     }
 
-    public void handleAccelerometerEvent(AccelerometerEvent event) throws NotImplementedListener {
+    public void handleAccelerometerEvent(AccelerometerEvent event){
         throw new NotImplementedListener();
     }
 
-    public void handleBatteryEvent(BatteryEvent event) throws NotImplementedListener {
+    public void handleBatteryEvent(BatteryEvent event){
         throw new NotImplementedListener();
     }
 
-    public void handleLightEvent(LightEvent event) throws NotImplementedListener {
+    public void handleLightEvent(LightEvent event){
         throw new NotImplementedListener();
     }
 
-    public void handleNetworkEvent(NetworkEvent event) throws NotImplementedListener {
+    public void handleNetworkEvent(NetworkEvent event){
         throw new NotImplementedListener();
     }
 
-    public void handleRoutingEvent(RoutingEvent event) throws NotImplementedListener {
+    public void handleRoutingEvent(RoutingEvent event){
         throw new NotImplementedListener();
     }
 
-    public void handleThemperatureEvent(TemperatureEvent event) throws NotImplementedListener {
+    public void handleTemperatureEvent(TemperatureEvent event){
         throw new NotImplementedListener();
     }
 
@@ -86,7 +86,7 @@ public class App extends Component implements IApp {
         try {
             super.newEventArrived(event);
             if (event instanceof TemperatureEvent) {
-                handleThemperatureEvent((TemperatureEvent) event);
+                handleTemperatureEvent((TemperatureEvent) event);
             } else if (event instanceof RoutingEvent) {
                 handleRoutingEvent((RoutingEvent) event);
             } else if (event instanceof NetworkEvent) {
