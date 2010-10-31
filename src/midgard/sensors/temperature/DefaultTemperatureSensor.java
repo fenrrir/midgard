@@ -2,12 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package midgard.sensors;
+package midgard.sensors.temperature;
 
+import midgard.sensors.temperature.ITemperatureSensor;
+import midgard.sensors.temperature.TemperatureSensorData;
 import com.sun.spot.sensorboard.EDemoBoard;
 import com.sun.spot.sensorboard.peripheral.ITemperatureInput;
 import com.sun.spot.sensorboard.peripheral.ITemperatureInputThresholdListener;
 import java.io.IOException;
+import midgard.sensors.Sensor;
 import midgard.sensors.events.TemperatureEvent;
 import midgard.sensors.events.ThresholdExceededTemperatureEvent;
 

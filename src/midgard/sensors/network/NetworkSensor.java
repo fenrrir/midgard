@@ -3,7 +3,10 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
+package midgard.sensors.network;
+
+import midgard.sensors.ProxySensor;
+import midgard.sensors.network.INetworkSensor;
 
 
 

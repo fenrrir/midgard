@@ -2,12 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package midgard.sensors;
+package midgard.sensors.light;
 
 import com.sun.spot.sensorboard.EDemoBoard;
 import com.sun.spot.sensorboard.peripheral.ILightSensor;
 import com.sun.spot.sensorboard.peripheral.ILightSensorThresholdListener;
 import java.io.IOException;
+import midgard.sensors.Sensor;
 import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.ThresholdChangedLightEvent;
 import midgard.sensors.events.ThresholdExceededLightEvent;
@@ -16,7 +17,7 @@ import midgard.sensors.events.ThresholdExceededLightEvent;
  *
  * @author fenrrir
  */
-public class DefaultLightSensor extends Sensor implements midgard.sensors.ILightSensor, ILightSensorThresholdListener {
+public class DefaultLightSensor extends Sensor implements midgard.sensors.light.ILightSensor, ILightSensorThresholdListener {
 
     private com.sun.spot.sensorboard.peripheral.ILightSensor lightSensor;
 

@@ -3,12 +3,14 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
+package midgard.sensors.network;
+
+import midgard.sensors.ISensor;
 
 /**
  *
  * @author fenrrir
  */
-public interface IAccelerometerSensor extends ISensor{
+public interface INetworkSensor extends ISensor{
 
 }

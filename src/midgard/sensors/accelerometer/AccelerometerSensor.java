@@ -3,7 +3,9 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
+package midgard.sensors.accelerometer;
+
+import midgard.sensors.ProxySensor;
 
 
 

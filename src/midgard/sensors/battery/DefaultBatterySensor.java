@@ -3,11 +3,12 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
+package midgard.sensors.battery;
 
 import midgard.battery.IBatteryManager;
 import midgard.kernel.MicroKernel;
 import midgard.naming.INameService;
+import midgard.sensors.Sensor;
 
 /**
  *

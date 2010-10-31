@@ -5,6 +5,11 @@
 
 package midgard.sensors;
 
+import midgard.sensors.accelerometer.IAccelerometerSensor;
+import midgard.sensors.temperature.ITemperatureSensor;
+import midgard.sensors.battery.IBatterySensor;
+import midgard.sensors.network.INetworkSensor;
+import midgard.sensors.light.ILightSensor;
 import midgard.kernel.MicroKernel;
 import midgard.naming.INameService;
 import midgard.services.Service;

@@ -3,14 +3,16 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
+package midgard.sensors.temperature;
 
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.ProxyComponent;
+import midgard.sensors.ProxySensor;
 
 /**
  *
  * @author fenrrir
  */
-public class LightSensor extends ProxySensor implements ILightSensor{
+public class TemperatureSensor extends ProxySensor implements ITemperatureSensor {
+
 }

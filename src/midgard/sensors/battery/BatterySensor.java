@@ -3,10 +3,12 @@
  * and open the template in the editor.
  */
 
-package midgard.sensors;
+package midgard.sensors.battery;
 
+import midgard.sensors.battery.IBatterySensor;
 import midgard.battery.IBatteryManager;
 import midgard.componentmodel.IComponent;
+import midgard.sensors.ProxySensor;
 
 /**
  *
