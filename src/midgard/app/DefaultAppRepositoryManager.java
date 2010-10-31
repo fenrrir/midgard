@@ -5,12 +5,14 @@
 package midgard.app;
 
 import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
 import midgard.naming.DNS;
 import midgard.utils.FileUtils;
+import org.json.me.JSONArray;
 import org.json.me.JSONException;
 import org.json.me.JSONObject;
 
@@ -22,7 +24,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
 
     private IComponentManager componentManager = null;
     private final String REPO = "/apps.json";
-    private Vector names;
+    private Vector names, sensors, services;
     private JSONObject json;
 
     public String[] getRequiredInterfaces() {
@@ -49,6 +51,10 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
 
     public void clear() {
         names.removeAllElements();
+        services.removeAllElements();
+        sensors.removeAllElements();
+        services = null;
+        sensors = null;
         names = null;
         json = null;
     }
@@ -77,22 +83,55 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     }
 
     public void open() {
+        JSONObject apps;
+        JSONArray jsonservices, jsonsensors;
+        String name, classname;
+        String sensorinterface, sensorclass;
+
         if (json == null) {
             try {
-                String name, classname;
+                
                 names = new Vector();
                 json = new JSONObject(FileUtils.readFile(REPO));
-                Enumeration e = json.keys();
+                apps = json.getJSONObject("apps");
+                Enumeration e = apps.keys();
                 while (e.hasMoreElements()) {
                     name = (String) e.nextElement();
-                    classname = json.getJSONObject(name).getString("class");
+                    classname = apps.getJSONObject(name).getString("class");
                     names.addElement(classname);
                 }
+
+
+                sensors = new Vector();
+                jsonsensors = json.getJSONArray("sensors");
+                int size = jsonsensors.length();
+                for (int i=0; i< size; i++) {
+                    sensors.addElement( jsonsensors.get(i) );
+                }
+
+                services = new Vector();
+                jsonservices = json.getJSONArray("services");
+                size = jsonservices.length();
+                for (int i=0; i< size; i++) {
+                    services.addElement( jsonservices.get(i) );
+                }
+
+             
             } catch (JSONException ex) {
                 ex.printStackTrace();
             }
         }
     }
+
+    public Vector listSensors() {
+        return sensors;
+    }
+
+    public Vector listServices() {
+        return services;
+    }
+
+
 
     public void destroy() {
         super.destroy();

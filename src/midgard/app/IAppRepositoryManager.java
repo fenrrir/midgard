@@ -16,4 +16,7 @@ public interface IAppRepositoryManager extends IRepositoryManager{
     public Vector getInstalledAppNames();
     public IApp getApp(String name);
     public IThreadedApp getThreadedApp(String name);
+    public Vector listServices();
+    public Vector listSensors();
+    
 }

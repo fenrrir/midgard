@@ -34,5 +34,13 @@ public class AppRepositoryManager extends RepositoryManager implements IAppRepos
         return concreteComponent.getApp(name);
     }
 
-    
+    public Vector listServices() {
+        return concreteComponent.listServices();
+    }
+
+    public Vector listSensors() {
+        return concreteComponent.listSensors();
+    }
+
+        
 }

@@ -4,15 +4,10 @@
  */
 package midgard.app;
 
-import java.util.Enumeration;
 import java.util.Vector;
 import midgard.componentmodel.IComponent;
-import midgard.components.IComponentManager;
 import midgard.naming.DNS;
 import midgard.services.Service;
-import midgard.utils.FileUtils;
-import org.json.me.JSONException;
-import org.json.me.JSONObject;
 
 /**
  *
