@@ -163,8 +163,7 @@ public class DefaultComponentManager extends Service implements IComponentManage
         if (ClassLoader.isInterface(name)) {
             IProxyComponent proxy = repository.getProxyOf(name);
             component = getImplementationOfInterface(name);
-            if (proxy.getConcreteComponent() == null)
-                proxy.setConcreteComponent(component); //FIX
+            proxy.setConcreteComponent(component); //TODO: test this
             loadAndInitializeComponent(proxy);
             return proxy;
 
