@@ -8,6 +8,8 @@ package midgard.repositories;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
+import midgard.components.IComponentManager;
+import midgard.components.IComponentRepositoryManager;
 import midgard.tasks.ITask;
 
 /**
@@ -15,6 +17,30 @@ import midgard.tasks.ITask;
  * @author fenrrir
  */
 public class DefaultTaskRepositoryManager extends Component implements ITaskRepositoryManager {
+
+    private IComponentRepositoryManager repository;
+    private IComponentManager componentManager;
+
+    public void initialize() {
+        super.initialize();
+        repository = (IComponentRepositoryManager) 
+                getConnectedComponents()
+                    .get(IComponentRepositoryManager.class.getName());
+
+        componentManager = (IComponentManager)
+                getConnectedComponents()
+                    .get(IComponentManager.class.getName());
+    }
+
+    public String[] getRequiredInterfaces() {
+        return new String[]{
+            IComponentRepositoryManager.class.getName(),
+            IComponentManager.class.getName()
+
+        };
+    }
+
+
 
     public void clear() {
     }
@@ -26,7 +52,7 @@ public class DefaultTaskRepositoryManager extends Component implements ITaskRepo
     }
 
     public IComponent get(String name) {
-        return null;
+        return componentManager.resolveComponent(name);
     }
 
     public ITask getTask(String name) {
@@ -34,7 +60,7 @@ public class DefaultTaskRepositoryManager extends Component implements ITaskRepo
     }
 
     public Vector list() {
-        return null;
+        return repository.getComponentsFromInterface(ITask.class.getName());
     }
 
 }
