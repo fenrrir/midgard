@@ -5,7 +5,6 @@
 
 package midgard.kernel;
 
-import midgard.app.IAppManager;
 import midgard.components.ComponentManager;
 import midgard.components.IComponentManager;
 import midgard.naming.DNS;
@@ -13,6 +12,7 @@ import midgard.naming.INameService;
 import midgard.components.ComponentRepositoryManager;
 import midgard.components.IComponentRepositoryManager;
 import midgard.sensors.ISensorManager;
+import midgard.services.IService;
 
 /**
  *
@@ -68,13 +68,11 @@ public class MicroKernel {
         componentManager.connect(DNS.ICOMPONENTREPOSITORYMANAGER, repositoryProxy);
         componentManager.initialize();
 
-        IAppManager appManager =  (IAppManager)
+        IService appManager =  (IService)
                         componentManager.resolveComponent(DNS.IAPPMANAGER);
-        appManager.loadAndInitializeApps();
+        appManager.startService();
 
-        ISensorManager sensorManager = (ISensorManager)
-                        componentManager.resolveComponent(ISensorManager.class.getName());
-        sensorManager.startService();
+        
 
     }
 

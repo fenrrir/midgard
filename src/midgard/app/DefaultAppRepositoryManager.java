@@ -5,11 +5,11 @@
 package midgard.app;
 
 import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
+import midgard.config.IDefaultConfig;
 import midgard.naming.DNS;
 import midgard.sensors.light.ThresholdChangedLightData;
 import midgard.sensors.temperature.ThresholdChangedTemperatureData;
@@ -26,18 +26,30 @@ import org.json.me.JSONObject;
 public class DefaultAppRepositoryManager extends Component implements IAppRepositoryManager {
 
     private IComponentManager componentManager = null;
+    private IDefaultConfig defaultConfig = null;
     private final String REPO = "/apps.json";
     private Vector names, appLabels, sensors, services;
-    private JSONObject json;
+    private JSONObject json = null;
     private long sleepTime;
 
     public String[] getRequiredInterfaces() {
-        return new String[]{DNS.ICOMPONENTMANAGER};
+        return new String[]{
+            IComponentManager.class.getName(),
+            IDefaultConfig.class.getName()
+        };
     }
 
-    public void connect(String interfaceName, IComponent component) {
-        super.connect(interfaceName, component);
-        componentManager = (IComponentManager) component;
+    
+
+    public void initialize() {
+        super.initialize();
+        componentManager = (IComponentManager)
+                getConnectedComponents()
+                    .get(IComponentManager.class.getName());
+
+        defaultConfig = (IDefaultConfig)
+                getConnectedComponents()
+                    .get(IDefaultConfig.class.getName());
 
     }
 
@@ -61,6 +73,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         sensors = null;
         names = null;
         json = null;
+        defaultConfig = null;
     }
 
     public void close() {
@@ -132,7 +145,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                 try {
                     sleepTime = json.getLong("sleep");
                 } catch (JSONException ex) {
-                    sleepTime = 10000; //FIX //TODO
+                    sleepTime = defaultConfig.getSleepTime();
                     System.err.println("Configuracao das apps nao contem tempo de sleep");
                 }
 
@@ -220,8 +233,4 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         }
         return new ThresholdChangedTemperatureData(min, max);
     }
-
-
-
-
 }

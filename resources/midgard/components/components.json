@@ -51,6 +51,13 @@
          [
             "midgard.sensors.temperature.DefaultTemperatureSensor"
          ]
+    },
+    "midgard.config.IDefaultConfig" : {
+        "proxy" : "midgard.config.DefaultConfig",
+        "implementations" :
+         [
+            "midgard.config.DefaultDefaultConfig"
+         ]
     }
 
 

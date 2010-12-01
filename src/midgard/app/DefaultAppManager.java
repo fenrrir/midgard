@@ -5,8 +5,8 @@
 package midgard.app;
 
 import java.util.Vector;
-import midgard.componentmodel.IComponent;
-import midgard.naming.DNS;
+import midgard.components.IComponentManager;
+import midgard.sensors.ISensorManager;
 import midgard.services.Service;
 
 /**
@@ -16,20 +16,24 @@ import midgard.services.Service;
 public class DefaultAppManager extends Service implements IAppManager {
 
     private IAppRepositoryManager repository = null;
+    private IComponentManager componentManager = null;
 
      public String[] getRequiredInterfaces() {
-        return new String[]{DNS.IAPPREPOSITORYMANAGER};
+        return new String[]{
+            IAppRepositoryManager.class.getName(),
+            IComponentManager.class.getName()
+        };
     }
 
-    public void connect(String interfaceName, IComponent component) {
-        super.connect(interfaceName, component);
-        repository = (IAppRepositoryManager) component;
-    }
-
-
-
-    public void initialize() {
+        public void initialize() {
         super.initialize();
+        repository = (IAppRepositoryManager) getConnectedComponents()
+                .get(IAppRepositoryManager.class.getName());
+
+
+        componentManager = (IComponentManager) getConnectedComponents()
+                .get(IComponentManager.class.getName());
+
         repository.open();
     }
 
@@ -83,4 +87,22 @@ public class DefaultAppManager extends Service implements IAppManager {
 
         }
     }
+
+    public void startService() {
+        super.startService();
+
+        if( repository.getInstalledAppNames().size() > 0 ){
+            loadAndInitializeApps();
+
+
+            ISensorManager sensorManager = (ISensorManager)
+                        componentManager.resolveComponent(ISensorManager.class.getName());
+            sensorManager.startService();
+
+        }
+
+        
+    }
+
+
 }
