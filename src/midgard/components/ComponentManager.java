@@ -82,7 +82,13 @@ public class ComponentManager extends ProxyService implements IComponentManager 
         return concreteComponent.getComponent(name);
     }
 
+    public void freeComponent(String name) {
+        concreteComponent.freeComponent(name);
+    }
 
+    public void freeComponent(IComponent component) {
+        concreteComponent.freeComponent(component);
+    }
 
 
 

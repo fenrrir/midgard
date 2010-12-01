@@ -53,6 +53,10 @@ public class DefaultComponentProfile implements IComponentProfile {
         return Utils.enumToVector(cache.keys());
     }
 
+    public void freeComponent(String name) {
+        if (cache.containsKey(name))
+            cache.remove(name);
+    }
 
 
 }

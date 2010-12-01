@@ -26,4 +26,5 @@ public interface IComponentManager extends IService, IComponentContainer {
                                      IComponent comp);
     public void changeImplementation(IProxyComponent proxy,
                                      IComponent comp);
+    public void freeComponent(IComponent component);
 }

@@ -77,6 +77,13 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
         }
     }
 
+    public void freeComponent(String name) {
+        if (table.containsKey(name))
+            table.remove(name);
+    }
+
+
+
     public Vector list() {
         Vector v = new Vector();
         Enumeration e = json.keys();

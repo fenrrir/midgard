@@ -18,5 +18,6 @@ public interface IComponentContainer {
     public Vector getComponentsFromInterface(String name);
     public IComponent getImplementationOfInterface(String name);
     public IComponent getComponent(String name);
+    public void freeComponent(String name);
 
 }

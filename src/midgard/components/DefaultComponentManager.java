@@ -61,11 +61,13 @@ public class DefaultComponentManager extends Service implements IComponentManage
     public void changeImplementation(IProxyComponent proxy, IComponent comp) {
         proxy.pause();
         proxy.destroy();
+        freeComponent(proxy.getConcreteComponent());
         proxy.setConcreteComponent(comp);
     }
 
     public void destroyComponent(IComponent component) {
         component.destroy();
+        freeComponent(component);
     }
 
     public void initializeComponent(IComponent component) {
@@ -170,4 +172,21 @@ public class DefaultComponentManager extends Service implements IComponentManage
         }
         return getComponent(name);
     }
+
+    public void freeComponent(String name) {
+        IComponent component = getComponent(name, false);
+        freeComponent(component);
+        
+    }
+
+    public void freeComponent(IComponent component) {
+        component.pause();
+        component.destroy();
+        repository.freeComponent(component.getName());
+    }
+
+
+
+
+
 }

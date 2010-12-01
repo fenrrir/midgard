@@ -53,5 +53,8 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
         return concreteComponent.getProxyOf(name);
     }
 
-    
+    public void freeComponent(String name) {
+        concreteComponent.freeComponent(name);
+    }
+
 }
