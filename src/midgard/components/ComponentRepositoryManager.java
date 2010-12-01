@@ -57,4 +57,14 @@ public class ComponentRepositoryManager extends RepositoryManager implements ICo
         concreteComponent.freeComponent(name);
     }
 
+    public Vector getOnMemoryComponents() {
+        return concreteComponent.getOnMemoryComponents();
+    }
+
+    public Vector getOnMemoryComponentNames() {
+        return concreteComponent.getOnMemoryComponentNames();
+    }
+
+
+
 }

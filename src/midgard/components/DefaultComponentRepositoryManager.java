@@ -5,6 +5,7 @@
 
 package midgard.components;
 
+import com.sun.spot.util.Utils;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
@@ -12,7 +13,6 @@ import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.kernel.ClassLoader;
-import midgard.naming.DNS;
 import midgard.utils.FileUtils;
 import org.json.me.JSONArray;
 import org.json.me.JSONException;
@@ -158,5 +158,15 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
             return null;
         }
     }
+
+    public Vector getOnMemoryComponentNames() {
+        return Utils.enumToVector(table.keys());
+    }
+
+    public Vector getOnMemoryComponents() {
+        return Utils.enumToVector(table.elements());
+    }
+
+
 
 }

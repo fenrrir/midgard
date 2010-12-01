@@ -5,8 +5,8 @@
 
 package midgard.components;
 
+import java.util.Vector;
 import midgard.componentmodel.IProxyComponent;
-import midgard.components.IComponentContainer;
 import midgard.repositories.IRepositoryManager;
 
 /**
@@ -15,5 +15,7 @@ import midgard.repositories.IRepositoryManager;
  */
 public interface IComponentRepositoryManager extends IRepositoryManager, IComponentContainer {
     public IProxyComponent getProxyOf(String name);
+    public Vector getOnMemoryComponentNames();
+    public Vector getOnMemoryComponents();
 
 }
