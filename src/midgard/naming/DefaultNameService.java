@@ -18,13 +18,13 @@ public class DefaultNameService extends Service implements INameService {
     private IComponentManager componentManager = null;
 
     public String[] getRequiredInterfaces(){
-        return new String [] {DNS.ICOMPONENTMANAGER};
+        return new String [] {IComponentManager.class.getName()};
     }
 
     public void initialize() {
         super.initialize();
         componentManager = (IComponentManager)
-                getConnectedComponents().get("IComponentManager");
+                getConnectedComponents().get(IComponentManager.class.getName());
     }
 
     public IComponent resolveName(String name) {
