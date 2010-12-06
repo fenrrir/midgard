@@ -73,8 +73,8 @@ public class DefaultTaskManager extends Service
 
 
     public void destroyTask(String name) {
-        IComponent component = componentManager.getComponent(name);
-        destroyTask((ITask) component);
+        ITask task = getTask(name);
+        destroyTask((ITask) task);
     }
 
     public void destroyTask(ITask task) {
@@ -119,8 +119,8 @@ public class DefaultTaskManager extends Service
     }
 
     public void pauseTask(String name) {
-        IComponent component = componentManager.getComponent(name);
-        pauseTask((ITask) component);
+        ITask task = getTask(name);
+        pauseTask((ITask) task);
     }
 
     public void pauseTask(ITask task) {
@@ -128,8 +128,8 @@ public class DefaultTaskManager extends Service
     }
 
     public void resumeTask(String name) {
-        IComponent component = componentManager.getComponent(name);
-        resumeTask((ITask) component);
+        ITask task = getTask(name);
+        resumeTask((ITask) task);
     }
 
     public void resumeTask(ITask task) {
