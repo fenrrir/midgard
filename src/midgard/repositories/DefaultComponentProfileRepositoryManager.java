@@ -14,8 +14,8 @@ import midgard.components.DefaultComponentProfile;
 import midgard.components.IComponentProfile;
 import midgard.components.IComponentRepositoryManager;
 import midgard.utils.FileUtils;
-import org.json.me.JSONException;
-import org.json.me.JSONObject;
+import midgard.web.json.JSONException;
+import midgard.web.json.JSONObject;
 
 /**
  *

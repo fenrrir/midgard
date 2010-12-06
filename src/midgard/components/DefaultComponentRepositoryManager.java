@@ -14,9 +14,9 @@ import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.kernel.ClassLoader;
 import midgard.utils.FileUtils;
-import org.json.me.JSONArray;
-import org.json.me.JSONException;
-import org.json.me.JSONObject;
+import midgard.web.json.JSONArray;
+import midgard.web.json.JSONException;
+import midgard.web.json.JSONObject;
 
 /**
  *

@@ -6,8 +6,8 @@ package midgard.config;
 
 import midgard.componentmodel.Component;
 import midgard.utils.FileUtils;
-import org.json.me.JSONException;
-import org.json.me.JSONObject;
+import midgard.web.json.JSONException;
+import midgard.web.json.JSONObject;
 
 /**
  *

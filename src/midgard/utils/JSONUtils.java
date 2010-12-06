@@ -7,9 +7,9 @@ package midgard.utils;
 
 import com.sun.spot.util.Utils;
 import java.util.Vector;
-import org.json.me.JSONArray;
-import org.json.me.JSONException;
-import org.json.me.JSONObject;
+import midgard.web.json.JSONArray;
+import midgard.web.json.JSONException;
+import midgard.web.json.JSONObject;
 
 /**
  *
