@@ -239,12 +239,12 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     }
 
     public ThresholdChangedTemperatureData getTemperatureThreshold() {
-        int max;
-        int min;
+        double max;
+        double min;
         try {
             JSONObject lightConf = json.getJSONObject("temperatureThreshold");
-            max = lightConf.getInt("max");
-            min = lightConf.getInt("min");
+            max = lightConf.getDouble("max");
+            min = lightConf.getDouble("min");
         } catch (JSONException ex) {
             max = min = -1; //invalid
         }

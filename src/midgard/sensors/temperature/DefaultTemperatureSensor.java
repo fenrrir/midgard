@@ -62,7 +62,7 @@ public class DefaultTemperatureSensor extends Sensor implements ITemperatureSens
 
     
     public void initSensor(){
-        int high, low;
+        double high, low;
         ThresholdChangedTemperatureData thresholdChangedTemperatureData;
 
         tempSensor = EDemoBoard.getInstance().getADCTemperature();

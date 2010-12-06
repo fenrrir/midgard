@@ -11,10 +11,23 @@ import midgard.sensors.ThresholdChangedData;
  *
  * @author fenrrir
  */
-public class ThresholdChangedTemperatureData extends ThresholdChangedData{
+public class ThresholdChangedTemperatureData{
 
-    public ThresholdChangedTemperatureData(int low, int high) {
-        super(low, high);
+    public double low, high;
+
+    public ThresholdChangedTemperatureData(double low, double high) {
+        this.low = low;
+        this.high = high;
     }
+
+    public double getHigh() {
+        return high;
+    }
+
+    public double getLow() {
+        return low;
+    }
+
+    
 
 }
