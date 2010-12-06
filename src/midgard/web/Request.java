@@ -10,7 +10,9 @@ package midgard.web;
  * @author fenrrir
  */
 public class Request {
-      public Request(String method, String uri) {
+
+
+    public Request(String method, String uri) {
         this.method = method;
         this.uri = uri;
         this.uriPrefix = "";

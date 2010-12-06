@@ -22,6 +22,7 @@ public interface IAppRepositoryManager extends IRepositoryManager{
     public Vector listAppLabels();
     public Vector getSensorsForAppLabel(String name);
     public Vector listServices();
+    public Vector listTasks();
     public Vector listSensors();
     public long getSleepTime();
     public ThresholdChangedLightData getLightThreshold();

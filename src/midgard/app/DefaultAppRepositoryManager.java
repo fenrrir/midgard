@@ -28,7 +28,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     private IComponentManager componentManager = null;
     private IDefaultConfig defaultConfig = null;
     private final String REPO = "/apps.json";
-    private Vector names, appLabels, sensors, services;
+    private Vector names, appLabels, sensors, services, tasks;
     private JSONObject json = null;
     private long sleepTime;
 
@@ -139,6 +139,14 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                 try {
                     services = JSONUtils.JSONArrayToVectorString(json.getJSONArray("services"));
                 } catch (JSONException ex) {
+                    services = new Vector();
+                    System.err.println("Configuracao das apps nao contem services");
+                }
+
+                try {
+                    tasks = JSONUtils.JSONArrayToVectorString(json.getJSONArray("tasks"));
+                } catch (JSONException ex) {
+                    tasks = new Vector();
                     System.err.println("Configuracao das apps nao contem services");
                 }
 
@@ -233,4 +241,10 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         }
         return new ThresholdChangedTemperatureData(min, max);
     }
+
+    public Vector listTasks() {
+        return tasks;
+    }
+
+
 }

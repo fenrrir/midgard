@@ -56,10 +56,10 @@ public class AppRepositoryManager extends RepositoryManager implements IAppRepos
         return concreteComponent.getTemperatureThreshold();
     }
 
-
-
-
-
+    public Vector listTasks() {
+        return concreteComponent.listTasks();
+    }
+    
     public Vector listAppLabels() {
         return concreteComponent.listAppLabels();
     }
