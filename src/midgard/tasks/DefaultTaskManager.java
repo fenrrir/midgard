@@ -29,7 +29,7 @@ public class DefaultTaskManager extends Service
     public String[] getRequiredInterfaces() {
         return new String [] {
             IComponentManager.class.getName(),
-            IAppManager.class.getName(),
+            IAppRepositoryManager.class.getName(),
             ITaskRepositoryManager.class.getName()
         };
     }
