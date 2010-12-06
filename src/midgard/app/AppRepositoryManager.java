@@ -59,6 +59,12 @@ public class AppRepositoryManager extends RepositoryManager implements IAppRepos
     public Vector listTasks() {
         return concreteComponent.listTasks();
     }
+
+    public Vector listCustomEvents() {
+        return concreteComponent.listCustomEvents();
+    }
+
+    
     
     public Vector listAppLabels() {
         return concreteComponent.listAppLabels();

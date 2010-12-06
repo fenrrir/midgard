@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import java.util.Vector;
 import midgard.events.ICustomEvent;
 
 /**
@@ -13,5 +14,7 @@ import midgard.events.ICustomEvent;
  */
 public interface IEventRepositoryManager extends IRepositoryManager {
     public ICustomEvent getEvent(String name);
+    public Vector listCustomEvents();
+    public Vector listEvents();
 
 }

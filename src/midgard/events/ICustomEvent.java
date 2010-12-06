@@ -13,7 +13,5 @@ import midgard.componentmodel.IComponent;
  * @author fenrrir
  */
 public interface ICustomEvent extends IEvent, IComponent{
-    public boolean onBoot();
     public Vector connectIn();
-
 }

@@ -28,7 +28,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     private IComponentManager componentManager = null;
     private IDefaultConfig defaultConfig = null;
     private final String REPO = "/apps.json";
-    private Vector names, appLabels, sensors, services, tasks;
+    private Vector names, appLabels, sensors, services, tasks, customEvents;
     private JSONObject json = null;
     private long sleepTime;
 
@@ -69,6 +69,8 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         names.removeAllElements();
         services.removeAllElements();
         sensors.removeAllElements();
+        tasks.removeAllElements();
+        customEvents.removeAllElements();
         services = null;
         sensors = null;
         names = null;
@@ -147,6 +149,13 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                     tasks = JSONUtils.JSONArrayToVectorString(json.getJSONArray("tasks"));
                 } catch (JSONException ex) {
                     tasks = new Vector();
+                    System.err.println("Configuracao das apps nao contem services");
+                }
+
+                try {
+                    customEvents = JSONUtils.JSONArrayToVectorString(json.getJSONArray("customEvents"));
+                } catch (JSONException ex) {
+                    customEvents = new Vector();
                     System.err.println("Configuracao das apps nao contem services");
                 }
 
@@ -244,6 +253,11 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
 
     public Vector listTasks() {
         return tasks;
+    }
+
+
+    public Vector listCustomEvents() {
+        return customEvents;
     }
 
 

@@ -24,6 +24,7 @@ public interface IAppRepositoryManager extends IRepositoryManager{
     public Vector listServices();
     public Vector listTasks();
     public Vector listSensors();
+    public Vector listCustomEvents();
     public long getSleepTime();
     public ThresholdChangedLightData getLightThreshold();
     public ThresholdChangedTemperatureData getTemperatureThreshold();

@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import java.util.Vector;
 import midgard.componentmodel.IComponent;
 import midgard.events.ICustomEvent;
 
@@ -25,6 +26,16 @@ public class EventRepositoryManager extends RepositoryManager  implements IEvent
     public ICustomEvent getEvent(String name) {
         return concreteComponent.getEvent(name);
     }
+
+    public Vector listEvents() {
+        return concreteComponent.listEvents();
+    }
+
+    public Vector listCustomEvents() {
+        return concreteComponent.listCustomEvents();
+    }
+
+    
 
 
 }

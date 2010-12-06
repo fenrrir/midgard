@@ -11,6 +11,7 @@ import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
 import midgard.components.IComponentRepositoryManager;
 import midgard.events.ICustomEvent;
+import midgard.events.IEvent;
 
 /**
  *
@@ -59,8 +60,15 @@ public class DefaultEventRepositoryManager extends Component implements IEventRe
     }
 
     public Vector list() {
+        return repository.getComponentsFromInterface(IEvent.class.getName());
+    }
+
+    public Vector listCustomEvents() {
         return repository.getComponentsFromInterface(ICustomEvent.class.getName());
     }
 
+    public Vector listEvents() {
+        return list();
+    }
 
 }
