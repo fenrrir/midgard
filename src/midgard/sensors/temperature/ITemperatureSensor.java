@@ -12,5 +12,7 @@ import midgard.sensors.ISensor;
  * @author fenrrir
  */
 public interface ITemperatureSensor extends ISensor{
+    public void enableThresholds(double low, double high, boolean celsius);
+    public void disableThresholds();
 
 }
