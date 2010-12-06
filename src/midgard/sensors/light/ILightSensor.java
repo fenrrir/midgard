@@ -12,5 +12,7 @@ import midgard.sensors.ISensor;
  * @author fenrrir
  */
 public interface ILightSensor extends ISensor{
+    public void enableThresholds(int low, int high);
+    public void disableThresholds();
 
 }

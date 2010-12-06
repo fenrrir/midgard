@@ -26,16 +26,14 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
 
     public void connect(String interfaceName, IComponent component) {
         super.connect(interfaceName, component);
-        if (interfaceName.equals(IAppRepositoryManager.class.getName())){
+        if (interfaceName.equals(IAppRepositoryManager.class.getName())) {
             appRepositoryManager = (IAppRepositoryManager) component;
         }
     }
 
     public String[] getRequiredInterfaces() {
-        return new String [] {IAppRepositoryManager.class.getName()};
+        return new String[]{IAppRepositoryManager.class.getName()};
     }
-
-
 
     public void collect() {
         try {
@@ -70,31 +68,38 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
     public void thresholdChanged(ILightSensor light, int low, int high) {
         System.err.println("thresholdChanged " + light + " " + low + " " + high);
         Object content = new ThresholdChangedLightData(low, high);
-        fireEvent( new ThresholdChangedLightEvent(content) );
+        fireEvent(new ThresholdChangedLightEvent(content));
     }
 
-    public void initSensor(){
+    public void initSensor() {
         int high, low;
         ThresholdChangedLightData thresholdChangedLightData;
         lightSensor = EDemoBoard.getInstance().getLightSensor();
 
         thresholdChangedLightData = appRepositoryManager.getLightThreshold();
-        high = thresholdChangedLightData.high;
-        low = thresholdChangedLightData.low;
-        if (!( high == low && low == -1 )){
-            lightSensor.addILightSensorThresholdListener(this); // register us as a listener
-            lightSensor.setThresholds(low, high);   
-            lightSensor.enableThresholdEvents(true);            // turn on notification
-        }
-        else{
+        if (thresholdChangedLightData != null) {
+            high = thresholdChangedLightData.high;
+            low = thresholdChangedLightData.low;
+            enableThresholds(low, high);
+
+        } else {
             System.err.println("Light threshold not seted");
         }
     }
 
-    public void disableSensor(){
-        lightSensor.removeILightSensorThresholdListener(this);
-        lightSensor.enableThresholdEvents(false);
+    public void disableSensor() {
+        disableThresholds();
         lightSensor = null;
     }
 
+    public void disableThresholds() {
+        lightSensor.removeILightSensorThresholdListener(this);
+        lightSensor.enableThresholdEvents(false);
+    }
+
+    public void enableThresholds(int low, int high) {
+        lightSensor.addILightSensorThresholdListener(this); // register us as a listener
+        lightSensor.setThresholds(low, high);
+        lightSensor.enableThresholdEvents(true);            // turn on notification
+    }
 }
