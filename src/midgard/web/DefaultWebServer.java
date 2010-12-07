@@ -11,6 +11,8 @@ import java.io.OutputStream;
 import java.util.Vector;
 import javax.microedition.io.Connector;
 import javax.microedition.io.StreamConnection;
+import midgard.components.IComponentManager;
+import midgard.events.IEvent;
 import midgard.services.Service;
 
 
@@ -23,16 +25,61 @@ import midgard.services.Service;
 public class DefaultWebServer extends Service implements IWebServer {
 
     private StreamConnection conn;
-    private NanoHttp server;
+    private IHTTPServer server;
+    private IComponentManager componentManager;
+
     private InputStream is;
     private OutputStream os;
+    private boolean isRunning = false;
+    private Thread thread;
 
 
+    public String[] getRequiredInterfaces() {
+        return new String [] {
+            IHTTPServer.class.getName(),
+            IComponentManager.class.getName()
+        };
+    }
 
-    public DefaultWebServer() throws IOException {
-        server = new NanoHttp();
+
+    public void initialize(){
+        super.initialize();
+        server = (IHTTPServer) getConnectedComponents()
+                    .get(IHTTPServer.class.getName());
+
+        componentManager = (IComponentManager) getConnectedComponents()
+                    .get(IComponentManager.class.getName());
+
         
     }
+
+    public void startService() {
+        super.startService();
+
+        server.registerEventListener(this);
+        isRunning = true;
+        thread = new Thread(this);
+        thread.start();
+    }
+
+    public void stopService() {
+        super.stopService();
+        isRunning = false;
+        server.removeEventListener(this);
+        componentManager.destroyComponent(server);
+
+        thread.interrupt();
+
+        isRunning = false;
+        server = null;
+    }
+
+    public void newEventArrived(IEvent event) {
+        super.newEventArrived(event);
+        fireEvent(event);
+    }
+
+ 
 
     public void run(){
         try {
@@ -61,7 +108,7 @@ public class DefaultWebServer extends Service implements IWebServer {
 
         try {
 
-            while (true) {
+            while (isRunning) {
 
                 
                 conn = (StreamConnection) Connector.open("");

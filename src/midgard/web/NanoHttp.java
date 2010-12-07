@@ -8,6 +8,8 @@ import com.sun.squawk.util.StringTokenizer;
 import java.io.*;
 import java.util.*;
 import midgard.componentmodel.Component;
+import midgard.web.events.RequestEvent;
+import midgard.web.events.ResponseEvent;
 
 /**
  *
@@ -144,10 +146,12 @@ public class NanoHttp extends Component implements IHTTPServer{
 
 
 
+            fireEvent(new RequestEvent(request));
             IURLHandler handler = (IURLHandler) handlers.get(request.uri);
             
             if (handler != null) {
                 Response response = handler.serve(request);
+                fireEvent( new ResponseEvent(response));
                 sendResponse(outs, response);
             } else {
                 sendError(outs, HTTP_NOTFOUND, HTTP_NOTFOUND);
