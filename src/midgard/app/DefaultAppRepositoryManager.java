@@ -11,6 +11,7 @@ import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
 import midgard.config.IDefaultConfig;
 import midgard.naming.DNS;
+import midgard.sensors.accelerometer.AccelerometerThresholds;
 import midgard.sensors.light.ThresholdChangedLightData;
 import midgard.sensors.temperature.ThresholdChangedTemperatureData;
 import midgard.utils.FileUtils;
@@ -232,7 +233,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
             max = lightConf.getInt("max");
             min = lightConf.getInt("min");
         } catch (JSONException ex) {
-            max = min = -1; //invalid
+            return null;
         }
         return new ThresholdChangedLightData(min, max);
 
@@ -246,9 +247,41 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
             max = lightConf.getDouble("max");
             min = lightConf.getDouble("min");
         } catch (JSONException ex) {
-            max = min = -1; //invalid
+            return  null;
         }
         return new ThresholdChangedTemperatureData(min, max);
+    }
+
+    public AccelerometerThresholds getAccelerometerThreshold() {
+        double xmax, xmin, ymax, ymin, zmax, zmin;
+        boolean relative;
+        try {
+            JSONObject axisX, axisY, axisZ;
+
+            relative = json.getJSONObject("accelerometerThreshold")
+                    .getBoolean("relative");
+            axisX = json.getJSONObject("accelerometerThreshold")
+                    .getJSONObject("x");
+            axisY = json.getJSONObject("accelerometerThreshold")
+                    .getJSONObject("y");
+            axisZ = json.getJSONObject("accelerometerThreshold")
+                    .getJSONObject("z");
+
+            xmax = axisX.getDouble("max");
+            xmin = axisX.getDouble("min");
+
+            ymax = axisY.getDouble("max");
+            ymin = axisY.getDouble("min");
+
+            zmax = axisZ.getDouble("max");
+            zmin = axisZ.getDouble("min");
+        } catch (JSONException ex) {
+            return null;
+        }
+        return new AccelerometerThresholds(xmin, xmax,
+                                           ymin, ymax,
+                                           zmin, zmax,
+                                           relative);
     }
 
     public Vector listTasks() {
