@@ -29,7 +29,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     private IComponentManager componentManager = null;
     private IDefaultConfig defaultConfig = null;
     private final String REPO = "/apps.json";
-    private Vector names, appLabels, sensors, services, tasks, customEvents;
+    private Vector names, appLabels, sensors, services, tasks, customEvents, adaptationProfiles;
     private JSONObject json = null;
     private long sleepTime;
 
@@ -150,14 +150,21 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                     tasks = JSONUtils.JSONArrayToVectorString(json.getJSONArray("tasks"));
                 } catch (JSONException ex) {
                     tasks = new Vector();
-                    System.err.println("Configuracao das apps nao contem services");
+                    System.err.println("Configuracao das apps nao contem tarefas");
                 }
 
                 try {
                     customEvents = JSONUtils.JSONArrayToVectorString(json.getJSONArray("customEvents"));
                 } catch (JSONException ex) {
                     customEvents = new Vector();
-                    System.err.println("Configuracao das apps nao contem services");
+                    System.err.println("Configuracao das apps nao contem eventos");
+                }
+
+                try {
+                    adaptationProfiles = JSONUtils.JSONArrayToVectorString(json.getJSONArray("adaptationProfiles"));
+                } catch (JSONException ex) {
+                    adaptationProfiles = new Vector();
+                    System.err.println("Configuracao das apps nao contem profiles de adaptacao");
                 }
 
                 try {
@@ -292,6 +299,12 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     public Vector listCustomEvents() {
         return customEvents;
     }
+
+    public Vector listAdaptationProfiles() {
+        return adaptationProfiles;
+    }
+
+
 
 
 }

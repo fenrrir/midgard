@@ -84,6 +84,12 @@ public class AppRepositoryManager extends RepositoryManager implements IAppRepos
         return concreteComponent.getAppFromLabel(name);
     }
 
+    public Vector listAdaptationProfiles() {
+        return concreteComponent.listAdaptationProfiles();
+    }
+
+    
+
 
 
 
