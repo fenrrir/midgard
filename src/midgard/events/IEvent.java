@@ -13,5 +13,6 @@ public interface IEvent {
     long getType();
     long getID();
     Object getContentObject();
+    public void setContentObject(Object content);
 
 }

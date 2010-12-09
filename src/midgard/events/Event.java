@@ -29,4 +29,10 @@ public class Event implements IEvent{
     public long getType() {
         return this.getClass().hashCode();
     }
+
+    public void setContentObject(Object content) {
+        this.content = content;
+    }
+
+
 }
