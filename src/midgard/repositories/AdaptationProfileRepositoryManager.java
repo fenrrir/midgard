@@ -5,6 +5,7 @@
 
 package midgard.repositories;
 
+import midgard.adaptation.IAdaptationProfile;
 import midgard.componentmodel.IComponent;
 
 /**
@@ -18,4 +19,16 @@ public class AdaptationProfileRepositoryManager extends RepositoryManager implem
         super.setConcreteComponent(concreteComponent);
         this.concreteComponent = (IAdaptationProfileRepositoryManager) concreteComponent;
     }
+
+    public IAdaptationProfile getProfile(String name) {
+        return concreteComponent.getProfile(name);
+    }
+
+    public void freeProfile(String name) {
+        concreteComponent.freeProfile(name);
+    }
+
+    
+
+
 }
