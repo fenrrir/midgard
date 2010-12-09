@@ -58,6 +58,34 @@
          [
             "midgard.config.DefaultDefaultConfig"
          ]
+    },
+    "midgard.sensors.network.INetworkSensor" : {
+        "proxy" : "midgard.sensors.network.NetworkSensor",
+        "implementations" :
+         [
+            "midgard.sensors.network.DefaultNetworkSensor"
+         ]
+    },
+    "midgard.sensors.battery.IBatterySensor" : {
+        "proxy" : "midgard.sensors.battery.BatterySensor",
+        "implementations" :
+         [
+            "midgard.sensors.battery.DefaultBatterySensor"
+         ]
+    },
+    "midgard.web.IWebServer" : {
+        "proxy" : "midgard.web.WebServer",
+        "implementations" :
+         [
+            "midgard.web.DefaultWebServer"
+         ]
+    },
+    "midgard.web.IHTTPServer" : {
+        "proxy" : "midgard.web.HTTPServer",
+        "implementations" :
+         [
+            "midgard.web.NanoHttp"
+         ]
     }
 
 
