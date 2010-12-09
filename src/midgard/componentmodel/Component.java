@@ -104,7 +104,9 @@ public class Component implements IComponent {
     }
 
     public void registerEventListener(IListener listener) {
-        getListeners().addElement(listener);
+        Vector listeners = getListeners();
+        if (!listeners.contains(listener))
+            listeners.addElement(listener);
     }
 
     public void removeEventListener(IListener listener) {
