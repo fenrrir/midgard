@@ -29,28 +29,25 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     private IComponentManager componentManager = null;
     private IDefaultConfig defaultConfig = null;
     private final String REPO = "/apps.json";
-    private Vector names, appLabels, sensors, services, tasks, customEvents, adaptationProfiles;
+    private Vector names, appLabels,
+            sensors, services,
+            tasks, customEvents,
+            adaptationProfiles, webApplications;
     private JSONObject json = null;
     private long sleepTime;
 
     public String[] getRequiredInterfaces() {
         return new String[]{
-            IComponentManager.class.getName(),
-            IDefaultConfig.class.getName()
-        };
+                    IComponentManager.class.getName(),
+                    IDefaultConfig.class.getName()
+                };
     }
-
-    
 
     public void initialize() {
         super.initialize();
-        componentManager = (IComponentManager)
-                getConnectedComponents()
-                    .get(IComponentManager.class.getName());
+        componentManager = (IComponentManager) getConnectedComponents().get(IComponentManager.class.getName());
 
-        defaultConfig = (IDefaultConfig)
-                getConnectedComponents()
-                    .get(IDefaultConfig.class.getName());
+        defaultConfig = (IDefaultConfig) getConnectedComponents().get(IDefaultConfig.class.getName());
 
     }
 
@@ -139,33 +136,11 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
 
                 }
 
-                try {
-                    services = JSONUtils.JSONArrayToVectorString(json.getJSONArray("services"));
-                } catch (JSONException ex) {
-                    services = new Vector();
-                    System.err.println("Configuracao das apps nao contem services");
-                }
-
-                try {
-                    tasks = JSONUtils.JSONArrayToVectorString(json.getJSONArray("tasks"));
-                } catch (JSONException ex) {
-                    tasks = new Vector();
-                    System.err.println("Configuracao das apps nao contem tarefas");
-                }
-
-                try {
-                    customEvents = JSONUtils.JSONArrayToVectorString(json.getJSONArray("customEvents"));
-                } catch (JSONException ex) {
-                    customEvents = new Vector();
-                    System.err.println("Configuracao das apps nao contem eventos");
-                }
-
-                try {
-                    adaptationProfiles = JSONUtils.JSONArrayToVectorString(json.getJSONArray("adaptationProfiles"));
-                } catch (JSONException ex) {
-                    adaptationProfiles = new Vector();
-                    System.err.println("Configuracao das apps nao contem profiles de adaptacao");
-                }
+                services = loadVectorDataFrom("services");
+                tasks = loadVectorDataFrom("tasks");
+                customEvents = loadVectorDataFrom("customEvents");
+                adaptationProfiles = loadVectorDataFrom("adaptationProfiles");
+                webApplications = loadVectorDataFrom("webApplications");
 
                 try {
                     sleepTime = json.getLong("sleep");
@@ -180,6 +155,17 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                 ex.printStackTrace();
             }
         }
+    }
+
+    private Vector loadVectorDataFrom(String name) {
+        Vector v;
+        try {
+            v = JSONUtils.JSONArrayToVectorString(json.getJSONArray(name));
+        } catch (JSONException ex) {
+            v = new Vector();
+            System.err.println("Configuracao das apps nao contem " + name);
+        }
+        return v;
     }
 
     public Vector listAppLabels() {
@@ -254,7 +240,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
             max = lightConf.getDouble("max");
             min = lightConf.getDouble("min");
         } catch (JSONException ex) {
-            return  null;
+            return null;
         }
         return new ThresholdChangedTemperatureData(min, max);
     }
@@ -265,14 +251,10 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         try {
             JSONObject axisX, axisY, axisZ;
 
-            relative = json.getJSONObject("accelerometerThreshold")
-                    .getBoolean("relative");
-            axisX = json.getJSONObject("accelerometerThreshold")
-                    .getJSONObject("x");
-            axisY = json.getJSONObject("accelerometerThreshold")
-                    .getJSONObject("y");
-            axisZ = json.getJSONObject("accelerometerThreshold")
-                    .getJSONObject("z");
+            relative = json.getJSONObject("accelerometerThreshold").getBoolean("relative");
+            axisX = json.getJSONObject("accelerometerThreshold").getJSONObject("x");
+            axisY = json.getJSONObject("accelerometerThreshold").getJSONObject("y");
+            axisZ = json.getJSONObject("accelerometerThreshold").getJSONObject("z");
 
             xmax = axisX.getDouble("max");
             xmin = axisX.getDouble("min");
@@ -286,15 +268,14 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
             return null;
         }
         return new AccelerometerThresholds(xmin, xmax,
-                                           ymin, ymax,
-                                           zmin, zmax,
-                                           relative);
+                ymin, ymax,
+                zmin, zmax,
+                relative);
     }
 
     public Vector listTasks() {
         return tasks;
     }
-
 
     public Vector listCustomEvents() {
         return customEvents;
@@ -304,7 +285,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
         return adaptationProfiles;
     }
 
-
-
-
+    public Vector listWebApplications() {
+        return webApplications;
+    }
 }
