@@ -5,8 +5,13 @@
 
 package midgard.app;
 
+import com.sun.spot.peripheral.radio.RadioFactory;
+import com.sun.spot.util.IEEEAddress;
+import java.io.IOException;
 import midgard.sensors.events.LightEvent;
+import midgard.sensors.events.NetworkEvent;
 import midgard.sensors.events.TemperatureEvent;
+import midgard.web.http.HttpConnector;
 
 /**
  *
@@ -47,8 +52,11 @@ public class TestApp extends App{
         System.err.println("Evento de temperatura recebido");
     }
 
+    public void handleNetworkEvent(NetworkEvent event) {
+        System.err.println("Evento de rede recebido");
+    }
 
-  
+
 
 
 }
