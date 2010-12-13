@@ -5,12 +5,13 @@
 
 package midgard.web;
 
+import com.sun.spot.io.j2me.radiogram.RadiogramConnection;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Vector;
 import javax.microedition.io.Connector;
-import javax.microedition.io.StreamConnection;
+import javax.microedition.io.Datagram;
 import midgard.components.IComponentManager;
 import midgard.events.IEvent;
 import midgard.services.Service;
@@ -24,12 +25,11 @@ import midgard.services.Service;
 
 public class DefaultWebServer extends Service implements IWebServer {
 
-    private StreamConnection conn;
+    private RadiogramConnection conn;
     private IHTTPServer server;
+    private Datagram input, output;
     private IComponentManager componentManager;
 
-    private InputStream is;
-    private OutputStream os;
     private boolean isRunning = false;
     private Thread thread;
 
@@ -111,18 +111,21 @@ public class DefaultWebServer extends Service implements IWebServer {
             while (isRunning) {
 
                 
-                conn = (StreamConnection) Connector.open("");
+                conn = (RadiogramConnection) Connector.open("radiogram://:80");
 
-                is = conn.openInputStream();
-                os = conn.openOutputStream();
+                input = conn.newDatagram(conn.getMaximumLength());
+                output = conn.newDatagram(conn.getMaximumLength());
 
-                server.handleRequest(is, os);
+                System.err.println("Webserver listening");
+                conn.receive(input);
+                System.err.println("Webserver received request");
+                server.handleRequest(input, output);
+                System.err.println("Webserver process request");
+                conn.send(output);
+                System.err.println("Webserver send request");
+                conn.close();
 
-                os.write(0);
-                os.flush();
-
-                is.close();
-                os.close();
+                
             }
         } catch (IOException e) {
             e.printStackTrace();

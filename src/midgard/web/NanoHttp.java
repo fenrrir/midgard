@@ -7,6 +7,7 @@ package midgard.web;
 import com.sun.squawk.util.StringTokenizer;
 import java.io.*;
 import java.util.*;
+import javax.microedition.io.Datagram;
 import midgard.componentmodel.Component;
 import midgard.web.events.RequestEvent;
 import midgard.web.events.ResponseEvent;
@@ -86,22 +87,27 @@ public class NanoHttp extends Component implements IHTTPServer{
         return res.toString();
     }
 
-    public void handleRequest(InputStream ins, OutputStream outs) throws IOException {
+    public void handleRequest(Datagram input, Datagram output) throws IOException {
         try {
 
-            Reader in = new InputStreamReader(ins);
+            ByteArrayInputStream byteArrayInput =
+                    new ByteArrayInputStream(input.getData());
+            Reader in = new InputStreamReader(byteArrayInput);
+
+
+
 
             // Read the request line
             StringTokenizer st = new StringTokenizer(readLine(in));
             if (!st.hasMoreTokens()) {
-                sendError(outs, HTTP_BADREQUEST, "BAD REQUEST: Syntax error");
+                sendError(output, HTTP_BADREQUEST, "BAD REQUEST: Syntax error");
                 return;
             }
 
             String method = st.nextToken();
 
             if (!st.hasMoreTokens()) {
-                sendError(outs, HTTP_BADREQUEST, "BAD REQUEST: Missing URI");
+                sendError(output, HTTP_BADREQUEST, "BAD REQUEST: Missing URI");
                 return;
             }
 
@@ -152,16 +158,16 @@ public class NanoHttp extends Component implements IHTTPServer{
             if (handler != null) {
                 Response response = handler.serve(request);
                 fireEvent( new ResponseEvent(response));
-                sendResponse(outs, response);
+                sendResponse(output, response);
             } else {
-                sendError(outs, HTTP_NOTFOUND, HTTP_NOTFOUND);
+                sendError(output, HTTP_NOTFOUND, HTTP_NOTFOUND);
             }
 
         } catch (IllegalArgumentException iae) {
-            sendError(outs, HTTP_BADREQUEST, iae.toString());
+            sendError(output, HTTP_BADREQUEST, iae.toString());
         } catch (Exception e) {
             e.printStackTrace();
-            sendError(outs, HTTP_INTERNALERROR, "SERVER INTERNAL ERROR: Exception: " + e.toString());
+            sendError(output, HTTP_INTERNALERROR, "SERVER INTERNAL ERROR: Exception: " + e.toString());
         }
     }
 
@@ -217,26 +223,29 @@ public class NanoHttp extends Component implements IHTTPServer{
     /**
      * Returns an error message as a HTTP response.
      */
-    private void sendError(OutputStream outs, String status, String msg) throws IOException {
-        sendResponse(outs, new Response(status, MIME_PLAINTEXT, msg));
+    private void sendError(Datagram output, String status, String msg) throws IOException {
+        sendResponse(output, new Response(status, MIME_PLAINTEXT, msg));
     }
 
     /**
      * Sends given response to the socket.
      */
-    private void sendResponse(OutputStream outs, Response response) throws IOException {
+    private void sendResponse(Datagram output, Response response) throws IOException {
         String status = response.status;
         String mime = response.mimeType;
         Properties header = response.header;
         InputStream data = response.data;
         int contentLength = response.contentLength;
 
+        ByteArrayOutputStream byteArrayOutput =
+                new ByteArrayOutputStream(output.getLength());
+
 
         if (status == null) {
             throw new Error("sendResponse(): Status can't be null.");
         }
 
-        Writer out = new OutputStreamWriter(outs);
+        Writer out = new OutputStreamWriter(byteArrayOutput);
         out.write("HTTP/1.0 " + status + " \r\n");
 
         if (contentLength >= 0) {
@@ -263,10 +272,9 @@ public class NanoHttp extends Component implements IHTTPServer{
             int read = 2048;
             while (read == 2048) {
                 read = data.read(buff, 0, 2048);
-                outs.write(buff, 0, read);
+                output.write(buff, 0, read);
             }
         }
-        outs.flush();
         if (data != null) {
             data.close();
         }
