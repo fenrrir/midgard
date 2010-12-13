@@ -18,4 +18,5 @@ import midgard.componentmodel.IComponent;
 public interface IHTTPServer extends IComponent {
     public void handleRequest(Datagram input, Datagram output) throws IOException;
     public void addView(URLView view);
+    public void removeViewWithURI(String URI);
 }

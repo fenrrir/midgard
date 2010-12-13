@@ -5,6 +5,7 @@
 
 package midgard.web;
 
+import java.util.Vector;
 import midgard.componentmodel.IComponent;
 import midgard.services.ProxyService;
 
@@ -25,10 +26,16 @@ public class WebServer extends ProxyService implements IWebServer{
         concreteComponent.run();
     }
 
-    public void addWebComponent(IWebComponent component) {
-        concreteComponent.addWebComponent(component);
+    public void removeWebApplication(IWebApplication application) {
+        concreteComponent.removeWebApplication(application);
     }
 
-    
+    public Vector listWebApplications() {
+        return concreteComponent.listWebApplications();
+    }
+
+    public void addWebApplication(IWebApplication application) {
+        concreteComponent.addWebApplication(application);
+    }
 
 }

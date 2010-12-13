@@ -5,6 +5,7 @@
 
 package midgard.web.tests;
 
+import java.io.ByteArrayInputStream;
 import java.util.Vector;
 import midgard.web.IWebApplication;
 import midgard.web.NanoHttp;
@@ -18,33 +19,16 @@ import midgard.web.URLView;
  * @author fenrrir
  */
 public class FakeWebApp implements IWebApplication {
-    private Vector views;
+    private Vector uris;
 
     public FakeWebApp() {
-        views = new Vector();
-        views.addElement(
-                new URLView("/", new URLHandler(){
-                        public Response serve(Request request) throws Exception{
-                           return getHome();
-                        }
-                    }
-                )
-        );
+        uris = new Vector();
+        uris.addElement("/");
+        uris.addElement("/foobar");
 
-        views.addElement(
-                new URLView("/foobar", new URLHandler(){
-                        public Response serve(Request request) throws Exception{
-                           return getFoo();
-                        }
-                    }
-                )
-        );
     }
 
-    public Vector getViews() {
-        return views;
-    }
-
+    
     private Response getHome(){
         return getResponse("Hello World");
         
@@ -55,7 +39,21 @@ public class FakeWebApp implements IWebApplication {
     }
 
     private Response getResponse(String body){
-        return new Response(NanoHttp.HTTP_OK, NanoHttp.MIME_HTML, body);
+        return new Response(NanoHttp.HTTP_OK, NanoHttp.MIME_HTML, 
+                            new ByteArrayInputStream(body.getBytes()), body.length());
     }
+
+    public Vector getURIs() {
+        return uris;
+    }
+
+    public Response serve(Request request) throws Exception {
+        if (request.uri.equals("/foobar")){
+            return getFoo();
+        }
+        return getHome();
+    }
+
+
 
 }

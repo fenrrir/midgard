@@ -11,7 +11,6 @@ import java.util.Vector;
  *
  * @author fenrrir
  */
-public interface IWebApplication {
-    public Vector getViews();
-
+public interface IWebApplication extends IURLHandler {
+    public Vector getURIs();
 }

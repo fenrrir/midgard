@@ -69,6 +69,11 @@ public class NanoHttp extends Component implements IHTTPServer{
         }
     }
 
+    public void removeViewWithURI(String URI) {
+        if (handlers.contains(URI)){
+            handlers.remove(URI);
+        }
+    }
 
     // ==================================================
     // Socket & server code
@@ -90,15 +95,20 @@ public class NanoHttp extends Component implements IHTTPServer{
     public void handleRequest(Datagram input, Datagram output) throws IOException {
         try {
 
+            String line;
+            String message = input.readUTF();
+
+            
             ByteArrayInputStream byteArrayInput =
-                    new ByteArrayInputStream(input.getData());
+                    new ByteArrayInputStream(message.getBytes());
             Reader in = new InputStreamReader(byteArrayInput);
 
 
 
 
             // Read the request line
-            StringTokenizer st = new StringTokenizer(readLine(in));
+            line = readLine(in);
+            StringTokenizer st = new StringTokenizer(line);
             if (!st.hasMoreTokens()) {
                 sendError(output, HTTP_BADREQUEST, "BAD REQUEST: Syntax error");
                 return;
@@ -135,7 +145,7 @@ public class NanoHttp extends Component implements IHTTPServer{
             // If there's another token, it's protocol version,
             // followed by HTTP headers. Ignore version but parse headers.
             if (st.hasMoreTokens()) {
-                String line = readLine(in);
+                line = readLine(in);
 
                 while (line.trim().length() > 0) {
                     int p = line.indexOf(':');
@@ -164,6 +174,7 @@ public class NanoHttp extends Component implements IHTTPServer{
             }
 
         } catch (IllegalArgumentException iae) {
+            iae.printStackTrace();
             sendError(output, HTTP_BADREQUEST, iae.toString());
         } catch (Exception e) {
             e.printStackTrace();
@@ -231,6 +242,7 @@ public class NanoHttp extends Component implements IHTTPServer{
      * Sends given response to the socket.
      */
     private void sendResponse(Datagram output, Response response) throws IOException {
+        String messageContent;
         String status = response.status;
         String mime = response.mimeType;
         Properties header = response.header;
@@ -265,18 +277,21 @@ public class NanoHttp extends Component implements IHTTPServer{
         }
 
         out.write("\r\n");
+
+
+
+        byte [] buffer = new byte[contentLength];
+        data.read(buffer, 0, contentLength);
+        String appData = new String( buffer );
+        out.write(appData);
+
         out.flush();
 
         if (data != null) {
-            byte[] buff = new byte[2048];
-            int read = 2048;
-            while (read == 2048) {
-                read = data.read(buff, 0, 2048);
-                output.write(buff, 0, read);
-            }
-        }
-        if (data != null) {
             data.close();
         }
+
+        messageContent  = new String(byteArrayOutput.toByteArray());
+        output.writeUTF(messageContent);
     }
 }

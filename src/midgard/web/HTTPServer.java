@@ -30,4 +30,8 @@ public class HTTPServer extends ProxyComponent implements IHTTPServer{
         concreteComponent.addView(view);
     }
 
+    public void removeViewWithURI(String URI) {
+        concreteComponent.removeViewWithURI(URI);
+    }
+
 }

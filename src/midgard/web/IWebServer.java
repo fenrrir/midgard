@@ -5,6 +5,7 @@
 
 package midgard.web;
 
+import java.util.Vector;
 import midgard.services.IService;
 
 /**
@@ -12,5 +13,7 @@ import midgard.services.IService;
  * @author fenrrir
  */
 public interface IWebServer extends IService, Runnable{
-    public void addWebComponent(IWebComponent component);
+    public void addWebApplication(IWebApplication application);
+    public void removeWebApplication(IWebApplication application);
+    public Vector listWebApplications();
 }
