@@ -7,6 +7,7 @@ package midgard.app;
 import java.util.Vector;
 import midgard.components.IComponentManager;
 import midgard.sensors.ISensorManager;
+import midgard.services.IService;
 import midgard.services.Service;
 
 /**
@@ -94,6 +95,19 @@ public class DefaultAppManager extends Service implements IAppManager {
         if( repository.getInstalledAppNames().size() > 0 ){
             loadAndInitializeApps();
 
+
+            
+
+            Vector services = repository.listServices();
+            String serviceName;
+            IService service;
+
+            for (int i=0; i< services.size(); i++){
+                serviceName = (String) services.elementAt(i);
+                service = (IService) componentManager.resolveComponent(serviceName);
+                service.startService();
+
+            }
 
             ISensorManager sensorManager = (ISensorManager)
                         componentManager.resolveComponent(ISensorManager.class.getName());
