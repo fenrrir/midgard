@@ -86,6 +86,27 @@
          [
             "midgard.web.NanoHttp"
          ]
+    },
+    "midgard.pubsubhubbub.IHub" : {
+        "proxy" : "midgard.pubsubhubbub.Hub",
+        "implementations" :
+         [
+            "midgard.pubsubhubbub.DefaultHub"
+         ]
+    },
+    "midgard.pubsubhubbub.ISubscriber" : {
+        "proxy" : "midgard.pubsubhubbub.Subscriber",
+        "implementations" :
+         [
+            "midgard.pubsubhubbub.DefaultSubscriber"
+         ]
+    },
+    "midgard.pubsubhubbub.IPublisher" : {
+        "proxy" : "midgard.pubsubhubbub.Publisher",
+        "implementations" :
+         [
+            "midgard.pubsubhubbub.DefaultPublisher"
+         ]
     }
 
 

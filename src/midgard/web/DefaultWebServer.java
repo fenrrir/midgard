@@ -63,7 +63,7 @@ public class DefaultWebServer extends Service implements IWebServer {
         Vector userWebApplications = appRepositoryManager.listWebApplications();
         for (int i = 0; i < userWebApplications.size(); i++) {
             webAppName = (String) userWebApplications.elementAt(i);
-            webApp = (IWebApplication) initializeWebAppByName(webAppName);
+            webApp = (IWebApplication) componentManager.resolveComponent(webAppName);
             if (webApp != null) {
                 addWebApplication(webApp);
             }
@@ -102,19 +102,6 @@ public class DefaultWebServer extends Service implements IWebServer {
 
         isRunning = false;
         server = null;
-    }
-
-    public Object initializeWebAppByName(String name) {
-        try {
-            return ClassLoader.newInstanceOf(name);
-        } catch (IllegalAccessException ex) {
-            ex.printStackTrace();
-        } catch (InstantiationException ex) {
-            ex.printStackTrace();
-        } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
-        }
-        return null;
     }
 
     public void newEventArrived(IEvent event) {
@@ -171,11 +158,14 @@ public class DefaultWebServer extends Service implements IWebServer {
                 conn.receive(input);
                 output.reset();
                 output.setAddress(input);
-                System.err.println("Webserver received request");
-                server.handleRequest(input, output);
-                System.err.println("Webserver process request" + output.readUTF());
-                conn.send(output);
-                System.err.println("Webserver send request");
+                System.err.println("Webserver received request " + input.getAddress());
+
+                try{
+                    server.handleRequest(input, output);
+                    //System.err.println("Webserver process request " + output.readUTF());
+                    conn.send(output);
+                    System.err.println("Webserver send request");
+                }catch (NotRequestException e){}
 
 
 

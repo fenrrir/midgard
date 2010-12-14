@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 import javax.microedition.io.Datagram;
 import midgard.componentmodel.Component;
+import midgard.web.events.AsyncMessageEvent;
 import midgard.web.events.RequestEvent;
 import midgard.web.events.ResponseEvent;
 
@@ -41,20 +42,7 @@ public class NanoHttp extends Component implements IHTTPServer{
     /**
      * Some HTTP response status codes
      */
-    public static final String HTTP_OK = "200 OK",
-            HTTP_REDIRECT = "301 Moved Permanently",
-            HTTP_FORBIDDEN = "403 Forbidden",
-            HTTP_NOTFOUND = "404 Not Found",
-            HTTP_BADREQUEST = "400 Bad Request",
-            HTTP_INTERNALERROR = "500 Internal Server Error",
-            HTTP_NOTIMPLEMENTED = "501 Not Implemented";
-    /**
-     * Common mime types for dynamic content
-     */
-    public static final String MIME_PLAINTEXT = "text/plain",
-            MIME_HTML = "text/html",
-            MIME_APPLICATION_JSON = "application/json",
-            MIME_DEFAULT_BINARY = "application/octet-stream";
+    
     /**
      * Vector to store all registered Web Applications
      */
@@ -93,6 +81,8 @@ public class NanoHttp extends Component implements IHTTPServer{
     }
 
     public void handleRequest(Datagram input, Datagram output) throws IOException {
+        Request request;
+        Response response;
         try {
 
             String line;
@@ -116,6 +106,14 @@ public class NanoHttp extends Component implements IHTTPServer{
 
             String method = st.nextToken();
 
+            if (!(method.equals("GET") ||
+                 method.equals("PUT") ||
+                 method.equals("POST") ||
+                 method.equals("DELETE"))){
+                fireEvent( new AsyncMessageEvent(message));
+                throw new NotRequestException("errors");
+            }
+
             if (!st.hasMoreTokens()) {
                 sendError(output, HTTP_BADREQUEST, "BAD REQUEST: Missing URI");
                 return;
@@ -135,7 +133,7 @@ public class NanoHttp extends Component implements IHTTPServer{
             }
 
 
-            Request request = new Request(method, uri);
+            request = new Request(method, uri);
 
             // Decode parameters
             if (parms != null) {
@@ -164,9 +162,11 @@ public class NanoHttp extends Component implements IHTTPServer{
 
             fireEvent(new RequestEvent(request));
             IURLHandler handler = (IURLHandler) handlers.get(request.uri);
+
             
             if (handler != null) {
-                Response response = handler.serve(request);
+                response = handler.serve(request);
+                response.uri = request.uri;
                 fireEvent( new ResponseEvent(response));
                 sendResponse(output, response);
             } else {
@@ -176,6 +176,8 @@ public class NanoHttp extends Component implements IHTTPServer{
         } catch (IllegalArgumentException iae) {
             iae.printStackTrace();
             sendError(output, HTTP_BADREQUEST, iae.toString());
+        }catch(NotRequestException nre){
+            throw nre;
         } catch (Exception e) {
             e.printStackTrace();
             sendError(output, HTTP_INTERNALERROR, "SERVER INTERNAL ERROR: Exception: " + e.toString());

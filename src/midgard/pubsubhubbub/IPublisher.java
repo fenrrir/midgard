@@ -3,15 +3,15 @@
  * and open the template in the editor.
  */
 
-package midgard.web;
+package midgard.pubsubhubbub;
 
-import java.util.Vector;
 import midgard.componentmodel.IComponent;
 
 /**
  *
  * @author fenrrir
  */
-public interface IWebApplication extends IComponent, IURLHandler {
-    public Vector getURIs();
+public interface IPublisher extends IComponent {
+    public void publish(String uri, String content);
+
 }

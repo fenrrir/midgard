@@ -5,14 +5,23 @@
 
 package midgard.app;
 
-import java.io.IOException;
-import midgard.web.http.HttpConnector;
+import midgard.pubsubhubbub.ISubscriber;
+import midgard.pubsubhubbub.events.SubscriptionEvent;
+import midgard.sensors.events.NetworkEvent;
+import midgard.web.Request;
 
 /**
  *
  * @author fenrrir
  */
 public class TestClientApp extends App {
+    private ISubscriber subscriber;
+
+    public String[] getRequiredInterfaces() {
+        return new String [] {
+            ISubscriber.class.getName()
+        };
+    }
 
     public void destroy() {
         super.destroy();
@@ -22,6 +31,10 @@ public class TestClientApp extends App {
     public void initialize() {
         super.initialize();
         System.err.println("@@@@@@ " + getName() + " load");
+
+        subscriber = (ISubscriber) getConnectedComponents()
+                .get(ISubscriber.class.getName());
+/*
         HttpConnector conn = new HttpConnector();
         try {
             conn.connect("c0a8.0f66.0000.1001");
@@ -30,6 +43,10 @@ public class TestClientApp extends App {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+ *
+ *
+ */
+        subscriber.register(this, "/sensor/temperature", "c0a8.0f66.0000.1001");
         
     }
 
@@ -47,5 +64,16 @@ public class TestClientApp extends App {
         super.resume();
         System.err.println(getName() + " resume");
     }
+
+    public void handleNetworkEvent(NetworkEvent event) {
+
+        if (event instanceof SubscriptionEvent){
+            Request request = (Request) event.getContentObject();
+            System.err.println("$$$ Received " +
+                    request.parms.getProperty("value"));
+        }
+    }
+
+
 
 }

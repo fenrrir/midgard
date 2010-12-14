@@ -17,7 +17,7 @@ import javax.microedition.io.Datagram;
  */
 public class HttpConnector {
 
-    private final int TIMEOUT = 2000;
+    private final int TIMEOUT = 10000;
     private boolean connected = false;
     private RadiogramConnection conn = null;
     Datagram datagram;
@@ -47,20 +47,20 @@ public class HttpConnector {
         }
     }
 
-    public String get(String uri) throws IOException {
+    public void get(String uri) throws IOException {
         String request;
         request = "GET " + uri + " HTTP/1.0\r\n\r\n";
         datagram.writeUTF(request);
         conn.send(datagram);
-        conn.receive(datagram);
-        return datagram.readUTF();
+
     }
 
 
-    public String post(String uri, Hashtable params) throws IOException {
+    public void post(String uri, Hashtable params) throws IOException {
         StringBuffer request = new StringBuffer();
         StringBuffer content = new StringBuffer();
         request.append("POST " + uri + " HTTP/1.0\r\n");
+        content.append("\r\n");
 
         Enumeration keys = params.keys();
         while (keys.hasMoreElements()){
@@ -75,10 +75,6 @@ public class HttpConnector {
         request.append(content.toString());
         datagram.writeUTF(request.toString());
         conn.send(datagram);
-
-        conn.receive(datagram);
-        return datagram.readUTF();
-
     }
 
     

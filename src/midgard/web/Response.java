@@ -86,5 +86,7 @@ public class Response {
      * to add lines.
      */
     public Properties header = new Properties();
+
+    public String uri; // for pubsubhubbub
 }
 
