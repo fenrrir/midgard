@@ -6,12 +6,13 @@
 package midgard.web.events;
 
 import midgard.events.Event;
+import midgard.sensors.events.NetworkEvent;
 
 /**
  *
  * @author fenrrir
  */
-public class AsyncMessageEvent extends Event {
+public class AsyncMessageEvent extends NetworkEvent {
 
     public AsyncMessageEvent(Object content) {
         super(content);
