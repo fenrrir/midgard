@@ -90,9 +90,8 @@
     For more information on using ant, see http://ant.apache.org.
 
     -->
-    <target name="ls">
-        <exec executable="ls">
-            <arg value="-l"/>
+    <target name="-pre-preverify">
+        <exec executable="./tools/strip/strip.py">
         </exec>
     </target>
 
