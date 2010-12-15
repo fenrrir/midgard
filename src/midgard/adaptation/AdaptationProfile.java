@@ -313,7 +313,7 @@ public class AdaptationProfile
                 if (command.equals("fireEvent")){
                     param = call.getString("type");
                     Object param2 = call.get("param");
-                    helper.profileFireEvent(this, name, param2);
+                    helper.profileFireEvent(this, param, param2);
                 }
 
             } catch (JSONException ex) {
