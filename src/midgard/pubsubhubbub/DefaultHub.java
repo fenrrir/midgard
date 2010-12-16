@@ -78,8 +78,8 @@ public class DefaultHub extends Service implements IHub {
         Vector listeners;
         String topic = request.parms.getProperty("topic");
         String address = request.parms.getProperty("address");
-  
-        if (!listenersByTopic.contains(topic)) {
+
+        if (!listenersByTopic.containsKey(topic)) {
             listeners = new Vector();
             listeners.addElement(address);
             listenersByTopic.put(topic, listeners);
