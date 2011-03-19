@@ -1,0 +1,20 @@
+{
+    "ChangeSensorManager" : {
+        "connectToComponents" : [
+            "AdaptationWebApp",
+        ],
+        "actions" : {
+            "changeSensorManager" : {
+                "require" : {
+                    "event":"ChangeSensorManagerEvent"
+                },
+                "call" : {
+                    "command" : "changeComponent",
+                    "param" : "midgard.sensors.DefaultSensorManager",
+                    "param2" : "midgard.sensors.AlternativeSensorManager"
+                }
+
+            }
+        }
+    }
+}
