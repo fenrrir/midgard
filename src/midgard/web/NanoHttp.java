@@ -10,6 +10,7 @@ import java.util.*;
 import javax.microedition.io.Datagram;
 import midgard.componentmodel.Component;
 import midgard.web.events.AsyncMessageEvent;
+import midgard.web.events.AsyncMessageEventData;
 import midgard.web.events.RequestEvent;
 import midgard.web.events.ResponseEvent;
 
@@ -110,7 +111,8 @@ public class NanoHttp extends Component implements IHTTPServer{
                  method.equals("PUT") ||
                  method.equals("POST") ||
                  method.equals("DELETE"))){
-                fireEvent( new AsyncMessageEvent(message));
+                fireEvent( new AsyncMessageEvent(
+                        new AsyncMessageEventData(message, input.getAddress())));
                 throw new NotRequestException("errors");
             }
 
