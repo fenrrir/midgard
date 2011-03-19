@@ -52,6 +52,20 @@
             "midgard.sensors.temperature.DefaultTemperatureSensor"
          ]
     },
+    "midgard.sensors.battery.IBatterySensor" : {
+        "proxy" : "midgard.sensors.battery.BatterySensor",
+        "implementations" :
+         [
+            "midgard.sensors.battery.DefaultBatterySensor"
+         ]
+    },
+    "midgard.battery.IBatteryManager" : {
+        "proxy" : "midgard.battery.BatteryManager",
+        "implementations" :
+         [
+            "midgard.battery.DefaultBatteryManager"
+         ]
+    },
     "midgard.config.IDefaultConfig" : {
         "proxy" : "midgard.config.DefaultConfig",
         "implementations" :
