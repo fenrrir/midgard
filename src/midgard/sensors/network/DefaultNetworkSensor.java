@@ -39,11 +39,13 @@ public class DefaultNetworkSensor extends Sensor implements INetworkSensor{
     }
 
     public void newEventArrived(IEvent event) {
+        //System.err.println("@@@@@@@@@@@@@@@@@@Event class " + event.getClass().getName());
         super.newEventArrived(event);
         fireEvent(event);
     }
 
     public void disableSensor() {
+        webserver.removeEventListener(this);
         webserver.stopService();
     }
 
