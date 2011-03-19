@@ -9,6 +9,9 @@ import midgard.pubsubhubbub.ISubscriber;
 import midgard.pubsubhubbub.events.SubscriptionEvent;
 import midgard.sensors.events.NetworkEvent;
 import midgard.web.Request;
+import midgard.web.events.AsyncMessageEvent;
+import midgard.web.json.JSONException;
+import midgard.web.json.JSONObject;
 
 /**
  *
@@ -25,12 +28,12 @@ public class TestClientApp extends App {
 
     public void destroy() {
         super.destroy();
-        System.err.println(getName() + " destroy");
+        //System.err.println(getName() + " destroy");
     }
 
     public void initialize() {
         super.initialize();
-        System.err.println("@@@@@@ " + getName() + " load");
+        //System.err.println("@@@@@@ " + getName() + " load");
 
         subscriber = (ISubscriber) getConnectedComponents()
                 .get(ISubscriber.class.getName());
@@ -46,31 +49,59 @@ public class TestClientApp extends App {
  *
  *
  */
-        subscriber.register(this, "/sensor/temperature", "c0a8.0f66.0000.1001");
+        //subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1001");
+        subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1001");
+subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1002");
+subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1003");
+subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1004");
+subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1005");
+
+
+
+
+        
         
     }
 
     public void load() {
         super.load();
-        System.err.println("@@@@@@ " + getName() + " load");
+        //System.err.println("@@@@@@ " + getName() + " load");
     }
 
     public void pause() {
         super.pause();
-        System.err.println(getName() + " pause");
+        //System.err.println(getName() + " pause");
     }
 
     public void resume() {
         super.resume();
-        System.err.println(getName() + " resume");
+        //System.err.println(getName() + " resume");
     }
 
     public void handleNetworkEvent(NetworkEvent event) {
 
+        //System.err.println("@@@@@@@@@@@@@@@@@@Event class " + event.getClass().getName());
+
         if (event instanceof SubscriptionEvent){
             Request request = (Request) event.getContentObject();
-            System.err.println("$$$ Received " +
-                    request.parms.getProperty("value"));
+            String data =
+                    request.parms.getProperty("value");
+            try {
+                JSONObject json = new JSONObject(data);
+                String address = json.getString("address");
+                int counter = Integer.parseInt(request.parms.getProperty("counter"));
+                System.err.println(address + " " + counter + " " +  System.currentTimeMillis());
+
+                
+            } catch (JSONException ex) {
+                ex.printStackTrace();
+            }
+
+        }
+
+        if (event instanceof AsyncMessageEvent){
+            String data  = (String )event.getContentObject();
+            //System.err.println("@@@@@@@@@@@@@@@@@@@ Mensagem de resposta da requisicoes HTTP" + data);
         }
     }
 
