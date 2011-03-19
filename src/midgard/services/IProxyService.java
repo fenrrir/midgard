@@ -11,6 +11,6 @@ import midgard.componentmodel.IProxyComponent;
  *
  * @author fenrrir
  */
-public interface IProxyService extends IProxyComponent{
+public interface IProxyService extends IProxyComponent, IService{
 
 }
