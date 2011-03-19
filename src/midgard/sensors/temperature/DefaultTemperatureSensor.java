@@ -27,11 +27,11 @@ public class DefaultTemperatureSensor extends Sensor implements ITemperatureSens
 
         try {
             int range = tempSensor.getRange();
-            System.err.println("Temperature device an instance of " + tempSensor.getClass() + ", with range = " + range);
+            //System.err.println("Temperature device an instance of " + tempSensor.getClass() + ", with range = " + range);
             int temp = tempSensor.getValue(); // The raw reading
             double tempF = tempSensor.getFahrenheit(); // The value converted to Farenheight
             double tempC = tempSensor.getCelsius(); // The value converted to Celcius.
-            System.err.println("tempSensor.getValue() = " + temp + " (raw value) = " + tempF + " degrees F = " + tempC + " degrees C.");
+            //System.err.println("tempSensor.getValue() = " + temp + " (raw value) = " + tempF + " degrees F = " + tempC + " degrees C.");
             Object content = new TemperatureSensorData(tempC, tempF);
             fireEvent(new TemperatureEvent(content));
         } catch (IOException ex) {
@@ -52,11 +52,11 @@ public class DefaultTemperatureSensor extends Sensor implements ITemperatureSens
     }
 
     public void thresholdChanged(ITemperatureInput temp, double low, double high, boolean inCelsius) {
-        System.err.println("Temperature threshold changed"); //ignore this
+        //System.err.println("Temperature threshold changed"); //ignore this
     }
 
     public void thresholdExceeded(ITemperatureInput temp, double val, boolean inCelsius) {
-        System.err.println("Temperature threshold exceeded val=" + val + " celsius?" + inCelsius);
+        //System.err.println("Temperature threshold exceeded val=" + val + " celsius?" + inCelsius);
         fireEvent(new ThresholdExceededTemperatureEvent(new Double(val)));
     }
 
@@ -73,7 +73,7 @@ public class DefaultTemperatureSensor extends Sensor implements ITemperatureSens
             low = thresholdChangedTemperatureData.low;
             enableThresholds(low, high, true);
         } else {
-            System.err.println("Temperature threshold not seted");
+            //System.err.println("Temperature threshold not seted");
         }
     }
 
