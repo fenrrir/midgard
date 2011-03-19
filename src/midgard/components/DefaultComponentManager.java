@@ -82,17 +82,17 @@ public class DefaultComponentManager extends Service implements IComponentManage
 
     public void initializeComponent(IComponent component) {
         if (!component.isInitialized()) {
-            System.err.println(getName() + " initialize");
+            //System.err.println(getName() + " initialize");
             component.initialize();
-            System.err.println(getName() + " posInitilized");
+            //System.err.println(getName() + " posInitilized");
         }
     }
 
     public void loadComponent(IComponent component) {     
         if (!component.isLoaded()) {
-            System.err.println(getName() + " load");
+            //System.err.println(getName() + " load");
             component.load();
-            System.err.println(getName() + " posLoad");
+            //System.err.println(getName() + " posLoad");
         }
     }
 

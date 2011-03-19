@@ -50,7 +50,7 @@ public class DefaultAccelerometerSensor extends Sensor
         if (thresholds != null) {
             enableThresholds(thresholds);
         } else {
-            System.err.println("Accelerometer threshold not seted");
+            //System.err.println("Accelerometer threshold not seted");
         }
 
     }

@@ -36,7 +36,7 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
     }
 
     public void connect(String interfaceName, IComponent component) {
-        System.err.println("Conectando " + interfaceName);
+        //System.err.println("Conectando " + interfaceName);
         super.connect(interfaceName, component);
         if (interfaceName.equals(IAppRepositoryManager.class.getName())){
             appRepositoryManager = (IAppRepositoryManager) component;
@@ -74,7 +74,7 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
         while (true){
             collect();
             Utils.sleep(appRepositoryManager.getSleepTime());
-            System.err.println("sensormanager tick");
+            //System.err.println("sensormanager tick");
         }
     }
 
@@ -116,7 +116,7 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
             for (int j=0; j < appSensors.size(); j++){
                 sensorName = (String) appSensors.elementAt(j);
 
-                System.err.println("ComponentManager " + componentManager);
+                //System.err.println("ComponentManager " + componentManager);
 
                 sensor = (ISensor) componentManager.resolveComponent(sensorName);
                 sensor.registerEventListener(app);

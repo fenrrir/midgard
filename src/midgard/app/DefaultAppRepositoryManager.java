@@ -131,7 +131,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                             }
                         }
                     } catch (JSONException ex) {
-                        System.err.println("Configuracao da app " + name + "nao contem sensores");
+                        //System.err.println("Configuracao da app " + name + "nao contem sensores");
                     }
 
                 }
@@ -146,7 +146,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                     sleepTime = json.getLong("sleep");
                 } catch (JSONException ex) {
                     sleepTime = defaultConfig.getSleepTime();
-                    System.err.println("Configuracao das apps nao contem tempo de sleep");
+                    //System.err.println("Configuracao das apps nao contem tempo de sleep");
                 }
 
 
@@ -163,7 +163,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
             v = JSONUtils.JSONArrayToVectorString(json.getJSONArray(name));
         } catch (JSONException ex) {
             v = new Vector();
-            System.err.println("Configuracao das apps nao contem " + name);
+            //System.err.println("Configuracao das apps nao contem " + name);
         }
         return v;
     }

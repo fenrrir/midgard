@@ -38,7 +38,7 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
     public void collect() {
         try {
             int lightLevel = lightSensor.getValue();
-            System.err.println("LightSensor.getValue() = " + lightLevel);
+            //System.err.println("LightSensor.getValue() = " + lightLevel);
             fireEvent(new LightEvent(new Integer(lightLevel)));
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -53,7 +53,7 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
      */
     public void thresholdExceeded(ILightSensor light, int val) {
         String which = (val < 100) ? "Low" : "Bright";
-        System.err.println(which + " light level event: light level = " + val);
+        //System.err.println(which + " light level event: light level = " + val);
         lightSensor.enableThresholdEvents(true);            // re-enable notification
         fireEvent(new ThresholdExceededLightEvent(new Integer(val)));
     }
@@ -66,7 +66,7 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
      * @param high cause a threshold event when light sensor value is greater than or equal high
      */
     public void thresholdChanged(ILightSensor light, int low, int high) {
-        System.err.println("thresholdChanged " + light + " " + low + " " + high);
+        //System.err.println("thresholdChanged " + light + " " + low + " " + high);
         Object content = new ThresholdChangedLightData(low, high);
         fireEvent(new ThresholdChangedLightEvent(content));
     }
@@ -83,7 +83,7 @@ public class DefaultLightSensor extends Sensor implements midgard.sensors.light.
             enableThresholds(low, high);
 
         } else {
-            System.err.println("Light threshold not seted");
+            //System.err.println("Light threshold not seted");
         }
     }
 

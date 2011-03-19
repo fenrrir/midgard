@@ -60,14 +60,14 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
         else{
             try {
                 Object obj = ClassLoader.newInstanceOf(name);
-                System.err.println("Instantiating object from class " + name);
+                //System.err.println("Instantiating object from class " + name);
                 table.put(name, obj);
                 return (IComponent) obj;
             } catch (IllegalAccessException ex) {
                 ex.printStackTrace();
                 return null;
             } catch (InstantiationException ex) {
-                System.err.println("InstantiationException with class" + name);
+                //System.err.println("InstantiationException with class" + name);
                 ex.printStackTrace();
                 return null;
             } catch (ClassNotFoundException ex) {

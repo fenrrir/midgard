@@ -47,8 +47,6 @@ public class DefaultWebServer extends Service implements IWebServer {
         componentManager = (IComponentManager) getConnectedComponents().get(IComponentManager.class.getName());
 
         appRepositoryManager = (IAppRepositoryManager) getConnectedComponents().get(IAppRepositoryManager.class.getName());
-
-
     }
 
     public void startService() {
@@ -59,7 +57,7 @@ public class DefaultWebServer extends Service implements IWebServer {
 
         server.registerEventListener(this);
 
-        System.err.println("WebServer Starting...");
+        //System.err.println("WebServer Starting...");
         Vector userWebApplications = appRepositoryManager.listWebApplications();
         for (int i = 0; i < userWebApplications.size(); i++) {
             webAppName = (String) userWebApplications.elementAt(i);
@@ -105,6 +103,7 @@ public class DefaultWebServer extends Service implements IWebServer {
     }
 
     public void newEventArrived(IEvent event) {
+        //System.err.println("@@@@@@@@@@@@@@@@@@Event class " + event.getClass().getName());
         super.newEventArrived(event);
         fireEvent(event);
     }
@@ -122,8 +121,8 @@ public class DefaultWebServer extends Service implements IWebServer {
         Vector appURIs = application.getURIs();
 
 
-        System.err.println("Webserver add application "
-                + application.getClass().getName());
+        //System.err.println("Webserver add application "
+        //        + application.getClass().getName());
 
         for (int i = 0; i < appURIs.size(); i++) {
             uri = (String) appURIs.elementAt(i);
@@ -154,17 +153,17 @@ public class DefaultWebServer extends Service implements IWebServer {
                 input = conn.newDatagram(conn.getMaximumLength());
                 output = conn.newDatagram(conn.getMaximumLength());
 
-                System.err.println("Webserver listening");
+                //System.err.println("Webserver listening");
                 conn.receive(input);
                 output.reset();
                 output.setAddress(input);
-                System.err.println("Webserver received request " + input.getAddress());
+                //System.err.println("Webserver received request " + input.getAddress());
 
                 try{
                     server.handleRequest(input, output);
                     //System.err.println("Webserver process request " + output.readUTF());
                     conn.send(output);
-                    System.err.println("Webserver send request");
+                    //System.err.println("Webserver send request");
                 }catch (NotRequestException e){}
 
 
