@@ -1,0 +1,25 @@
+{
+    "apps" : {
+        "Test": {
+            "class" : "MyAggregateWebApp",
+            "sensors" : [
+                            "midgard.sensors.network.INetworkSensor",
+                            "midgard.sensors.battery.IBatterySensor",
+                        ]
+        }
+    },
+    "services" : [
+        "midgard.pubsubhubbub.IHub"
+    ],
+    "webApplications" : [
+        "MyAggregateWebApp",
+        "midgard.web.apps.sensors.BatteryWebApp",
+        "AdaptationWebApp"
+    ],
+    "adaptationProfiles" : [
+        "ChangeSensorManager"
+    ],
+    "sleep" : 2000,
+}
+
+
