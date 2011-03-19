@@ -4,6 +4,8 @@
  */
 
 package midgard.battery;
+import com.sun.spot.peripheral.IBattery;
+import com.sun.spot.peripheral.Spot;
 import midgard.services.Service;
 
 /**
@@ -11,22 +13,30 @@ import midgard.services.Service;
  * @author fenrrir
  */
 public class DefaultBatteryManager extends Service implements IBatteryManager {
+    private IBattery battery;
 
-    public DefaultBatteryManager() {
+    public void initialize() {
+        super.initialize();
+        battery = Spot.getInstance().getPowerController().getBattery();
     }
 
-   
+    public void destroy() {
+        super.destroy();
+        battery = null;
+    }
+
 
     public double getAvailableCapacity() {
-        return 0.0;
+        return battery.getAvailableCapacity();
     }
 
     public int getBatteryLevel() {
-        return 0;
+        return battery.getBatteryLevel();
     }
 
     public long getTime() {
-        return 0;
+        long [] times = battery.getTime();
+        return times[times.length - 1];
     }
 
     
