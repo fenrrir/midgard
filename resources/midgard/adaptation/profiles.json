@@ -1,2 +1,24 @@
-
-{}
+{
+    "profileA" : {
+        "connectToComponents" : [
+            "midgard.sensors.ITemperatureSensor",
+        ],
+        "actions" : {
+            "Action1" : {
+                "require" : {
+                    "event":"midgard.sensors.events.TemperatureEvent",
+                    "conditional" : {
+                        "type" : "lt",
+                        "value" : 1.0
+                    }
+                },
+                "call" : {
+                    "command" : "fireEvent",
+                    "type" : "myapp.FrozenEvent",
+                    "param" : "Sensor fronzen!"
+                }
+                
+            }
+        }
+    }
+}
