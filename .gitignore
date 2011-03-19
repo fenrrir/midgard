@@ -1,0 +1,9 @@
+*.orig
+*.chg
+*.rej
+*.conflict
+*.class
+*.jar
+*~
+*.swp
+
