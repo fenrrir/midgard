@@ -1,0 +1,7 @@
+{
+    "customevents": [
+        "midgard.events.CustomEventA",
+        "midgard.events.CustomEventB",
+        "midgard.events.CustomEventC",
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "tasks": [
+        "midgard.tasks.TaskA",
+        "midgard.tasks.TaskB",
+        "midgard.tasks.TaskC",
+    ]
+}

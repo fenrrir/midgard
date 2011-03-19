@@ -1,0 +1,9 @@
+{
+    "default": {
+        "IComponentManager" : "DefaultComponentManager",
+        "IComponentRepositoryManager" : "DefaultComponentRepositoryManager"
+    }
+}
+
+
+adsas
