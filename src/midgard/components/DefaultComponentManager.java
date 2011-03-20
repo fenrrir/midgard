@@ -109,7 +109,7 @@ public class DefaultComponentManager extends Service implements IComponentManage
         }
     }
 
-    private void loadAndInitializeComponent(IComponent component) {
+    protected void loadAndInitializeComponent(IComponent component) {
         String[] requires;
         IComponent dependency = null;
 

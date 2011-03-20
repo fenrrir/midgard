@@ -36,7 +36,14 @@ public class Midgard extends MIDlet{
     }
 
     protected void startApp() throws MIDletStateChangeException {
-        kernel = MicroKernel.getInstance();
+        if (getAppProperty("UseProxy").equals("true")){
+            kernel = MicroKernel.getInstance();
+            System.err.println("UseProxy=on");
+        }
+        else{
+            kernel = MicroKernel.getInstance(false);
+            System.err.println("UseProxy=off");
+        }
     }
     
 

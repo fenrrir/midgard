@@ -4,3 +4,4 @@ MIDlet-Vendor: Rodrigo Pinheiro Marques de Araújo
 MIDlet-1: Midgard, , midgard.kernel.Midgard
 MicroEdition-Profile: IMP-1.0
 MicroEdition-Configuration: CLDC-1.1
+UseProxy: true

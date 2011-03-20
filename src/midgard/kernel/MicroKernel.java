@@ -23,8 +23,9 @@ import midgard.components.IComponentManager;
 import midgard.naming.DNS;
 import midgard.naming.INameService;
 import midgard.components.ComponentRepositoryManager;
+import midgard.components.DefaultComponentRepositoryManager;
 import midgard.components.IComponentRepositoryManager;
-import midgard.sensors.ISensorManager;
+import midgard.components.NoProxyComponentManager;
 import midgard.services.IService;
 
 /**
@@ -36,12 +37,16 @@ public class MicroKernel {
     private static MicroKernel instance = null;
     private ComponentManager componentManager;
 
-    private MicroKernel(){
-        boot();
+    private MicroKernel(boolean useProxy){
+        if (useProxy)
+            bootDefault();
+        else
+            bootNoProxy();
     }
 
 
-    private void boot(){
+
+    private void bootDefault(){
 
         
         IComponentRepositoryManager repositoryManager;
@@ -85,8 +90,34 @@ public class MicroKernel {
                         componentManager.resolveComponent(DNS.IAPPMANAGER);
         appManager.startService();
 
-        
+    }
 
+    private void bootNoProxy(){
+        IComponentRepositoryManager repositoryManager;
+        IComponentManager componentManager;
+
+        repositoryManager = (IComponentRepositoryManager)
+           new DefaultComponentRepositoryManager();
+
+
+        repositoryManager.open();
+
+
+
+
+        componentManager = (IComponentManager)
+                repositoryManager
+                    .getComponent(NoProxyComponentManager.class.getName());
+
+        componentManager.load();
+        componentManager.connect(IComponentRepositoryManager.class.getName(),
+                repositoryManager);
+        componentManager.initialize();
+
+        IService appManager =  (IService)
+                        componentManager.resolveComponent(DNS.IAPPMANAGER);
+
+        appManager.startService();
     }
 
     public INameService getNameService(){
@@ -97,9 +128,15 @@ public class MicroKernel {
         return ClassLoader.getInstance();
     }
 
+    public static MicroKernel getInstance(boolean useProxy){
+        if (instance == null)
+            instance = new MicroKernel(useProxy);
+        return instance;
+    }
+
     public static MicroKernel getInstance(){
         if (instance == null)
-            instance = new MicroKernel();
+            instance = new MicroKernel(true); /*never necessary*/
         return instance;
     }
 
