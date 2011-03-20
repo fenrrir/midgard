@@ -17,13 +17,11 @@
 */
 package midgard.components;
 
-import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.kernel.ClassLoader;
-import midgard.naming.DNS;
 import midgard.services.Service;
 
 /**
@@ -38,7 +36,7 @@ public class DefaultComponentManager extends Service implements IComponentManage
     public void initialize() {
         super.initialize();
         requestComponent = new Hashtable();
-        repository = (IComponentRepositoryManager) getConnectedComponents().get(DNS.ICOMPONENTREPOSITORYMANAGER);
+        repository = (IComponentRepositoryManager) getConnectedComponents().get(IComponentRepositoryManager.class.getName());
     }
 
     private void setRequestComponent(String name) {
@@ -64,7 +62,7 @@ public class DefaultComponentManager extends Service implements IComponentManage
     }
 
     public String[] getRequiredInterfaces() {
-        return new String[]{DNS.ICOMPONENTREPOSITORYMANAGER};
+        return new String[]{IComponentRepositoryManager.class.getName()};
     }
 
     public void changeImplementation(IProxyComponent proxy, IComponent old, IComponent comp) {

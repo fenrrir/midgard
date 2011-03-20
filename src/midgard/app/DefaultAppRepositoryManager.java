@@ -23,7 +23,6 @@ import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
 import midgard.config.IDefaultConfig;
-import midgard.naming.DNS;
 import midgard.sensors.accelerometer.AccelerometerThresholds;
 import midgard.sensors.light.ThresholdChangedLightData;
 import midgard.sensors.temperature.ThresholdChangedTemperatureData;
@@ -99,8 +98,8 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     public Vector list() {
         Vector v1, v2;
         Enumeration e;
-        v1 = componentManager.getComponentsFromInterface(DNS.IAPP);
-        v2 = componentManager.getComponentsFromInterface(DNS.ITHREADEDAPP);
+        v1 = componentManager.getComponentsFromInterface(IApp.class.getName());
+        v2 = componentManager.getComponentsFromInterface(IThreadedApp.class.getName());
 
         e = v2.elements();
         while (e.hasMoreElements()) {

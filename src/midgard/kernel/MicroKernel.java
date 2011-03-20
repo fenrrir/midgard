@@ -18,9 +18,9 @@
 
 package midgard.kernel;
 
+import midgard.app.IAppManager;
 import midgard.components.ComponentManager;
 import midgard.components.IComponentManager;
-import midgard.naming.DNS;
 import midgard.naming.INameService;
 import midgard.components.ComponentRepositoryManager;
 import midgard.components.DefaultComponentRepositoryManager;
@@ -68,7 +68,7 @@ public class MicroKernel {
 
         
         repositoryManager = (IComponentRepositoryManager)
-           repositoryProxy.getImplementationOfInterface(DNS.ICOMPONENTREPOSITORYMANAGER);
+           repositoryProxy.getImplementationOfInterface(IComponentRepositoryManager.class.getName());
         
         if ( !repositoryProxy.getConcreteComponent().getName().equals(repositoryManager.getName()) ){
             repositoryProxy.pause();
@@ -80,19 +80,19 @@ public class MicroKernel {
 
 
         componentManager = (ComponentManager) 
-                        repositoryManager.getProxyOf(DNS.ICOMPONENTMANAGER);
+                        repositoryManager.getProxyOf(IComponentManager.class.getName());
 
         componentManagerImpl = (IComponentManager)
-                repositoryManager.getImplementationOfInterface(DNS.ICOMPONENTMANAGER);
+                repositoryManager.getImplementationOfInterface(IComponentManager.class.getName());
 
 
         componentManager.setConcreteComponent(componentManagerImpl);
         componentManager.load();
-        componentManager.connect(DNS.ICOMPONENTREPOSITORYMANAGER, repositoryProxy);
+        componentManager.connect(IComponentRepositoryManager.class.getName(), repositoryProxy);
         componentManager.initialize();
 
         IService appManager =  (IService)
-                        componentManager.resolveComponent(DNS.IAPPMANAGER);
+                        componentManager.resolveComponent(IAppManager.class.getName());
         appManager.startService();
 
     }
@@ -120,13 +120,13 @@ public class MicroKernel {
         componentManager.initialize();
 
         IService appManager =  (IService)
-                        componentManager.resolveComponent(DNS.IAPPMANAGER);
+                        componentManager.resolveComponent(IAppManager.class.getName());
 
         appManager.startService();
     }
 
     public INameService getNameService(){
-        return (INameService) componentManager.resolveComponent(DNS.INAMESERVICE);
+        return (INameService) componentManager.resolveComponent(INameService.class.getName());
     }
 
     public ClassLoader getClassLoader(){
