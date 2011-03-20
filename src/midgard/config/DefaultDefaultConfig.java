@@ -18,6 +18,7 @@
 package midgard.config;
 
 import midgard.componentmodel.Component;
+import midgard.kernel.Midgard;
 import midgard.utils.FileUtils;
 import midgard.web.json.JSONException;
 import midgard.web.json.JSONObject;
@@ -67,4 +68,18 @@ public class DefaultDefaultConfig extends Component implements IDefaultConfig { 
             ex.printStackTrace();
         }
     }
+
+    public String getAdaptationProfileRepositoryPath() {
+        return getSystemProperty("AdaptationProfileRepositoryPath");
+    }
+
+    public String getAppRepositoryPath() {
+        return getSystemProperty("AppRepositoryPath");
+    }
+
+    public String getSystemProperty(String name) {
+        return Midgard.getProperty(name);
+    }
+
+
 }

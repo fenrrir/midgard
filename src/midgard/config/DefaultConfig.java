@@ -37,4 +37,19 @@ public class DefaultConfig extends ProxyComponent implements IDefaultConfig {
         return concreteComponent.getSleepTime();
     }
 
+    public String getSystemProperty(String name) {
+        return concreteComponent.getSystemProperty(name);
+    }
+
+    public String getAppRepositoryPath() {
+        return concreteComponent.getAppRepositoryPath();
+    }
+
+    public String getAdaptationProfileRepositoryPath() {
+        return concreteComponent.getAdaptationProfileRepositoryPath();
+    }
+
+    
+
+
 }

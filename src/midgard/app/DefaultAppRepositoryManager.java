@@ -41,7 +41,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
 
     private IComponentManager componentManager = null;
     private IDefaultConfig defaultConfig = null;
-    private final String REPO = "/apps.json";
+    private String repositoryPath;
     private Vector names, appLabels,
             sensors, services,
             tasks, customEvents,
@@ -59,9 +59,8 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
     public void initialize() {
         super.initialize();
         componentManager = (IComponentManager) getConnectedComponents().get(IComponentManager.class.getName());
-
         defaultConfig = (IDefaultConfig) getConnectedComponents().get(IDefaultConfig.class.getName());
-
+        repositoryPath = defaultConfig.getAppRepositoryPath();
     }
 
     public IApp getApp(String name) {
@@ -124,7 +123,7 @@ public class DefaultAppRepositoryManager extends Component implements IAppReposi
                 sensors = new Vector();
                 appLabels = new Vector();
 
-                json = new JSONObject(FileUtils.readFile(REPO));
+                json = new JSONObject(FileUtils.readFile(repositoryPath));
 
                 apps = json.getJSONObject("apps");
                 Enumeration e = apps.keys();

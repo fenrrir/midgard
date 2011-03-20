@@ -26,5 +26,8 @@ import midgard.componentmodel.IComponent;
  */
 public interface IDefaultConfig extends IComponent {
     public long getSleepTime();
+    public String getSystemProperty(String name);
+    public String getAppRepositoryPath();
+    public String getAdaptationProfileRepositoryPath();
 
 }

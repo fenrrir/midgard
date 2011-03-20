@@ -24,6 +24,7 @@ import midgard.adaptation.AdaptationProfile;
 import midgard.adaptation.IAdaptationProfile;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
+import midgard.config.IDefaultConfig;
 import midgard.utils.FileUtils;
 import midgard.web.json.JSONException;
 import midgard.web.json.JSONObject;
@@ -34,10 +35,24 @@ import midgard.web.json.JSONObject;
  */
 public class DefaultAdaptationProfileRepositoryManager extends Component implements IAdaptationProfileRepositoryManager {
 
-    private final String REPO = "/midgard/adaptation/profiles.json";
+    private String repositoryPath;
+    private IDefaultConfig defaultConfig = null;
     private JSONObject json;
     private boolean isOpened = false;
     private Hashtable cache = null;
+
+
+    public String[] getRequiredInterfaces() {
+        return new String[]{
+                    IDefaultConfig.class.getName()
+                };
+    }
+
+    public void initialize() {
+        super.initialize();
+        defaultConfig = (IDefaultConfig) getConnectedComponents().get(IDefaultConfig.class.getName());
+        repositoryPath = defaultConfig.getAdaptationProfileRepositoryPath();
+    }
 
     public void clear() {
         json = null;
@@ -56,7 +71,7 @@ public class DefaultAdaptationProfileRepositoryManager extends Component impleme
     public void open() {
         if (!isOpened) {
             try {
-                json = new JSONObject(FileUtils.readFile(REPO));
+                json = new JSONObject(FileUtils.readFile(repositoryPath));
                 isOpened = true;
             } catch (JSONException ex) {
                 ex.printStackTrace();
