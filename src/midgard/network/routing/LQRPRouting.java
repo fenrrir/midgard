@@ -21,6 +21,7 @@ package midgard.network.routing;
 import com.sun.spot.peripheral.radio.ILowPan;
 import com.sun.spot.peripheral.radio.LowPan;
 import com.sun.spot.peripheral.radio.RadioFactory;
+import com.sun.spot.peripheral.radio.mhrp.aodv.AODVManager;
 import com.sun.spot.peripheral.radio.mhrp.lqrp.LQRPManager;
 import com.sun.spot.peripheral.radio.routing.RouteInfo;
 import com.sun.spot.peripheral.radio.routing.RouteTable;
@@ -64,9 +65,14 @@ public class LQRPRouting extends Service implements IRouting {
         super.initialize();
         ILowPan lowPan;
         lowPan = LowPan.getInstance();
+        manager = LQRPManager.getInstance();
+        /* FIXME
         lowPan.setRoutingManager(manager);
         manager.initialize(RadioFactory.getRadioPolicyManager().getIEEEAddress(), lowPan);
         manager.start();
+        */
+
+
     }
 
     public void load() {
