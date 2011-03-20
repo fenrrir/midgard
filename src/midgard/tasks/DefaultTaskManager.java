@@ -129,6 +129,9 @@ public class DefaultTaskManager extends Service
                 component.registerEventListener(task);
             }
         }
+
+        Thread thread = new Thread(task);
+        thread.start();
     }
 
     public void pauseTask(String name) {
