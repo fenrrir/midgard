@@ -18,14 +18,13 @@
 
 package midgard.components;
 
-import midgard.componentmodel.IComponent;
-import midgard.componentmodel.IProxyComponent;
+import midgard.services.IService;
 
 /**
  *
  * @author fenrrir
  */
-public interface IComponentProfileManager extends IComponent, IComponentProfileContainer {
+public interface IComponentProfileManager extends IService, IComponentProfileContainer {
     public IComponentProfile getActiveProfile();
     public void loadAndinitializeProfile(String profile);
     public void loadAndinitializeProfile(IComponentProfile profile);

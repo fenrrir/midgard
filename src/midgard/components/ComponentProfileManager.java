@@ -20,13 +20,13 @@ package midgard.components;
 
 import java.util.Vector;
 import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
+import midgard.services.ProxyService;
 
 /**
  *
  * @author fenrrir
  */
-public class ComponentProfileManager extends ProxyComponent
+public class ComponentProfileManager extends ProxyService
         implements IComponentProfileManager{
 
     private IComponentProfileManager concreteComponent;

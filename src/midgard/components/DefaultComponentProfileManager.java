@@ -19,15 +19,15 @@
 package midgard.components;
 
 import java.util.Vector;
-import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.repositories.IComponentProfileRepositoryManager;
+import midgard.services.Service;
 
 /**
  *
  * @author fenrrir
  */
-public class DefaultComponentProfileManager extends Component
+public class DefaultComponentProfileManager extends Service
        implements IComponentProfileManager {
 
     private IComponentProfileRepositoryManager repository;
@@ -48,6 +48,7 @@ public class DefaultComponentProfileManager extends Component
 
         repository = (IComponentProfileRepositoryManager) getConnectedComponents().
                 get(IComponentProfileRepositoryManager.class.getName());
+        repository.open();
         activeProfile = repository.getProfileByName("default");
     }
 
