@@ -16,32 +16,15 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.repositories;
+package midgard.repositories.tasks;
 
-import midgard.adaptation.IAdaptationProfile;
-import midgard.componentmodel.IComponent;
+import midgard.repositories.IRepositoryManager;
+import midgard.tasks.ITask;
 
 /**
  *
  * @author fenrrir
  */
-public class AdaptationProfileRepositoryManager extends RepositoryManager implements IAdaptationProfileRepositoryManager{
-    private IAdaptationProfileRepositoryManager concreteComponent;
-
-    public void setConcreteComponent(IComponent concreteComponent){
-        super.setConcreteComponent(concreteComponent);
-        this.concreteComponent = (IAdaptationProfileRepositoryManager) concreteComponent;
-    }
-
-    public IAdaptationProfile getProfile(String name) {
-        return concreteComponent.getProfile(name);
-    }
-
-    public void freeProfile(String name) {
-        concreteComponent.freeProfile(name);
-    }
-
-    
-
-
+public interface ITaskRepositoryManager extends IRepositoryManager{
+    public ITask getTask(String name);
 }

@@ -16,8 +16,9 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.repositories;
+package midgard.repositories.tasks;
 
+import midgard.repositories.tasks.ITaskRepositoryManager;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;

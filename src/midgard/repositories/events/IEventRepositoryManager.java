@@ -16,16 +16,19 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.repositories;
+package midgard.repositories.events;
 
-import midgard.adaptation.IAdaptationProfile;
+import java.util.Vector;
+import midgard.events.ICustomEvent;
+import midgard.repositories.IRepositoryManager;
 
 /**
  *
  * @author fenrrir
  */
-public interface IAdaptationProfileRepositoryManager extends IRepositoryManager{
-    public IAdaptationProfile getProfile(String name);
-    public void freeProfile(String name);
+public interface IEventRepositoryManager extends IRepositoryManager {
+    public ICustomEvent getEvent(String name);
+    public Vector listCustomEvents();
+    public Vector listEvents();
 
 }

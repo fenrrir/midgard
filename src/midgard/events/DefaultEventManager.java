@@ -22,7 +22,7 @@ import midgard.app.IAppManager;
 import midgard.app.IAppRepositoryManager;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
-import midgard.repositories.IEventRepositoryManager;
+import midgard.repositories.events.IEventRepositoryManager;
 import midgard.services.Service;
 
 /**

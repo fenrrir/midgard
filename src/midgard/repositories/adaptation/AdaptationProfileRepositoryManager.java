@@ -16,39 +16,33 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.repositories;
+package midgard.repositories.adaptation;
 
-import java.util.Vector;
+import midgard.adaptation.IAdaptationProfile;
 import midgard.componentmodel.IComponent;
-import midgard.components.IComponentProfile;
+import midgard.repositories.RepositoryManager;
 
 /**
  *
  * @author fenrrir
  */
-public class ComponentProfileRepositoryManager extends RepositoryManager implements IComponentProfileRepositoryManager{
-    private IComponentProfileRepositoryManager concreteComponent;
-
-
-
+public class AdaptationProfileRepositoryManager extends RepositoryManager implements IAdaptationProfileRepositoryManager{
+    private IAdaptationProfileRepositoryManager concreteComponent;
 
     public void setConcreteComponent(IComponent concreteComponent){
         super.setConcreteComponent(concreteComponent);
-        this.concreteComponent = (IComponentProfileRepositoryManager) concreteComponent;
+        this.concreteComponent = (IAdaptationProfileRepositoryManager) concreteComponent;
     }
 
-    public Vector getProfiles() {
-        return concreteComponent.getProfiles();
+    public IAdaptationProfile getProfile(String name) {
+        return concreteComponent.getProfile(name);
     }
 
-    public IComponentProfile getProfileByName(String name) {
-        return concreteComponent.getProfileByName(name);
-    }
-
-    public String getContainerName() {
-        return concreteComponent.getContainerName();
+    public void freeProfile(String name) {
+        concreteComponent.freeProfile(name);
     }
 
     
+
 
 }

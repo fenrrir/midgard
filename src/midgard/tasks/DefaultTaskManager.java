@@ -23,7 +23,7 @@ import midgard.app.IAppManager;
 import midgard.app.IAppRepositoryManager;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
-import midgard.repositories.ITaskRepositoryManager;
+import midgard.repositories.tasks.ITaskRepositoryManager;
 import midgard.services.Service;
 
 /**

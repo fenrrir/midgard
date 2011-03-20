@@ -80,11 +80,11 @@
                'midgard.tasks.DefaultTaskManager',
          ]
     },
-    "midgard.repositories.ITaskRepositoryManager": {
-        'proxy': "midgard.repositories.TaskRepositoryManager",
+    "midgard.repositories.tasks.ITaskRepositoryManager": {
+        'proxy': "midgard.repositories.tasks.TaskRepositoryManager",
         'implementations':
          [
-               "midgard.repositories.DefaultTaskRepositoryManager",
+               "midgard.repositories.tasks.DefaultTaskRepositoryManager",
          ]
     },
     'midgard.events.IEventManager': {
@@ -94,11 +94,11 @@
                'midgard.events.DefaultEventManager',
          ]
     },
-    "midgard.repositories.IEventRepositoryManager": {
-        'proxy': "midgard.repositories.EventRepositoryManager",
+    "midgard.repositories.events.IEventRepositoryManager": {
+        'proxy': "midgard.repositories.events.EventRepositoryManager",
         'implementations':
          [
-               "midgard.repositories.DefaultEventRepositoryManager",
+               "midgard.repositories.events.DefaultEventRepositoryManager",
          ]
     },
     'midgard.network.INetworkManager': {
@@ -144,18 +144,18 @@
                "midgard.components.DefaultComponentProfileManager",
          ]
     },
-    "midgard.repositories.IAdaptationProfileRepositoryManager": {
-        'proxy': "midgard.repositories.AdaptationProfileRepositoryManager",
+    "midgard.repositories.adaptation.IAdaptationProfileRepositoryManager": {
+        'proxy': "midgard.repositories.adaptation.AdaptationProfileRepositoryManager",
         'implementations':
          [
-               "midgard.repositories.DefaultAdaptationProfileRepositoryManager",
+               "midgard.repositories.adaptation.DefaultAdaptationProfileRepositoryManager",
          ]
     },
-    "midgard.repositories.IComponentProfileRepositoryManager": {
-        'proxy': "midgard.repositories.ComponentProfileRepositoryManager",
+    "midgard.repositories.components.IComponentProfileRepositoryManager": {
+        'proxy': "midgard.repositories.components.ComponentProfileRepositoryManager",
         'implementations':
          [
-               "midgard.repositories.DefaultComponentProfileRepositoryManager",
+               "midgard.repositories.components.DefaultComponentProfileRepositoryManager",
          ]
     },
     "midgard.battery.IBatteryManager" : {

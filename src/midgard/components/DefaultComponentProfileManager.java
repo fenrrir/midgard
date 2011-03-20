@@ -20,7 +20,7 @@ package midgard.components;
 
 import java.util.Vector;
 import midgard.componentmodel.IComponent;
-import midgard.repositories.IComponentProfileRepositoryManager;
+import midgard.repositories.components.IComponentProfileRepositoryManager;
 import midgard.services.Service;
 
 /**

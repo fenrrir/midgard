@@ -15,8 +15,9 @@
 * this program; if not, write to the Free Software Foundation, Inc., 51
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
-package midgard.repositories;
+package midgard.repositories.adaptation;
 
+import midgard.repositories.adaptation.IAdaptationProfileRepositoryManager;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;

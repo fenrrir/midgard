@@ -16,14 +16,15 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.repositories;
+package midgard.repositories.components;
 
-import midgard.tasks.ITask;
+import midgard.components.IComponentProfileContainer;
+import midgard.repositories.IRepositoryManager;
 
 /**
  *
  * @author fenrrir
  */
-public interface ITaskRepositoryManager extends IRepositoryManager{
-    public ITask getTask(String name);
+public interface IComponentProfileRepositoryManager extends IRepositoryManager, IComponentProfileContainer{
+
 }
