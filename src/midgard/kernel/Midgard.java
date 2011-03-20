@@ -27,6 +27,7 @@ import javax.microedition.midlet.MIDletStateChangeException;
  */
 public class Midgard extends MIDlet{
     private MicroKernel kernel;
+    private static Midgard self = null;
 
     protected void destroyApp(boolean unconditional) throws MIDletStateChangeException {
         
@@ -36,14 +37,13 @@ public class Midgard extends MIDlet{
     }
 
     protected void startApp() throws MIDletStateChangeException {
-        if (getAppProperty("UseProxy").equals("true")){
-            kernel = MicroKernel.getInstance();
-            System.err.println("UseProxy=on");
-        }
-        else{
-            kernel = MicroKernel.getInstance(false);
-            System.err.println("UseProxy=off");
-        }
+        self = this;
+        kernel = MicroKernel.getInstance();
+    }
+
+
+    public static String getProperty(String name){
+        return self.getAppProperty(name);
     }
     
 

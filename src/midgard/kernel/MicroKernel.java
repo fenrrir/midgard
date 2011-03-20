@@ -37,11 +37,16 @@ public class MicroKernel {
     private static MicroKernel instance = null;
     private ComponentManager componentManager;
 
-    private MicroKernel(boolean useProxy){
-        if (useProxy)
+    private MicroKernel(){
+        boolean useProxy = Midgard.getProperty("UseProxy").equals("true");
+        if (useProxy){
+            System.err.println("UseProxy=on");
             bootDefault();
-        else
+        }
+        else{
             bootNoProxy();
+            System.err.println("UseProxy=off");
+        }
     }
 
 
@@ -128,15 +133,9 @@ public class MicroKernel {
         return ClassLoader.getInstance();
     }
 
-    public static MicroKernel getInstance(boolean useProxy){
-        if (instance == null)
-            instance = new MicroKernel(useProxy);
-        return instance;
-    }
-
     public static MicroKernel getInstance(){
         if (instance == null)
-            instance = new MicroKernel(true); /*never necessary*/
+            instance = new MicroKernel();
         return instance;
     }
 
