@@ -18,7 +18,9 @@
 
 package midgard.app;
 
+import midgard.events.IEvent;
 import midgard.sensors.battery.IBatteryData;
+import midgard.sensors.events.AccelerometerEvent;
 import midgard.sensors.events.BatteryEvent;
 import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.NetworkEvent;
@@ -73,6 +75,21 @@ public class TestApp extends App{
     public void handleBatteryEvent(BatteryEvent event) {
         
     }
+
+    public void handleAccelerometerEvent(AccelerometerEvent event) {
+        
+    }
+
+
+
+    public void newEventArrived(IEvent event) {
+        System.err.println("Event arrived " + event.toString());
+        super.newEventArrived(event);
+    }
+
+
+
+
 
 
 
