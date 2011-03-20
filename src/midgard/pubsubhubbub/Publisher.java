@@ -19,13 +19,13 @@
 package midgard.pubsubhubbub;
 
 import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
+import midgard.services.ProxyService;
 
 /**
  *
  * @author fenrrir
  */
-public class Publisher extends ProxyComponent implements IPublisher{
+public class Publisher extends ProxyService implements IPublisher{
     private IPublisher concreteComponent;
 
     public void setConcreteComponent(IComponent component){

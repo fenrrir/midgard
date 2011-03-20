@@ -18,13 +18,13 @@
 
 package midgard.pubsubhubbub;
 
-import midgard.componentmodel.IComponent;
+import midgard.services.IService;
 
 /**
  *
  * @author fenrrir
  */
-public interface IPublisher extends IComponent {
+public interface IPublisher extends IService {
     public void publish(String uri, String content);
 
 }

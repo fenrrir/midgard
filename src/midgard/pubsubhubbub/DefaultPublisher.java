@@ -19,11 +19,11 @@
 package midgard.pubsubhubbub;
 
 import midgard.pubsubhubbub.events.PublicationEvent;
-import midgard.componentmodel.Component;
 import midgard.events.IEvent;
 import midgard.pubsubhubbub.events.PublicationSensorEvent;
 import midgard.pubsubhubbub.events.PublicationSensorEventData;
 import midgard.sensors.network.INetworkSensor;
+import midgard.services.Service;
 import midgard.web.Response;
 import midgard.web.events.ResponseEvent;
 
@@ -31,7 +31,7 @@ import midgard.web.events.ResponseEvent;
  *
  * @author fenrrir
  */
-public class DefaultPublisher extends Component implements IPublisher {
+public class DefaultPublisher extends Service implements IPublisher {
     private INetworkSensor networkSensor;
 
     public String[] getRequiredInterfaces() {
