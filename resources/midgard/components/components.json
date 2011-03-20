@@ -59,6 +59,105 @@
             "midgard.sensors.battery.DefaultBatterySensor"
          ]
     },
+    "midgard.sensors.accelerometer.IAccelerometerSensor" : {
+        "proxy" : "midgard.sensors.accelerometer.AccelerometerSensor",
+        "implementations" :
+         [
+            "midgard.sensors.accelerometer.DefaultAccelerometerSensor"
+         ]
+    },
+    'midgard.naming.INameService': {
+        'proxy': 'midgard.naming.NameService',
+        'implementations':
+         [
+               'midgard.naming.DefaultNameService',
+         ]
+    },
+    'midgard.tasks.ITaskManager': {
+        'proxy': 'midgard.tasks.TaskManager',
+        'implementations':
+         [
+               'midgard.tasks.DefaultTaskManager',
+         ]
+    },
+    "midgard.repositories.ITaskRepositoryManager": {
+        'proxy': "midgard.repositories.TaskRepositoryManager",
+        'implementations':
+         [
+               "midgard.repositories.DefaultTaskRepositoryManager",
+         ]
+    },
+    'midgard.events.IEventManager': {
+        'proxy': 'midgard.events.EventManager',
+        'implementations':
+         [
+               'midgard.events.DefaultEventManager',
+         ]
+    },
+    "midgard.repositories.IEventRepositoryManager": {
+        'proxy': "midgard.repositories.EventRepositoryManager",
+        'implementations':
+         [
+               "midgard.repositories.DefaultEventRepositoryManager",
+         ]
+    },
+    'midgard.network.INetworkManager': {
+        'proxy': 'midgard.network.NetworkManager',
+        'implementations':
+         [
+               'midgard.network.DefaultNetworkManager',
+         ]
+    },
+    'midgard.network.routing.IRoutingManager': {
+        'proxy': 'midgard.network.routing.RoutingManager',
+        'implementations':
+         [
+               'midgard.network.routing.DefaultRoutingManager',
+         ]
+    },
+    'midgard.network.routing.IRouting': {
+        'proxy': 'midgard.network.routing.Routing',
+        'implementations':
+         [
+               'midgard.network.routing.LQRPRouting',
+               'midgard.network.routing.AODVRouting',
+         ]
+    },
+    'midgard.adaptation.IAdaptationManager': {
+        'proxy': 'midgard.adaptation.AdaptationManager',
+        'implementations':
+         [
+               'midgard.adaptation.DefaultAdaptationManager',
+         ]
+    },
+    'midgard.adaptation.IAdaptationProfileManager': {
+        'proxy': 'midgard.adaptation.AdaptationProfileManager',
+        'implementations':
+         [
+               'midgard.adaptation.DefaultAdaptationProfileManager',
+         ]
+    },
+    "midgard.components.IComponentProfileManager": {
+        'proxy': "midgard.components.ComponentProfileManager",
+        'implementations':
+         [
+               "midgard.components.DefaultComponentProfileManager",
+         ]
+    },
+    "midgard.repositories.IAdaptationProfileRepositoryManager": {
+        'proxy': "midgard.repositories.AdaptationProfileRepositoryManager",
+        'implementations':
+         [
+               "midgard.repositories.DefaultAdaptationProfileRepositoryManager",
+         ]
+    },
+    "midgard.repositories.IComponentProfileRepositoryManager": {
+        'proxy': "midgard.repositories.ComponentProfileRepositoryManager",
+        'implementations':
+         [
+               "midgard.repositories.DefaultComponentProfileRepositoryManager",
+         ]
+    },
     "midgard.battery.IBatteryManager" : {
         "proxy" : "midgard.battery.BatteryManager",
         "implementations" :
