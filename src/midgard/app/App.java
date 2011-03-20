@@ -18,11 +18,13 @@
 
 package midgard.app;
 
+import midgard.adaptation.IAdaptationManager;
 import midgard.battery.IBatteryManager;
 import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
 import midgard.events.IEvent;
+import midgard.events.IEventManager;
 import midgard.kernel.MicroKernel;
 import midgard.network.INetworkManager;
 import midgard.network.routing.IRoutingManager;
@@ -32,6 +34,7 @@ import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.NetworkEvent;
 import midgard.sensors.events.RoutingEvent;
 import midgard.sensors.events.TemperatureEvent;
+import midgard.tasks.ITaskManager;
 
 /**
  *
@@ -43,32 +46,32 @@ public class App extends Component implements IApp {
         return MicroKernel.getInstance().getNameService().resolveName(name);
     }
 
-    public IComponent getAdapterManager() {
-        return resolveName("midgard.adapter.IAdapterManager");
+    public IAdaptationManager getAdaptationManager() {
+        return (IAdaptationManager) resolveName(IAdaptationManager.class.getName());
     }
 
     public IBatteryManager getBatteryManager() {
-        return (IBatteryManager) resolveName("midgard.battery.IBatteryManager");
+        return (IBatteryManager) resolveName(IBatteryManager.class.getName());
     }
 
     public IComponentManager getComponentManager() {
-        return (IComponentManager) resolveName("midgard.components.IComponentManager");
+        return (IComponentManager) resolveName(IComponentManager.class.getName());
     }
 
-    public IComponent getEventManager() {
-        return (IComponent) resolveName("midgard.events.IEventManager");
+    public IEventManager getEventManager() {
+        return (IEventManager) resolveName(IEventManager.class.getName());
     }
 
     public INetworkManager getNetworkManager() {
-        return (INetworkManager) resolveName("midgard.network.INetworkManager");
+        return (INetworkManager) resolveName(INetworkManager.class.getName());
     }
 
     public IRoutingManager getRoutingManager() {
-        return (IRoutingManager) resolveName("midgard.network.routing.IRoutingManager");
+        return (IRoutingManager) resolveName(IRoutingManager.class.getName());
     }
 
-    public IComponent getTaskManager() {
-        return (IComponent) resolveName("midgard.tasks.ITaskManager");
+    public ITaskManager getTaskManager() {
+        return (ITaskManager) resolveName(ITaskManager.class.getName());
     }
 
     public void handleAccelerometerEvent(AccelerometerEvent event){

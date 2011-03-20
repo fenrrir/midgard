@@ -18,9 +18,11 @@
 
 package midgard.app;
 
+import midgard.adaptation.IAdaptationManager;
 import midgard.battery.IBatteryManager;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
+import midgard.events.IEventManager;
 import midgard.network.INetworkManager;
 import midgard.network.routing.IRoutingManager;
 import midgard.sensors.events.AccelerometerEvent;
@@ -29,16 +31,17 @@ import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.NetworkEvent;
 import midgard.sensors.events.RoutingEvent;
 import midgard.sensors.events.TemperatureEvent;
+import midgard.tasks.ITaskManager;
 
 /**
  *
  * @author fenrrir
  */
 public interface IApp extends IComponent  {
-    IComponent getTaskManager();
+    ITaskManager getTaskManager();
     IComponentManager getComponentManager();
-    IComponent getEventManager();
-    IComponent getAdapterManager();
+    IEventManager getEventManager();
+    IAdaptationManager getAdaptationManager();
     IBatteryManager getBatteryManager();
     INetworkManager getNetworkManager();
     IRoutingManager getRoutingManager();
