@@ -61,6 +61,7 @@ public class DefaultAdaptationProfileManager extends Component
 
         repository = (IAdaptationProfileRepositoryManager) getConnectedComponents()
                 .get(IAdaptationProfileRepositoryManager.class.getName());
+        repository.open();
         componentManager = (IComponentManager) getConnectedComponents()
                 .get(IComponentManager.class.getName());
         taskManager = (ITaskManager)getConnectedComponents()
@@ -99,7 +100,6 @@ public class DefaultAdaptationProfileManager extends Component
 
 
             profile.setHelper(this);
-            profile.setup();
             cache.put(name, profile);
             return profile;
         }
