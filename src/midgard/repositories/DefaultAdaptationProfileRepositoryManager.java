@@ -71,6 +71,7 @@ public class DefaultAdaptationProfileRepositoryManager extends Component impleme
     public void open() {
         if (!isOpened) {
             try {
+                cache = new Hashtable();
                 json = new JSONObject(FileUtils.readFile(repositoryPath));
                 isOpened = true;
             } catch (JSONException ex) {
@@ -90,6 +91,7 @@ public class DefaultAdaptationProfileRepositoryManager extends Component impleme
             AdaptationProfile profile = new AdaptationProfile();
             profile.setConfiguration(conf);
             profile.setProfileName(name);
+            profile.setup();
             return profile;
         } catch (JSONException ex) {
             ex.printStackTrace();
