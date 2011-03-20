@@ -19,14 +19,14 @@
 package midgard.pubsubhubbub;
 
 import midgard.componentmodel.IComponent;
-import midgard.componentmodel.ProxyComponent;
 import midgard.events.IListener;
+import midgard.services.ProxyService;
 
 /**
  *
  * @author fenrrir
  */
-public class Subscriber extends ProxyComponent implements ISubscriber {
+public class Subscriber extends ProxyService implements ISubscriber {
     private ISubscriber concreteComponent;
 
     public void setConcreteComponent( IComponent component ){

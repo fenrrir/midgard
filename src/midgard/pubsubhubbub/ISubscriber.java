@@ -18,14 +18,14 @@
 
 package midgard.pubsubhubbub;
 
-import midgard.componentmodel.IComponent;
 import midgard.events.IListener;
+import midgard.services.IService;
 
 /**
  *
  * @author fenrrir
  */
-public interface ISubscriber extends IComponent {
+public interface ISubscriber extends IService {
     public void register(IListener listener, String topic);
     public void unRegister(IListener listener, String topic);
 

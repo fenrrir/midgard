@@ -20,10 +20,10 @@ package midgard.pubsubhubbub;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Vector;
-import midgard.componentmodel.Component;
 import midgard.events.IEvent;
 import midgard.events.IListener;
 import midgard.network.Utils;
+import midgard.services.Service;
 import midgard.web.Request;
 import midgard.web.http.HttpConnector;
 
@@ -31,7 +31,7 @@ import midgard.web.http.HttpConnector;
  *
  * @author fenrrir
  */
-public class DefaultSubscriber extends Component implements ISubscriber {
+public class DefaultSubscriber extends Service implements ISubscriber {
 
     private Hashtable subscriptionsByTopic;
     private IHub hub;
