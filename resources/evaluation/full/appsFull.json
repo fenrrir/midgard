@@ -1,0 +1,45 @@
+{
+    "apps" : {
+        "Test": {
+            "class" : "midgard.app.TestApp",
+            "sensors" : [
+                            "midgard.sensors.network.INetworkSensor",
+                            "midgard.sensors.battery.IBatterySensor",
+                            "midgard.sensors.temperature.ITemperatureSensor",
+                            "midgard.sensors.light.ILightSensor",
+                            "midgard.sensors.accelerometer.IAccelerometerSensor"
+                        ]
+        }
+    },
+    "services" : [
+        "midgard.pubsubhubbub.IHub",
+        "midgard.pubsubhubbub.IPublisher",
+        "midgard.pubsubhubbub.ISubscriber",
+        "midgard.naming.INameService",
+        "midgard.tasks.ITaskManager",
+        "midgard.adaptation.IAdaptationManager",
+        "midgard.battery.IBatteryManager",
+        "midgard.events.IEventManager",
+        "midgard.network.INetworkManager",
+        "midgard.network.routing.IRoutingManager",
+        "midgard.components.IComponentProfileManager"
+    ],
+    "webApplications" : [
+        "midgard.web.apps.sensors.BatteryWebApp",
+        "midgard.web.apps.sensors.TemperatureWebApp",
+        "midgard.web.apps.sensors.LightWebApp",
+        "midgard.web.apps.sensors.AccelerometerWebApp"
+    ],
+    "adaptationProfiles" : [
+        "ChangeSensorManager"
+    ],
+    "tasks" : [
+        "midgard.tasks.TestTask"
+    ],
+    "customEvents" : [
+        "midgard.events.tests.TestCustomEvent"
+    ],
+    "sleep" : 2000,
+}
+
+

@@ -1,0 +1,19 @@
+{
+    "apps" : {
+        "Test": {
+            "class" : "midgard.app.MyAggregateWebApp",
+            "sensors" : [
+                            "midgard.sensors.network.INetworkSensor",
+                            "midgard.sensors.battery.IBatterySensor",
+                        ]
+        }
+    },
+    "services" : [
+        "midgard.pubsubhubbub.IHub"
+    ],
+    "webApplications" : [
+        "midgard.app.MyAggregateWebApp",
+        "midgard.web.apps.sensors.BatteryWebApp"
+    ],
+    "sleep" : 2000,
+}

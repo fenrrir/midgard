@@ -1,0 +1,5 @@
+{
+    "events": [
+        "midgard.events.tests.TestCustomEvent",
+    ]
+}

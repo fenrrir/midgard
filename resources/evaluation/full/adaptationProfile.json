@@ -1,0 +1,41 @@
+{
+    "ChangeSensorManager" : {
+        "connectToComponents" : [
+            "midgard.app.MyAggregateWebApp"
+        ],
+        "actions" : {
+            "ChangeSensorManager" : {
+                "require" : {
+                    "event" : "ChangeSensorManagerEvent"
+                },
+                "call" : {
+                    "command" : "changeComponent",
+                    "param" : "midgard.sensors.DefaultSensorManager",
+                    "param2" : "midgard.sensors.AlternativeSensorManager"
+                }
+             }
+         }
+    },
+    "profileA" : {
+        "connectToComponents" : [
+            "midgard.sensors.ITemperatureSensor",
+        ],
+        "actions" : {
+            "Action1" : {
+                "require" : {
+                    "event":"midgard.sensors.events.TemperatureEvent",
+                    "conditional" : {
+                        "type" : "lt",
+                        "value" : 1.0
+                    }
+                },
+                "call" : {
+                    "command" : "fireEvent",
+                    "type" : "midgard.events.tests.TestCustomEvent",
+                    "param" : "Sensor fronzen!"
+                }
+
+            }
+        }
+    }
+}

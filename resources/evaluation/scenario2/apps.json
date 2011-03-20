@@ -1,0 +1,21 @@
+{
+    "apps" : {
+        "Test": {
+            "class" : "midgard.app.TestApp",
+            "sensors" : [
+                            "midgard.sensors.network.INetworkSensor",
+                            "midgard.sensors.temperature.ITemperatureSensor",
+                            "midgard.sensors.light.ILightSensor"
+
+                        ]
+        }
+    },
+    "services" : [
+        "midgard.pubsubhubbub.IHub"
+    ],
+    "webApplications" : [
+        "midgard.web.apps.sensors.TemperatureWebApp",
+        "midgard.web.apps.sensors.LightWebApp"
+    ],
+    "sleep" : 2000,
+}
