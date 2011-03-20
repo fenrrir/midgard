@@ -46,7 +46,7 @@ public class AdaptationProfile
     private Vector listeners = null;
 
 
-    public void AdaptationProfile(){
+    public AdaptationProfile(){
         requiredEvents = new Vector();
         components = new Vector();
         componentsToMe = new Vector();
