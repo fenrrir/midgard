@@ -70,11 +70,21 @@ public class DefaultDefaultConfig extends Component implements IDefaultConfig { 
     }
 
     public String getAdaptationProfileRepositoryPath() {
-        return getSystemProperty("AdaptationProfileRepositoryPath");
+        try {
+            return json.getString("AdaptationProfileRepositoryPath");
+        } catch (JSONException ex) {
+            ex.printStackTrace();
+            return "/midgard/adaptation/profiles.json";
+        }
     }
 
     public String getAppRepositoryPath() {
-        return getSystemProperty("AppRepositoryPath");
+        try {
+            return json.getString("AppRepositoryPath");
+        } catch (JSONException ex) {
+            ex.printStackTrace();
+            return "/apps.json";
+        }
     }
 
     public String getSystemProperty(String name) {

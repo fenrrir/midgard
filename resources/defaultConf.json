@@ -4,5 +4,7 @@
  */
 
 {
-    "sleep": 5000
+    "sleep": 5000,
+    "AdaptationProfileRepositoryPath": "/evaluation/full/adaptationProfile.json",
+    "AppRepositoryPath": "/evaluation/full/appsFull.json"
 }
