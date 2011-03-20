@@ -34,13 +34,8 @@ public class RoutingManager extends ProxyService implements IRoutingManager{
         this.concreteComponent = (IRoutingManager) concreteComponent;
     }
 
-
-
-
     public IRouting getRouting() {
         return concreteComponent.getRouting();
     }
-
-
 
 }
