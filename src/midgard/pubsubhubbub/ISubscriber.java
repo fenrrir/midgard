@@ -30,5 +30,6 @@ public interface ISubscriber extends IService {
     public void unRegister(IListener listener, String topic);
 
     public void register(IListener listener, String topic, String address);
+    public void register(IListener listener, String [] topics, String address);
     public void unRegister(IListener listener, String topic, String address);
 }

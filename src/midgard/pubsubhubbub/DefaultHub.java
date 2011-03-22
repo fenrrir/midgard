@@ -17,17 +17,20 @@
 */
 package midgard.pubsubhubbub;
 
+
 import midgard.pubsubhubbub.events.PubSubHubBubNotificationEvent;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Vector;
 import midgard.events.IEvent;
-import midgard.network.Utils;
+import midgard.kernel.Debug;
+import midgard.utils.NetworkUtils;
 import midgard.pubsubhubbub.events.PublicationEvent;
 import midgard.pubsubhubbub.events.PublicationSensorEvent;
 import midgard.pubsubhubbub.events.PublicationSensorEventData;
 import midgard.services.Service;
+import midgard.utils.StringUtils;
 import midgard.web.IHTTPServer;
 import midgard.web.IWebServer;
 import midgard.web.Request;
@@ -68,7 +71,7 @@ public class DefaultHub extends Service implements IHub {
 
         webserver.addWebApplication(this);
 
-        myAddress = Utils.getAddress();
+        myAddress = NetworkUtils.getAddress();
     }
 
     public void destroy() {
@@ -89,17 +92,23 @@ public class DefaultHub extends Service implements IHub {
 
     private Response handleSubscribe(Request request) {
         Vector listeners;
-        String topic = request.parms.getProperty("topic");
+        String topics = request.parms.getProperty("topic");
         String address = request.parms.getProperty("address");
+        Vector arrayTopics = StringUtils.split(topics);
 
-        if (!listenersByTopic.containsKey(topic)) {
-            listeners = new Vector();
-            listeners.addElement(address);
-            listenersByTopic.put(topic, listeners);
-        } else {
-            listeners = (Vector) listenersByTopic.get(topic);
-            listeners.addElement(address);
 
+        for(int i=0; i< arrayTopics.size(); i++){
+            String topic = (String) arrayTopics.elementAt(i);
+
+            if (!listenersByTopic.containsKey(topic)) {
+                listeners = new Vector();
+                listeners.addElement(address);
+                listenersByTopic.put(topic, listeners);
+            } else {
+                listeners = (Vector) listenersByTopic.get(topic);
+                listeners.addElement(address);
+
+            }
         }
         return getResponse("{ \"result\" : true }");
     }

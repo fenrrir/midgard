@@ -42,6 +42,10 @@ public class Subscriber extends ProxyService implements ISubscriber {
         concreteComponent.register(listener, topic);
     }
 
+    public void register(IListener listener, String[] topics, String address) {
+        concreteComponent.register(listener, topics, address);
+    }
+
     public void unRegister(IListener listener, String topic, String address) {
         concreteComponent.unRegister(listener, topic, address);
     }

@@ -22,8 +22,10 @@ import java.util.Hashtable;
 import java.util.Vector;
 import midgard.events.IEvent;
 import midgard.events.IListener;
-import midgard.network.Utils;
+import midgard.kernel.Debug;
+import midgard.utils.NetworkUtils;
 import midgard.services.Service;
+import midgard.utils.StringUtils;
 import midgard.web.Request;
 import midgard.web.http.HttpConnector;
 
@@ -43,7 +45,7 @@ public class DefaultSubscriber extends Service implements ISubscriber {
         hub = (IHub) getConnectedComponents()
                 .get(IHub.class.getName());
         hub.registerEventListener(this);
-        myAddress = Utils.getAddress();
+        myAddress = NetworkUtils.getAddress();
     }
 
     public void destroy() {
@@ -61,7 +63,6 @@ public class DefaultSubscriber extends Service implements ISubscriber {
             IHub.class.getName(),
         };
     }
-
 
 
     public void register(IListener listener, String topic) {
@@ -149,6 +150,31 @@ public class DefaultSubscriber extends Service implements ISubscriber {
             ex.printStackTrace();
         }
 
+    }
+
+    public void register(IListener listener, String[] topics, String address) {
+        Vector subscriptions;
+
+        String addressUpper = address.toUpperCase();
+
+        for( int i=0; i < topics.length; i++){
+            String topic = topics[i];
+
+            if (subscriptionsByTopic.containsKey(topic)) {
+                subscriptions = (Vector) subscriptionsByTopic.get(topic);
+                Subscription sub = new Subscription(listener, topic, addressUpper);
+                if (!subscriptions.contains(sub)) {
+                    subscriptions.addElement(sub);
+                }
+            } else {
+                subscriptions = new Vector();
+                Subscription sub = new Subscription(listener, topic, addressUpper);
+                subscriptions.addElement(sub);
+                subscriptionsByTopic.put(topic, subscriptions);
+            }
+
+        }
+        registerOnRemoteHub(StringUtils.join(topics), address);
     }
 
 
