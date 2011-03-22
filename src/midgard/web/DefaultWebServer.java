@@ -19,15 +19,13 @@ package midgard.web;
 
 import com.sun.spot.io.j2me.radiogram.RadiogramConnection;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Vector;
 import javax.microedition.io.Connector;
 import javax.microedition.io.Datagram;
 import midgard.app.IAppRepositoryManager;
 import midgard.components.IComponentManager;
 import midgard.events.IEvent;
-import midgard.kernel.ClassLoader;
+import midgard.kernel.Debug;
 import midgard.services.Service;
 
 /**
