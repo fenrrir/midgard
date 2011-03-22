@@ -23,7 +23,6 @@ import midgard.events.IEvent;
 import midgard.pubsubhubbub.IPublisher;
 import midgard.sensors.accelerometer.IAccelerometerData;
 import midgard.sensors.accelerometer.IAccelerometerSensor;
-import midgard.sensors.temperature.TemperatureSensorData;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
@@ -94,17 +93,20 @@ public class AccelerometerWebApp extends Component implements IWebApplication {
     }
 
     public void newEventArrived(IEvent event) {
+        double oldValue = relativeAccel;
         super.newEventArrived(event);
         IAccelerometerData data = (IAccelerometerData) event.getContentObject();
         relativeAccel = data.getRelativeAccel();
 
-        try {
-            json.put("value", relativeAccel);
-        } catch (JSONException ex) {
-            ex.printStackTrace();
-        }
+        if (oldValue != relativeAccel){
+            try {
+                json.put("value", relativeAccel);
+            } catch (JSONException ex) {
+                ex.printStackTrace();
+            }
 
-        publisher.publish(URI, json.toString());
+            publisher.publish(URI, json.toString());
+        }
 
 
     }

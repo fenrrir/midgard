@@ -93,18 +93,22 @@ public class BatteryWebApp extends Component implements IWebApplication {
     }
 
     public void newEventArrived(IEvent event) {
+        double oldValue = batteryCapacity;
         super.newEventArrived(event);
         IBatteryData data = (IBatteryData) event.getContentObject();
         batteryCapacity = data.getAvailableCapacity();
 
-        try {
-            json.put("value", batteryCapacity);
-        } catch (JSONException ex) {
-            ex.printStackTrace();
+        if (oldValue != batteryCapacity){
+
+            try {
+                json.put("value", batteryCapacity);
+            } catch (JSONException ex) {
+                ex.printStackTrace();
+            }
+
+            publisher.publish(URI, json.toString());
+
         }
-
-        publisher.publish(URI, json.toString());
-
 
     }
 }

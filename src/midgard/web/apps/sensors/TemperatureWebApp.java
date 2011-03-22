@@ -20,6 +20,7 @@ package midgard.web.apps.sensors;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.events.IEvent;
+import midgard.kernel.Debug;
 import midgard.pubsubhubbub.IPublisher;
 import midgard.sensors.temperature.ITemperatureSensor;
 import midgard.sensors.temperature.TemperatureSensorData;
@@ -93,17 +94,23 @@ public class TemperatureWebApp extends Component implements IWebApplication {
     }
 
     public void newEventArrived(IEvent event) {
+        double oldValue = temperatureCelsius;
         super.newEventArrived(event);
         TemperatureSensorData data = (TemperatureSensorData) event.getContentObject();
         temperatureCelsius = data.getCelsius();
 
-        try {
-            json.put("value", temperatureCelsius);
-        } catch (JSONException ex) {
-            ex.printStackTrace();
-        }
+        if (temperatureCelsius != oldValue){
 
-        publisher.publish(URI, json.toString());
+
+            try {
+                json.put("value", temperatureCelsius);
+            } catch (JSONException ex) {
+                ex.printStackTrace();
+            }
+
+            publisher.publish(URI, json.toString());
+
+        }
 
 
     }

@@ -20,6 +20,7 @@ package midgard.web.apps.sensors;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.events.IEvent;
+import midgard.kernel.Debug;
 import midgard.pubsubhubbub.IPublisher;
 import midgard.sensors.light.ILightSensor;
 import midgard.web.IWebApplication;
@@ -92,17 +93,21 @@ public class LightWebApp extends Component implements IWebApplication {
     }
 
     public void newEventArrived(IEvent event) {
+        int oldValue = lightLevel;
         super.newEventArrived(event);
         Integer integer = (Integer) event.getContentObject();
         lightLevel = integer.intValue();
 
-        try {
-            json.put("value", lightLevel);
-        } catch (JSONException ex) {
-            ex.printStackTrace();
-        }
+        if (oldValue != lightLevel){
 
-        publisher.publish(URI, json.toString());
+            try {
+                json.put("value", lightLevel);
+            } catch (JSONException ex) {
+                ex.printStackTrace();
+            }
+
+            publisher.publish(URI, json.toString());
+        }
 
 
     }
