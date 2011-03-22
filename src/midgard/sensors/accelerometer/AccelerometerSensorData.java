@@ -25,11 +25,11 @@ import java.io.IOException;
  *
  * @author fenrrir
  */
-public class DefaultAccelerometerData implements IAccelerometerData{
+public class AccelerometerSensorData implements IAccelerometerData{
 
     private IAccelerometer3D accel;
 
-    public DefaultAccelerometerData(IAccelerometer3D accel) {
+    public AccelerometerSensorData(IAccelerometer3D accel) {
         this.accel = accel;
     }
 

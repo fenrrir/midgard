@@ -24,10 +24,10 @@ import com.sun.spot.peripheral.IBattery;
  *
  * @author fenrrir
  */
-public class DefaultBatteryData implements IBatteryData{
+public class BatterySensorData implements IBatteryData{
     private IBattery battery;
 
-    public DefaultBatteryData(IBattery battery) {
+    public BatterySensorData(IBattery battery) {
         this.battery = battery;
     }
 
