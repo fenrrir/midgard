@@ -52,7 +52,7 @@ public class DefaultBatterySensor extends Sensor implements IBatterySensor{
     }
 
     public void collect() {
-        IBatteryData data = new DefaultBatteryData(battery);
+        IBatteryData data = new BatterySensorData(battery);
         fireEvent( new BatteryEvent( data ) );
     }
 

@@ -47,7 +47,7 @@ public class DefaultAccelerometerSensor extends Sensor
     }
 
     public void collect() {
-        IAccelerometerData data = new DefaultAccelerometerData(accel);
+        IAccelerometerData data = new AccelerometerSensorData(accel);
         fireEvent(new AccelerometerEvent(data));
     }
 
