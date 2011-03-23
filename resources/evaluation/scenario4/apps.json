@@ -12,9 +12,9 @@
         "midgard.pubsubhubbub.IHub"
     ],
     "webApplications" : [
-        "midgard.app.MyAggregateWebApp",
+        "midgard.app.tests.MyAggregateWebApp",
         "midgard.web.apps.sensors.BatteryWebApp",
-        "midgard.app.AdaptationWebApp"
+        "midgard.web.tests.AdaptationWebApp"
     ],
     "adaptationProfiles" : [
         "ChangeSensorManager"

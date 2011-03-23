@@ -1,7 +1,7 @@
 {
     "apps" : {
         "Test": {
-            "class" : "midgard.app.TestApp",
+            "class" : "midgard.app.tests.TestApp",
             "sensors" : [
                             "midgard.sensors.network.INetworkSensor",
                             "midgard.sensors.battery.IBatterySensor",

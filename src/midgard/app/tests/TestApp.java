@@ -16,15 +16,19 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.app;
+package midgard.app.tests;
 
+import midgard.app.App;
 import midgard.events.IEvent;
-import midgard.sensors.battery.IBatteryData;
+import midgard.kernel.Debug;
+import midgard.sensors.accelerometer.AccelerometerSensorData;
+import midgard.sensors.battery.BatterySensorData;
 import midgard.sensors.events.AccelerometerEvent;
 import midgard.sensors.events.BatteryEvent;
 import midgard.sensors.events.LightEvent;
 import midgard.sensors.events.NetworkEvent;
 import midgard.sensors.events.TemperatureEvent;
+import midgard.sensors.temperature.TemperatureSensorData;
 
 /**
  *
@@ -33,57 +37,31 @@ import midgard.sensors.events.TemperatureEvent;
 public class TestApp extends App{
 
 
-    public void destroy() {
-        super.destroy();
-        //System.err.println(getName() + " destroy");
-    }
-
-    public void initialize() {
-        super.initialize();
-        //System.err.println("@@@@@ " + getName() + " initialize");
-        
-    }
-
-    public void load() {
-        super.load();
-        //System.err.println("@@@@@@ " + getName() + " load");
-    }
-
-    public void pause() {
-        super.pause();
-        //System.err.println(getName() + " pause");
-    }
-
-    public void resume() {
-        super.resume();
-        //System.err.println(getName() + " resume");
-    }
-
     public void handleLightEvent(LightEvent event) {
-        //System.err.println("Evento de luz recebido");
+        Debug.debug("light " + event.getContentObject().toString());
     }
 
     public void handleTemperatureEvent(TemperatureEvent event) {
-        //System.err.println("Evento de temperatura recebido");
-        
+        TemperatureSensorData data = (TemperatureSensorData) event.getContentObject();
+        Debug.debug("temperature " + data.getCelsius());
     }
 
     public void handleNetworkEvent(NetworkEvent event) {
-        //System.err.println("Evento de rede recebido");
     }
 
     public void handleBatteryEvent(BatteryEvent event) {
-        
+        BatterySensorData data = (BatterySensorData) event.getContentObject();
+        Debug.debug("battery" + data.getAvailableCapacity());
     }
 
     public void handleAccelerometerEvent(AccelerometerEvent event) {
-        
+        AccelerometerSensorData data = (AccelerometerSensorData) event.getContentObject();
+        Debug.debug("accelerometer " + data.getAccel());
+
     }
 
-
-
     public void newEventArrived(IEvent event) {
-        System.err.println("Event arrived " + event.toString());
+        Debug.debug("Event arrived " + event.toString());
         super.newEventArrived(event);
     }
 

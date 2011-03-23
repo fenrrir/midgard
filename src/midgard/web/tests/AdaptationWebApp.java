@@ -16,7 +16,7 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.app;
+package midgard.web.tests;
 
 import java.util.Vector;
 import midgard.app.events.DeepSleepModeEvent;
@@ -25,6 +25,7 @@ import midgard.componentmodel.Component;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
+import midgard.web.apps.Helper;
 import midgard.web.apps.Helper;
 import midgard.web.json.JSONObject;
 

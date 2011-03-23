@@ -16,22 +16,25 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.network;
+package midgard.app.tests;
 
-import com.sun.spot.peripheral.radio.RadioFactory;
-import com.sun.spot.util.IEEEAddress;
+import java.io.IOException;
+import midgard.web.http.HttpConnector;
 
 /**
  *
  * @author fenrrir
  */
-public class Utils {
+public class FakeGatewayScenarioFour extends FakeGatewayScenarioThree{
 
-    public static String getAddress(){
-        long longMyAddress = RadioFactory.getRadioPolicyManager().getIEEEAddress();
-        String myAddress = new IEEEAddress(longMyAddress).asDottedHex();
-        return myAddress;
-        
+    public void callRemoteAdaptation(){
+        HttpConnector conn = new HttpConnector();
+        try {
+            conn.connect("c0a8.0f66.0000.1001");
+            conn.get("/sensor/changeSensorManager");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 }

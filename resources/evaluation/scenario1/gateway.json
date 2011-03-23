@@ -1,0 +1,13 @@
+{
+    "apps" : {
+        "Test": {
+            "class" : "midgard.app.tests.FakeGatewayScenarioOne",
+            "sensors" : [
+                            "midgard.sensors.network.INetworkSensor",
+                        ]
+        }
+    },
+    "services" : [
+        "midgard.pubsubhubbub.IHub"
+    ]
+}

@@ -22,7 +22,7 @@
     },
     "midgard.app.IApp" : {
         "implementations" :
-            [ "midgard.app.TestApp"]
+            [ "midgard.app.tests.TestApp"]
     },
     "midgard.app.IAppRepositoryManager" : {
         "proxy" : "midgard.app.AppRepositoryManager",

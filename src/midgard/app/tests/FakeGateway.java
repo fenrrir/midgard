@@ -16,8 +16,9 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.app;
+package midgard.app.tests;
 
+import midgard.app.App;
 import midgard.pubsubhubbub.ISubscriber;
 import midgard.pubsubhubbub.events.SubscriptionEvent;
 import midgard.sensors.events.NetworkEvent;
@@ -30,7 +31,7 @@ import midgard.web.json.JSONObject;
  *
  * @author fenrrir
  */
-public class TestClientApp extends App {
+public class FakeGateway extends App {
     private ISubscriber subscriber;
 
     public String[] getRequiredInterfaces() {
@@ -39,10 +40,6 @@ public class TestClientApp extends App {
         };
     }
 
-    public void destroy() {
-        super.destroy();
-        //System.err.println(getName() + " destroy");
-    }
 
     public void initialize() {
         super.initialize();
@@ -76,25 +73,9 @@ subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1005");
         
     }
 
-    public void load() {
-        super.load();
-        //System.err.println("@@@@@@ " + getName() + " load");
-    }
-
-    public void pause() {
-        super.pause();
-        //System.err.println(getName() + " pause");
-    }
-
-    public void resume() {
-        super.resume();
-        //System.err.println(getName() + " resume");
-    }
-
     public void handleNetworkEvent(NetworkEvent event) {
 
-        //System.err.println("@@@@@@@@@@@@@@@@@@Event class " + event.getClass().getName());
-
+        /*
         if (event instanceof SubscriptionEvent){
             Request request = (Request) event.getContentObject();
             String data =
@@ -114,8 +95,10 @@ subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1005");
 
         if (event instanceof AsyncMessageEvent){
             String data  = (String )event.getContentObject();
-            //System.err.println("@@@@@@@@@@@@@@@@@@@ Mensagem de resposta da requisicoes HTTP" + data);
         }
+         */
+
+        
     }
 
 
