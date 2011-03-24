@@ -16,7 +16,7 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-package midgard.web.apps;
+package midgard.utils;
 
 import java.io.ByteArrayInputStream;
 import midgard.web.IHTTPServer;
@@ -27,17 +27,17 @@ import midgard.web.json.JSONObject;
  *
  * @author fenrrir
  */
-public class Helper {
+public class ResponseUtils {
 
     public static Response getResponse(String body){
         return new Response(IHTTPServer.HTTP_OK, IHTTPServer.MIME_HTML,
-                            new ByteArrayInputStream(body.getBytes()), body.length());
+                            body, body.length());
     }
 
     public static Response getResponse(JSONObject json){
         String body = json.toString();
         return new Response(IHTTPServer.HTTP_OK, IHTTPServer.MIME_APPLICATION_JSON,
-                            new ByteArrayInputStream(body.getBytes()),
+                            body,
                             body.length());
     }
 

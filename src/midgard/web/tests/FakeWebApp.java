@@ -21,6 +21,7 @@ package midgard.web.tests;
 import java.io.ByteArrayInputStream;
 import java.util.Vector;
 import midgard.componentmodel.Component;
+import midgard.utils.ResponseUtils;
 import midgard.web.IHTTPServer;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
@@ -52,18 +53,14 @@ public class FakeWebApp extends Component implements IWebApplication {
 
     
     private Response getHome(){
-        return getResponse("Hello World");
+        return ResponseUtils.getResponse("Hello World");
         
     }
 
     private Response getFoo(){
-        return getResponse("FooBar");
+        return ResponseUtils.getResponse("FooBar");
     }
 
-    private Response getResponse(String body){
-        return new Response(IHTTPServer.HTTP_OK, IHTTPServer.MIME_HTML,
-                            new ByteArrayInputStream(body.getBytes()), body.length());
-    }
 
     public Vector getURIs() {
         return uris;

@@ -26,7 +26,7 @@ import midgard.sensors.accelerometer.IAccelerometerSensor;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
-import midgard.web.apps.Helper;
+import midgard.utils.ResponseUtils;
 import midgard.web.json.JSONException;
 import midgard.web.json.JSONObject;
 
@@ -87,7 +87,7 @@ public class AccelerometerWebApp extends Component implements IWebApplication {
 
     public Response serve(Request request) throws Exception {
         if (request.uri.equals(URI)) {
-            return Helper.getResponse(json);
+            return ResponseUtils.getResponse(json);
         }
         return null;
     }

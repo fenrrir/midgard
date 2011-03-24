@@ -20,13 +20,12 @@ package midgard.web.apps.sensors;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.events.IEvent;
-import midgard.kernel.Debug;
 import midgard.pubsubhubbub.IPublisher;
 import midgard.sensors.light.ILightSensor;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
-import midgard.web.apps.Helper;
+import midgard.utils.ResponseUtils;
 import midgard.web.json.JSONException;
 import midgard.web.json.JSONObject;
 
@@ -87,7 +86,7 @@ public class LightWebApp extends Component implements IWebApplication {
 
     public Response serve(Request request) throws Exception {
         if (request.uri.equals(URI)) {
-            return Helper.getResponse(json);
+            return ResponseUtils.getResponse(json);
         }
         return null;
     }

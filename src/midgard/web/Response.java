@@ -43,7 +43,7 @@ public class Response {
     /**
      * Basic constructor.
      */
-    public Response( String status, String mimeType, InputStream data ) {
+    public Response( String status, String mimeType, String data ) {
         this.status = status;
         this.mimeType = mimeType;
         this.data = data;
@@ -52,7 +52,7 @@ public class Response {
     /**
      * Basic constructor. Use when content length is known.
      */
-    public Response( String status, String mimeType, InputStream data, int contentLength ) {
+    public Response( String status, String mimeType, String data, int contentLength ) {
         this.status = status;
         this.mimeType = mimeType;
         this.data = data;
@@ -63,9 +63,7 @@ public class Response {
      * Convenience method that makes an InputStream out of
      * given text.
      */
-    public Response( String status, String mimeType, String txt ) {
-        this(status, mimeType, new ByteArrayInputStream(txt.getBytes()), txt.length());
-    }
+
 
     /**
      * Adds given line to the header.
@@ -92,7 +90,7 @@ public class Response {
     /**
      * Data of the response, may be null.
      */
-    public InputStream data;
+    public String data;
 
     /**
      * Headers for the HTTP response. Use addHeader()

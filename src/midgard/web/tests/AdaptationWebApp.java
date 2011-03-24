@@ -25,8 +25,8 @@ import midgard.componentmodel.Component;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
-import midgard.web.apps.Helper;
-import midgard.web.apps.Helper;
+import midgard.utils.ResponseUtils;
+import midgard.utils.ResponseUtils;
 import midgard.web.json.JSONObject;
 
 /**
@@ -49,7 +49,7 @@ public class AdaptationWebApp extends Component implements IWebApplication{
         else
             fireEvent(new LightSleepModeEvent(mode));
         response.put("value", "ok");
-        return Helper.getResponse(response);
+        return ResponseUtils.getResponse(response);
     }
 
 }
