@@ -36,8 +36,11 @@ def add_license(filename):
         content = "\n".join(content)
         newcontent = HEADER + content
 
-        with file(filename, "w") as f:
-            f.write(newcontent)
+        y_or_n = raw_input("confirm %s ?" % filename)
+
+        if y_or_n == "y":
+            with file(filename, "w") as f:
+                f.write(newcontent)
 
 
 
