@@ -1,7 +1,6 @@
 
 package midgard.app.tests;
 
-import com.sun.spot.util.Utils;
 import java.util.Vector;
 import midgard.app.App;
 import midgard.app.events.ChangeSleepTimeEvent;
@@ -14,7 +13,7 @@ import midgard.sensors.events.NetworkEvent;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
-import midgard.web.apps.Helper;
+import midgard.utils.ResponseUtils;
 import midgard.web.json.JSONException;
 import midgard.web.json.JSONObject;
 
@@ -29,8 +28,11 @@ public class MyAggregateWebApp extends App implements IWebApplication{
     public void initialize() {
         super.initialize();
         subscriber = (ISubscriber) getConnectedComponents().get(ISubscriber.class.getName());
+        //subscriber.register(this, "/sensor/temperature", "c0a8.0f66.0000.1001");
+        //subscriber.register(this, "/sensor/light", "c0a8.0f66.0000.1001");
         subscriber.register(this, topics, "c0a8.0f66.0000.1001");
     }
+
 
     public String[] getRequiredInterfaces() {
         return new String[]{
@@ -40,6 +42,7 @@ public class MyAggregateWebApp extends App implements IWebApplication{
 
     public void handleBatteryEvent(BatteryEvent event) {
         BatterySensorData data = (BatterySensorData) event.getContentObject();
+        Debug.debug("battery " + data.getAvailableCapacity() );
     }
 
 
@@ -57,11 +60,11 @@ public class MyAggregateWebApp extends App implements IWebApplication{
                 json = new JSONObject((String) request.parms.get("value"));
                 if (request.parms.get("topic").equals("/sensor/temperature")) {
                     temperature = json.getDouble("value");
-                    Debug.debug("Remote temperature " + temperature );
+                    Debug.debug("Remote temperature " + temperature,1 );
                 }
                 else {
                     light = json.getDouble("value");
-                    Debug.debug("Remote light " + light );
+                    Debug.debug("Remote light " + light,1 );
                 }
             } catch (JSONException ex) {
                 ex.printStackTrace();
@@ -83,17 +86,17 @@ public class MyAggregateWebApp extends App implements IWebApplication{
     String param;
     if (request.uri.equals("/sensor/temperature")){
         response.put("value", temperature);
-        return Helper.getResponse(response);
+        return ResponseUtils.getResponse(response);
     }
     else if(request.uri.equals("/sensor/light")){
         response.put("value", light);
-        return Helper.getResponse(response);
+        return ResponseUtils.getResponse(response);
     }
     else{
         param = request.parms.getProperty("md5");
         fireEvent(new ChangeSleepTimeEvent(""));
         response.put("value", "ok");
-        return Helper.getResponse(response);
+        return ResponseUtils.getResponse(response);
     }
 }
 }

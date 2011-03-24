@@ -22,7 +22,6 @@ import java.util.Hashtable;
 import java.util.Vector;
 import midgard.events.IEvent;
 import midgard.events.IListener;
-import midgard.kernel.Debug;
 import midgard.utils.NetworkUtils;
 import midgard.services.Service;
 import midgard.utils.StringUtils;
@@ -138,13 +137,14 @@ public class DefaultSubscriber extends Service implements ISubscriber {
 
     private void registerOnRemoteHub(String topic, String address) {
         try {
-
+            String response;
             Hashtable data = new Hashtable();
             data.put("topic", topic);
             data.put("address", myAddress);
             HttpConnector connector = new HttpConnector();
             connector.connect(address);
-            connector.post("/subscribe", data);
+            response = connector.post("/subscribe", data);
+            //TODO: catch error
             connector.closeConnection();
         } catch (IOException ex) {
             ex.printStackTrace();

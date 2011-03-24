@@ -18,6 +18,8 @@
 package midgard.web;
 
 import com.sun.spot.io.j2me.radiogram.RadiogramConnection;
+import com.sun.spot.ipv6.tcp.ServerSocket;
+import com.sun.spot.ipv6.tcp.Socket;
 import java.io.IOException;
 import java.util.Vector;
 import javax.microedition.io.Connector;
@@ -27,6 +29,7 @@ import midgard.components.IComponentManager;
 import midgard.events.IEvent;
 import midgard.kernel.Debug;
 import midgard.services.Service;
+import midgard.web.tcp.TCPWorker;
 
 /**
  *
@@ -34,9 +37,9 @@ import midgard.services.Service;
  */
 public class DefaultWebServer extends Service implements IWebServer {
 
-    private RadiogramConnection conn;
     private IHTTPServer server;
-    private Datagram input, output;
+    ServerSocket serverSocket = null;
+    
     private IComponentManager componentManager;
     private IAppRepositoryManager appRepositoryManager;
     private Vector webApplications;
@@ -121,7 +124,24 @@ public class DefaultWebServer extends Service implements IWebServer {
 
     public void run() {
         try {
-            handleConnections();
+            serverSocket = new ServerSocket(80);
+        } catch (IOException e) {
+            Debug.debug("Could not listen on port: 4444.", 1);
+            e.printStackTrace();
+        }
+        Debug.debug("[APP] Socket opened and listening", 1);
+        while (isRunning) {
+            try {
+                new TCPWorker(server, (Socket) serverSocket.accept());
+                Debug.debug("[APP] Connection started.", 1);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+        }
+        Debug.debug("[APP] Done, closing up", 1);
+        try {
+            serverSocket.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -154,37 +174,5 @@ public class DefaultWebServer extends Service implements IWebServer {
         }
     }
 
-    private void handleConnections() throws IOException {
-
-
-        while (isRunning) {
-            try {
-
-                conn = (RadiogramConnection) Connector.open("radiogram://:80");
-                input = conn.newDatagram(conn.getMaximumLength());
-                output = conn.newDatagram(conn.getMaximumLength());
-
-                //System.err.println("Webserver listening");
-                conn.receive(input);
-                output.reset();
-                output.setAddress(input);
-                //System.err.println("Webserver received request " + input.getAddress());
-
-                try{
-                    server.handleRequest(input, output);
-                    //System.err.println("Webserver process request " + output.readUTF());
-                    conn.send(output);
-                    //System.err.println("Webserver send request");
-                }catch (NotRequestException e){}
-
-
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                conn.close();
-            }
-        }
-    }
+    
 }

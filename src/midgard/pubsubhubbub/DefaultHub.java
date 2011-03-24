@@ -19,19 +19,17 @@ package midgard.pubsubhubbub;
 
 
 import midgard.pubsubhubbub.events.PubSubHubBubNotificationEvent;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Vector;
 import midgard.events.IEvent;
-import midgard.kernel.Debug;
 import midgard.utils.NetworkUtils;
 import midgard.pubsubhubbub.events.PublicationEvent;
 import midgard.pubsubhubbub.events.PublicationSensorEvent;
 import midgard.pubsubhubbub.events.PublicationSensorEventData;
 import midgard.services.Service;
+import midgard.utils.ResponseUtils;
 import midgard.utils.StringUtils;
-import midgard.web.IHTTPServer;
 import midgard.web.IWebServer;
 import midgard.web.Request;
 import midgard.web.Response;
@@ -110,18 +108,14 @@ public class DefaultHub extends Service implements IHub {
 
             }
         }
-        return getResponse("{ \"result\" : true }");
+        return ResponseUtils.getResponse("{ \"result\" : true }");
     }
 
     private Response handleNotify(Request request) {
         fireEvent(new PubSubHubBubNotificationEvent(request));
-        return getResponse("{ \"result\" : true }");
+        return ResponseUtils.getResponse("{ \"result\" : true }");
     }
 
-    private Response getResponse(String body) {
-        return new Response(IHTTPServer.HTTP_OK, IHTTPServer.MIME_APPLICATION_JSON,
-                new ByteArrayInputStream(body.getBytes()), body.length());
-    }
 
     public Response serve(Request request) throws Exception {
 
@@ -155,14 +149,7 @@ public class DefaultHub extends Service implements IHub {
 
         String topic = response.uri;
 
-        byte[] buffer = new byte[response.contentLength];
-        try {
-            response.data.read(buffer, 0, response.contentLength);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        String appData = new String(buffer);
+        String appData = response.data;
 
         Hashtable result = new Hashtable();
         result.put("topic", topic);
@@ -176,7 +163,7 @@ public class DefaultHub extends Service implements IHub {
 
     private void sendNotify(String topic, Hashtable parameters) {
 
-        String address;
+        String address, response;
         Vector listeners = (Vector) listenersByTopic.get(topic);
 
         if (listeners != null) {
@@ -187,7 +174,8 @@ public class DefaultHub extends Service implements IHub {
 
                 try {
                     connector.connect(address);
-                    connector.post("/notify", parameters);
+                    response = connector.post("/notify", parameters);
+                    //TODO: catch error
                     connector.closeConnection();
                 } catch (IOException e) {
                     e.printStackTrace();

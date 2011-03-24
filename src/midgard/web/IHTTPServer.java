@@ -21,7 +21,6 @@ package midgard.web;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import javax.microedition.io.Datagram;
 import midgard.componentmodel.IComponent;
 
 /**
@@ -44,7 +43,7 @@ public interface IHTTPServer extends IComponent {
             MIME_DEFAULT_BINARY = "application/octet-stream";
 
 
-    public void handleRequest(Datagram input, Datagram output) throws IOException;
+    public String handleRequest(String request) throws IOException;
     public void addView(URLView view);
     public void removeViewWithURI(String URI);
 }

@@ -19,7 +19,8 @@
 package midgard.web;
 
 import java.io.IOException;
-import javax.microedition.io.Datagram;
+import java.io.InputStream;
+import java.io.OutputStream;
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.ProxyComponent;
 
@@ -35,8 +36,8 @@ public class HTTPServer extends ProxyComponent implements IHTTPServer{
         concreteComponent = (IHTTPServer) component;
     }
 
-    public void handleRequest(Datagram input, Datagram output) throws IOException {
-        concreteComponent.handleRequest(input, output);
+    public String handleRequest(String request) throws IOException {
+        return concreteComponent.handleRequest(request);
     }
 
     public void addView(URLView view) {

@@ -17,12 +17,13 @@
 */
 package midgard.web.http;
 
-import com.sun.spot.io.j2me.radiogram.RadiogramConnection;
+import com.sun.spot.io.j2me.tcp.TCPConnection;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import javax.microedition.io.Connector;
-import javax.microedition.io.Datagram;
 
 /**
  *
@@ -32,8 +33,9 @@ public class HttpConnector {
 
     private final int TIMEOUT = 10000;
     private boolean connected = false;
-    private RadiogramConnection conn = null;
-    Datagram datagram;
+    private TCPConnection conn = null;
+    DataInputStream tin = null;
+    DataOutputStream ton = null;
 
     public HttpConnector() {
 
@@ -41,10 +43,8 @@ public class HttpConnector {
 
     public void connect(String address) throws IOException {
 
-        conn = (RadiogramConnection) Connector.open("radiogram://" + address + ":80");
+        conn = (TCPConnection) Connector.open("tcp://" + address + ":80");
         conn.setTimeout(TIMEOUT);
-
-        datagram = conn.newDatagram(conn.getMaximumLength());
         connected = true;
     }
 
@@ -60,16 +60,20 @@ public class HttpConnector {
         }
     }
 
-    public void get(String uri) throws IOException {
-        String request;
+    public String get(String uri) throws IOException {
+        String request, response;
         request = "GET " + uri + " HTTP/1.0\r\n\r\n";
-        datagram.writeUTF(request);
-        conn.send(datagram);
+        tin = conn.openDataInputStream();
+        ton = conn.openDataOutputStream();
 
+        ton.writeUTF(request);
+        response = tin.readUTF();
+        return response;
     }
 
 
-    public void post(String uri, Hashtable params) throws IOException {
+    public String post(String uri, Hashtable params) throws IOException {
+        String response;
         StringBuffer request = new StringBuffer();
         StringBuffer content = new StringBuffer();
         request.append("POST " + uri + " HTTP/1.0\r\n");
@@ -86,8 +90,16 @@ public class HttpConnector {
         request.append("\r\n");
         request.append("Content-Type: application/x-www-form-urlencoded\r\n");
         request.append(content.toString());
-        datagram.writeUTF(request.toString());
-        conn.send(datagram);
+
+
+        tin = conn.openDataInputStream();
+        ton = conn.openDataOutputStream();
+
+        ton.writeUTF(request.toString());
+
+        response = tin.readUTF();
+        return response;
+
     }
 
     

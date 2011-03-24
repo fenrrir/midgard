@@ -1,29 +1,10 @@
-/*
-* Copyright (C) 2011 Rodrigo Pinheiro Marques de Araujo
-*
-* This program is free software; you can redistribute it and/or modify it under
-* the terms of the GNU General Public License as published by the Free Software
-* Foundation; either version 2 of the License, or (at your option) any later
-* version.
-*
-* This program is distributed in the hope that it will be useful, but WITHOUT
-* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-* FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-* details.
-*
-* You should have received a copy of the GNU General Public License along with
-* this program; if not, write to the Free Software Foundation, Inc., 51
-* Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-*/
 package midgard.web;
 
 import com.sun.squawk.util.StringTokenizer;
 import java.io.*;
 import java.util.*;
-import javax.microedition.io.Datagram;
 import midgard.componentmodel.Component;
-import midgard.web.events.AsyncMessageEvent;
-import midgard.web.events.AsyncMessageEventData;
+import midgard.kernel.Debug;
 import midgard.web.events.RequestEvent;
 import midgard.web.events.ResponseEvent;
 
@@ -94,44 +75,29 @@ public class NanoHttp extends Component implements IHTTPServer{
         return res.toString();
     }
 
-    public void handleRequest(Datagram input, Datagram output) throws IOException {
-        Request request;
+    public String handleRequest(String request) throws IOException {
+        Request requestObj;
         Response response;
         try {
 
-            String line;
-            String message = input.readUTF();
-
             
-            ByteArrayInputStream byteArrayInput =
-                    new ByteArrayInputStream(message.getBytes());
-            Reader in = new InputStreamReader(byteArrayInput);
-
-
-
+            ByteArrayInputStream byteArray = new ByteArrayInputStream(request.getBytes());
+            Reader in = new InputStreamReader(byteArray);
 
             // Read the request line
-            line = readLine(in);
+            String line = readLine(in);
             StringTokenizer st = new StringTokenizer(line);
             if (!st.hasMoreTokens()) {
-                sendError(output, HTTP_BADREQUEST, "BAD REQUEST: Syntax error");
-                return;
+                return sendError(HTTP_BADREQUEST, "BAD REQUEST: Syntax error");
             }
 
             String method = st.nextToken();
 
-            if (!(method.equals("GET") ||
-                 method.equals("PUT") ||
-                 method.equals("POST") ||
-                 method.equals("DELETE"))){
-                fireEvent( new AsyncMessageEvent(
-                        new AsyncMessageEventData(message, input.getAddress())));
-                throw new NotRequestException("errors");
-            }
+       
 
             if (!st.hasMoreTokens()) {
-                sendError(output, HTTP_BADREQUEST, "BAD REQUEST: Missing URI");
-                return;
+                return sendError(HTTP_BADREQUEST, "BAD REQUEST: Missing URI");
+
             }
 
             String uri = decodePercent(st.nextToken());
@@ -148,11 +114,11 @@ public class NanoHttp extends Component implements IHTTPServer{
             }
 
 
-            request = new Request(method, uri);
+            requestObj = new Request(method, uri);
 
             // Decode parameters
             if (parms != null) {
-                decodeParms(parms, request.parms);
+                decodeParms(parms, requestObj.parms);
             }
 
             // If there's another token, it's protocol version,
@@ -162,7 +128,7 @@ public class NanoHttp extends Component implements IHTTPServer{
 
                 while (line.trim().length() > 0) {
                     int p = line.indexOf(':');
-                    request.header.put(line.substring(0, p).trim(), line.substring(p + 1).trim());
+                    requestObj.header.put(line.substring(0, p).trim(), line.substring(p + 1).trim());
                     line = readLine(in);
                 }
             }
@@ -170,32 +136,34 @@ public class NanoHttp extends Component implements IHTTPServer{
             // If the method is POST, there may be parameters
             // in data section, too, read another line:
             if (method.equals("POST")) {
-                decodeParms(readLine(in), request.parms);
+                decodeParms(readLine(in), requestObj.parms);
             }
 
 
 
-            fireEvent(new RequestEvent(request));
-            IURLHandler handler = (IURLHandler) handlers.get(request.uri);
+            fireEvent(new RequestEvent(requestObj));
+            IURLHandler handler = (IURLHandler) handlers.get(requestObj.uri);
 
             
             if (handler != null) {
-                response = handler.serve(request);
-                response.uri = request.uri;
+                Debug.debug("[APP] serve call", 1);
+                response = handler.serve(requestObj);
+                Debug.debug("[APP] serve response", 1);
+                response.uri = requestObj.uri;
                 fireEvent( new ResponseEvent(response));
-                sendResponse(output, response);
+                return sendResponse(response);
             } else {
-                sendError(output, HTTP_NOTFOUND, HTTP_NOTFOUND);
+                return sendError(HTTP_NOTFOUND, HTTP_NOTFOUND);
             }
 
         } catch (IllegalArgumentException iae) {
             iae.printStackTrace();
-            sendError(output, HTTP_BADREQUEST, iae.toString());
+            return sendError(HTTP_BADREQUEST, iae.toString());
         }catch(NotRequestException nre){
             throw nre;
         } catch (Exception e) {
             e.printStackTrace();
-            sendError(output, HTTP_INTERNALERROR, "SERVER INTERNAL ERROR: Exception: " + e.toString());
+            return sendError(HTTP_INTERNALERROR, "SERVER INTERNAL ERROR: Exception: " + e.toString());
         }
     }
 
@@ -251,38 +219,37 @@ public class NanoHttp extends Component implements IHTTPServer{
     /**
      * Returns an error message as a HTTP response.
      */
-    private void sendError(Datagram output, String status, String msg) throws IOException {
-        sendResponse(output, new Response(status, MIME_PLAINTEXT, msg));
+    private String sendError(String status, String msg) throws IOException {
+        return sendResponse(new Response(status, MIME_PLAINTEXT, msg));
     }
 
     /**
      * Sends given response to the socket.
      */
-    private void sendResponse(Datagram output, Response response) throws IOException {
-        String messageContent;
+    private String sendResponse(Response response) throws IOException {
+
+        StringBuffer strBuffer =  new StringBuffer();
         String status = response.status;
         String mime = response.mimeType;
         Properties header = response.header;
-        InputStream data = response.data;
         int contentLength = response.contentLength;
 
-        ByteArrayOutputStream byteArrayOutput =
-                new ByteArrayOutputStream(output.getLength());
 
 
         if (status == null) {
             throw new Error("sendResponse(): Status can't be null.");
         }
 
-        Writer out = new OutputStreamWriter(byteArrayOutput);
-        out.write("HTTP/1.0 " + status + " \r\n");
+
+
+        strBuffer.append("HTTP/1.0 " + status + " \r\n");
 
         if (contentLength >= 0) {
-            out.write("Content-Length: " + contentLength + "\r\n");
+            strBuffer.append("Content-Length: " + contentLength + "\r\n");
         }
 
         if (mime != null) {
-            out.write("Content-Type: " + mime + "\r\n");
+            strBuffer.append("Content-Type: " + mime + "\r\n");
         }
 
 
@@ -290,25 +257,12 @@ public class NanoHttp extends Component implements IHTTPServer{
         while (e.hasMoreElements()) {
             String key = (String) e.nextElement();
             String value = header.getProperty(key);
-            out.write(key + ": " + value + "\r\n");
+            strBuffer.append(key + ": " + value + "\r\n");
         }
 
-        out.write("\r\n");
+        strBuffer.append("\r\n");
+        strBuffer.append(response.data);
+        return strBuffer.toString();
 
-
-
-        byte [] buffer = new byte[contentLength];
-        data.read(buffer, 0, contentLength);
-        String appData = new String( buffer );
-        out.write(appData);
-
-        out.flush();
-
-        if (data != null) {
-            data.close();
-        }
-
-        messageContent  = new String(byteArrayOutput.toByteArray());
-        output.writeUTF(messageContent);
     }
 }
