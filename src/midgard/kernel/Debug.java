@@ -27,11 +27,11 @@ import midgard.utils.NetworkUtils;
 public class Debug {
     private static String address = "";
     public static boolean on = true;
-    public static int level = 1;
+    public static int level = 0;
 
-    private static void print(String msg, int level){
+    private static void print(String msg, int i_level){
 
-        if (on){
+        if (on && (i_level >= level)){
             if(address.equals("")){
                 address = NetworkUtils.getAddress();
             }
@@ -45,10 +45,7 @@ public class Debug {
     }
 
     public static void debug(String msg, int i_level){
-
-        if (i_level > level){
             print(msg, i_level);
-        }
     }
 
 }
