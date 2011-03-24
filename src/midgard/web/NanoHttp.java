@@ -75,7 +75,7 @@ public class NanoHttp extends Component implements IHTTPServer{
         return res.toString();
     }
 
-    public String handleRequest(String request) throws IOException {
+    public String handleRequest(String request){
         Request requestObj;
         Response response;
         try {
@@ -219,14 +219,14 @@ public class NanoHttp extends Component implements IHTTPServer{
     /**
      * Returns an error message as a HTTP response.
      */
-    private String sendError(String status, String msg) throws IOException {
+    private String sendError(String status, String msg){
         return sendResponse(new Response(status, MIME_PLAINTEXT, msg));
     }
 
     /**
      * Sends given response to the socket.
      */
-    private String sendResponse(Response response) throws IOException {
+    private String sendResponse(Response response){
 
         StringBuffer strBuffer =  new StringBuffer();
         String status = response.status;

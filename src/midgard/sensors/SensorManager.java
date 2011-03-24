@@ -69,9 +69,5 @@ public class SensorManager extends ProxyService implements ISensorManager{
     public void collect() {
         concreteComponent.collect();
     }
-
-    public void run() {
-        concreteComponent.run();
-    }
    
 }

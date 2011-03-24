@@ -35,10 +35,6 @@ public class WebServer extends ProxyService implements IWebServer{
         concreteComponent = (IWebServer) component;
     }
 
-    public void run() {
-        concreteComponent.run();
-    }
-
     public void removeWebApplication(IWebApplication application) {
         concreteComponent.removeWebApplication(application);
     }

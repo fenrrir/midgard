@@ -18,10 +18,13 @@
 
 package midgard.sensors.network;
 
-import midgard.components.IComponentManager;
-import midgard.events.IEvent;
+import midgard.network.mailbox.IMailBox;
+import midgard.network.mailbox.IMessage;
+import midgard.network.mailbox.MailBox;
+import midgard.network.mailbox.Receiver;
+import midgard.network.mailbox.Sender;
 import midgard.sensors.Sensor;
-import midgard.web.IWebServer;
+import midgard.sensors.events.NetworkEvent;
 
 
 
@@ -32,39 +35,41 @@ import midgard.web.IWebServer;
  */
 public class DefaultNetworkSensor extends Sensor implements INetworkSensor{
 
-    private IWebServer webserver;
+    private IMailBox mailbox;
+    private Sender sender;
+    private Receiver receiver;
+    private Thread receiverThread, senderThread;
 
 
-    public String[] getRequiredInterfaces() {
-        return new String [] {IWebServer.class.getName()}  ;
-    }
 
     public void initialize(){
-        webserver = (IWebServer)
-                getConnectedComponents().get(IWebServer.class.getName());
-        super.initialize();
+        mailbox = new MailBox();
+        super.initialize();      
     }
 
     public void collect() {
-        // do nothing.
-        // go to newEventArrived
+        for(int i=0; i<mailbox.sizeInbox(); i++){
+            IMessage message = mailbox.getInboxMessage(i);
+            fireEvent( new NetworkEvent(message) );
+        }
               
     }
 
-    public void newEventArrived(IEvent event) {
-        //System.err.println("@@@@@@@@@@@@@@@@@@Event class " + event.getClass().getName());
-        super.newEventArrived(event);
-        fireEvent(event);
-    }
-
     public void disableSensor() {
-        webserver.removeEventListener(this);
-        webserver.stopService();
+        sender.stop();
+        receiver.stop();
+        mailbox = null;
+        receiverThread = null;
+        senderThread = null;
     }
 
     public void initSensor() {
-        webserver.registerEventListener(this);
-        webserver.startService();
+        sender =  new Sender(mailbox);
+        receiver = new Receiver(mailbox);
+        receiverThread = new Thread(receiver);
+        senderThread = new Thread(sender);
+        receiverThread.start();
+        senderThread.start();
     }
    
 }

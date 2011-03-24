@@ -17,19 +17,14 @@
 */
 package midgard.web;
 
-import com.sun.spot.io.j2me.radiogram.RadiogramConnection;
-import com.sun.spot.ipv6.tcp.ServerSocket;
-import com.sun.spot.ipv6.tcp.Socket;
-import java.io.IOException;
 import java.util.Vector;
-import javax.microedition.io.Connector;
-import javax.microedition.io.Datagram;
 import midgard.app.IAppRepositoryManager;
 import midgard.components.IComponentManager;
 import midgard.events.IEvent;
-import midgard.kernel.Debug;
+import midgard.network.mailbox.IMessage;
+import midgard.sensors.events.NetworkEvent;
+import midgard.sensors.network.INetworkSensor;
 import midgard.services.Service;
-import midgard.web.tcp.TCPWorker;
 
 /**
  *
@@ -37,20 +32,20 @@ import midgard.web.tcp.TCPWorker;
  */
 public class DefaultWebServer extends Service implements IWebServer {
 
-    private IHTTPServer server;
-    ServerSocket serverSocket = null;
-    
+    private IHTTPServer server;    
     private IComponentManager componentManager;
     private IAppRepositoryManager appRepositoryManager;
+    private INetworkSensor networkSensor;
+    
     private Vector webApplications;
-    private boolean isRunning = false;
-    private Thread thread;
+    
 
     public String[] getRequiredInterfaces() {
         return new String[]{
                     IHTTPServer.class.getName(),
                     IComponentManager.class.getName(),
-                    IAppRepositoryManager.class.getName()
+                    IAppRepositoryManager.class.getName(),
+                    INetworkSensor.class.getName()
                 };
     }
 
@@ -61,6 +56,8 @@ public class DefaultWebServer extends Service implements IWebServer {
         componentManager = (IComponentManager) getConnectedComponents().get(IComponentManager.class.getName());
 
         appRepositoryManager = (IAppRepositoryManager) getConnectedComponents().get(IAppRepositoryManager.class.getName());
+        networkSensor = (INetworkSensor) getConnectedComponents().get(INetworkSensor.class.getName());
+        networkSensor.registerEventListener(this);
     }
 
     public void startService() {
@@ -69,9 +66,6 @@ public class DefaultWebServer extends Service implements IWebServer {
         String webAppName;
         IWebApplication webApp;
 
-        server.registerEventListener(this);
-
-        //System.err.println("WebServer Starting...");
         Vector userWebApplications = appRepositoryManager.listWebApplications();
         for (int i = 0; i < userWebApplications.size(); i++) {
             webAppName = (String) userWebApplications.elementAt(i);
@@ -81,18 +75,10 @@ public class DefaultWebServer extends Service implements IWebServer {
             }
         }
 
-
-
-        isRunning = true;
-        thread = new Thread(this);
-        thread.start();
     }
 
     public void stopService() {
         super.stopService();
-        isRunning = false;
-        server.removeEventListener(this);
-
         String uri;
         IWebApplication webApp;
         Vector URIs;
@@ -106,54 +92,23 @@ public class DefaultWebServer extends Service implements IWebServer {
             }
 
         }
-
-
         componentManager.destroyComponent(server);
-
-        thread.interrupt();
-
-        isRunning = false;
         server = null;
     }
 
     public void newEventArrived(IEvent event) {
-        //System.err.println("@@@@@@@@@@@@@@@@@@Event class " + event.getClass().getName());
-        super.newEventArrived(event);
-        fireEvent(event);
-    }
-
-    public void run() {
-        try {
-            serverSocket = new ServerSocket(80);
-        } catch (IOException e) {
-            Debug.debug("Could not listen on port: 4444.", 1);
-            e.printStackTrace();
-        }
-        Debug.debug("[APP] Socket opened and listening", 1);
-        while (isRunning) {
-            try {
-                new TCPWorker(server, (Socket) serverSocket.accept());
-                Debug.debug("[APP] Connection started.", 1);
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-
-        }
-        Debug.debug("[APP] Done, closing up", 1);
-        try {
-            serverSocket.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        if (event instanceof NetworkEvent){
+            IMessage message = (IMessage) event.getContentObject();
+            String reply = server.handleRequest(message.getContent());
+            message.reply(reply);
         }
     }
+
+    
 
     public void addWebApplication(IWebApplication application) {
         String uri;
         Vector appURIs = application.getURIs();
-
-
-        //System.err.println("Webserver add application "
-        //        + application.getClass().getName());
 
         for (int i = 0; i < appURIs.size(); i++) {
             uri = (String) appURIs.elementAt(i);

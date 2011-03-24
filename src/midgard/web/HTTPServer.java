@@ -36,7 +36,7 @@ public class HTTPServer extends ProxyComponent implements IHTTPServer{
         concreteComponent = (IHTTPServer) component;
     }
 
-    public String handleRequest(String request) throws IOException {
+    public String handleRequest(String request){
         return concreteComponent.handleRequest(request);
     }
 

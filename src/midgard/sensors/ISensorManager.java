@@ -29,7 +29,7 @@ import midgard.services.IService;
  *
  * @author fenrrir
  */
-public interface ISensorManager extends IService, ISensor, Runnable {
+public interface ISensorManager extends IService, ISensor{
 
     public IAccelerometerSensor getAccelerometerSensor();
 

@@ -41,7 +41,7 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
     private Vector userSensors;
     private IAppRepositoryManager appRepositoryManager;
     private IComponentManager componentManager;
-    private Thread thread = null;
+    private boolean isRunning;
 
     public String[] getRequiredInterfaces() {
         return new String [] {IAppRepositoryManager.class.getName(),
@@ -84,11 +84,7 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
     }
 
     public void run() {
-        while (true){
-            collect();
-            Utils.sleep(appRepositoryManager.getSleepTime());
-            //System.err.println("sensormanager tick");
-        }
+        
     }
 
     public void collect() {
@@ -144,16 +140,17 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
 
     public void startService() {
         super.startService();
-
-        if (thread == null){
-            thread = new Thread(this);
-            thread.start();
+        isRunning = true;
+        while (isRunning){
+            collect();
+            Utils.sleep(appRepositoryManager.getSleepTime());
+            //System.err.println("sensormanager tick");
         }
     }
 
     public void stopService() {
         super.stopService();
-        thread.interrupt();
+        isRunning = false;
     }
 
     public void destroy() {

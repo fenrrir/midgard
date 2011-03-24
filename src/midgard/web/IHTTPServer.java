@@ -43,7 +43,7 @@ public interface IHTTPServer extends IComponent {
             MIME_DEFAULT_BINARY = "application/octet-stream";
 
 
-    public String handleRequest(String request) throws IOException;
+    public String handleRequest(String request);
     public void addView(URLView view);
     public void removeViewWithURI(String URI);
 }
