@@ -18,7 +18,7 @@
 
 package midgard.network;
 
-import midgard.network.routing.RoutingManager;
+import midgard.network.routing.IRoutingManager;
 import midgard.services.Service;
 
 /**
@@ -26,9 +26,31 @@ import midgard.services.Service;
  * @author fenrrir
  */
 public class DefaultNetworkManager extends Service implements INetworkManager{
+    private IRoutingManager routingManager;
+   
 
-    public RoutingManager getRoutingManager() {
-        return null;
+    public String[] getRequiredInterfaces() {
+        return new String [] {IRoutingManager.class.getName()}  ;
+    }
+
+    public void initialize(){
+        super.initialize();
+        routingManager = (IRoutingManager)
+                getConnectedComponents().get(IRoutingManager.class.getName());
+    }
+
+    public IRoutingManager getRoutingManager() {
+        return routingManager;
+    }
+
+    public void startService() {
+        super.startService();
+        
+    }
+
+    public void stopService() {
+        super.stopService();
+        
     }
 
 }
