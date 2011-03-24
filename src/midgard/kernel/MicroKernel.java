@@ -40,12 +40,12 @@ public class MicroKernel {
     private MicroKernel(){
         boolean useProxy = Midgard.getProperty("UseProxy").equals("true");
         if (useProxy){
-            System.err.println("UseProxy=on");
+            Debug.debug("UseProxy=on");
             bootDefault();
         }
         else{
             bootNoProxy();
-            System.err.println("UseProxy=off");
+            Debug.debug("UseProxy=off");
         }
     }
 
@@ -53,7 +53,7 @@ public class MicroKernel {
 
     private void bootDefault(){
 
-        
+
         IComponentRepositoryManager repositoryManager;
         ComponentRepositoryManager repositoryProxy;
 

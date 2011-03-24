@@ -26,6 +26,7 @@ import midgard.componentmodel.Component;
 import midgard.componentmodel.IComponent;
 import midgard.componentmodel.IProxyComponent;
 import midgard.kernel.ClassLoader;
+import midgard.kernel.Debug;
 import midgard.utils.FileUtils;
 import midgard.web.json.JSONArray;
 import midgard.web.json.JSONException;
@@ -73,7 +74,7 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
         else{
             try {
                 Object obj = ClassLoader.newInstanceOf(name);
-                //System.err.println("Instantiating object from class " + name);
+                Debug.debug("new instance of " + name, -1);
                 table.put(name, obj);
                 return (IComponent) obj;
             } catch (IllegalAccessException ex) {

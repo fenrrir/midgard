@@ -17,7 +17,6 @@
  */
 package midgard.app.tests;
 
-import midgard.kernel.Debug;
 import midgard.pubsubhubbub.ISubscriber;
 
 /**
@@ -53,7 +52,6 @@ public class FakeGatewayScenarioOne extends TestApp {
         int id = clientId;
         for (int i=0; i < numClients; i++){
             String address = Integer.toHexString(id);
-            Debug.debug("Subscribe(topic=" + topic + ",address=" + address +")");
             subscriber.register(this, topic, clientsAddress + address);
             id +=1;
         }
