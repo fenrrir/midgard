@@ -11,6 +11,7 @@
         }
     },
     "services" : [
+        "midgard.web.IWebServer",
         "midgard.pubsubhubbub.IHub"
     ],
     "webApplications" : [
