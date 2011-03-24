@@ -79,7 +79,7 @@
             <compilation-unit>
                 <package-root>src</package-root>
                 <classpath mode="boot">${sunspot.bootclasspath}</classpath>
-                <classpath mode="compile">/home/fenrrir/.SunSPOT/sdk/lib/multihop_common.jar:/home/fenrrir/.SunSPOT/sdk/lib/transducer_device.jar:/home/fenrrir/.SunSPOT/sdk/lib/spotlib_device.jar:/home/fenrrir/.SunSPOT/sdk/lib/spotlib_common.jar</classpath>
+                <classpath mode="compile">/home/fenrrir/SunSPOT6/sdk/lib/CHTTPlib.jar:/home/fenrrir/SunSPOT6/sdk/lib/ipv6lib_common.jar:/home/fenrrir/SunSPOT6/sdk/lib/junit.jar:/home/fenrrir/SunSPOT6/sdk/lib/multihop_common.jar:/home/fenrrir/SunSPOT6/sdk/lib/sdcard_device.jar:/home/fenrrir/SunSPOT6/sdk/lib/spotlib_common.jar:/home/fenrrir/SunSPOT6/sdk/lib/spotlib_device.jar:/home/fenrrir/SunSPOT6/sdk/lib/spottestframework_device.jar:/home/fenrrir/SunSPOT6/sdk/lib/SSL_device.jar:/home/fenrrir/SunSPOT6/sdk/lib/transducer_device.jar:/home/fenrrir/SunSPOT6/sdk/lib/WoTlib-common.jar:/home/fenrrir/SunSPOT6/sdk/lib/WoTlib-device.jar</classpath>
                 <built-to>build</built-to>
                 <source-level>1.4</source-level>
             </compilation-unit>
