@@ -66,4 +66,14 @@ public class MailBox implements IMailBox{
         outbox.removeElement(message);
     }
 
+    public synchronized void waitOutboxMessages() {
+        if(outbox.size() == 0){
+            try {
+                wait();
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
 }

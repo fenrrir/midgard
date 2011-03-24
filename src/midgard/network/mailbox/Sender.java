@@ -38,6 +38,8 @@ public class Sender implements Runnable {
 
         while (isRunning) {
 
+            mailbox.waitOutboxMessages();
+
             for (int i = 0; i < mailbox.sizeOutbox(); i++) {
                 try {
                     IReplyMessage message = (IReplyMessage) mailbox.getOutboxMessage(i);
