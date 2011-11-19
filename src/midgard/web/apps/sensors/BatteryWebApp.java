@@ -20,6 +20,7 @@ package midgard.web.apps.sensors;
 import java.util.Vector;
 import midgard.componentmodel.Component;
 import midgard.events.IEvent;
+import midgard.kernel.Debug;
 import midgard.pubsubhubbub.IPublisher;
 import midgard.sensors.battery.IBatteryData;
 import midgard.sensors.battery.IBatterySensor;
@@ -39,9 +40,9 @@ public class BatteryWebApp extends Component implements IWebApplication {
     private Vector uris;
     private IBatterySensor batterySensor;
     private IPublisher publisher;
-    private double batteryCapacity;
+    private String batteryState = "";
     private JSONObject json;
-    private final String URI = "/battery/capacity";
+    private final String URI = "/battery/state";
 
     public void initialize() {
         super.initialize();
@@ -93,19 +94,23 @@ public class BatteryWebApp extends Component implements IWebApplication {
     }
 
     public void newEventArrived(IEvent event) {
-        double oldValue = batteryCapacity;
+        String oldState = batteryState;
         super.newEventArrived(event);
         IBatteryData data = (IBatteryData) event.getContentObject();
-        batteryCapacity = data.getAvailableCapacity();
 
-        if (oldValue != batteryCapacity){
+        Debug.debug("battery web app event");
+
+        batteryState = data.getStateAsString();
+
+        if (!oldState.equals(batteryState)){
 
             try {
-                json.put("value", batteryCapacity);
+                json.put("value", batteryState);
             } catch (JSONException ex) {
                 ex.printStackTrace();
             }
 
+            Debug.debug("vou notificar client");
             publisher.publish(URI, json.toString());
 
         }
