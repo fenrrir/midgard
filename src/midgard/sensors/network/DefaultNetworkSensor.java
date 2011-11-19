@@ -18,6 +18,7 @@
 
 package midgard.sensors.network;
 
+import midgard.kernel.Debug;
 import midgard.network.mailbox.IMailBox;
 import midgard.network.mailbox.IMessage;
 import midgard.network.mailbox.MailBox;
@@ -33,31 +34,31 @@ import midgard.sensors.events.NetworkEvent;
  *
  * @author fenrrir
  */
-public class DefaultNetworkSensor extends Sensor implements INetworkSensor{
+public class DefaultNetworkSensor extends Sensor implements INetworkSensor, Runnable{
 
     private IMailBox mailbox;
     private Sender sender;
     private Receiver receiver;
-    private Thread receiverThread, senderThread;
+    private Thread receiverThread, senderThread, self;
+    private boolean isRunning = false;
 
 
 
     public void initialize(){
         mailbox = new MailBox();
-        super.initialize();      
+        super.initialize();
     }
 
     public void collect() {
-        for(int i=0; i<mailbox.sizeInbox(); i++){
-            IMessage message = mailbox.getInboxMessage(i);
-            fireEvent( new NetworkEvent(message) );
-        }
-              
     }
 
     public void disableSensor() {
+        isRunning = false;
+        self.interrupt();
         sender.stop();
         receiver.stop();
+        senderThread.interrupt();
+        receiverThread.interrupt();
         mailbox = null;
         receiverThread = null;
         senderThread = null;
@@ -68,8 +69,28 @@ public class DefaultNetworkSensor extends Sensor implements INetworkSensor{
         receiver = new Receiver(mailbox);
         receiverThread = new Thread(receiver);
         senderThread = new Thread(sender);
+
+        self = new Thread(this);
+
+
         receiverThread.start();
         senderThread.start();
+        self.start();
+    }
+
+    public void run(){
+        isRunning = true;
+        while(isRunning){
+            try {
+                mailbox.waitInboxMessages();
+                for (int i = 0; i < mailbox.sizeInbox(); i++) {
+                    IMessage message = mailbox.getInboxMessage(i);
+                    fireEvent(new NetworkEvent(message));
+                }
+            } catch (InterruptedException ex) {
+                //ex.printStackTrace(); FIX TODO
+            }
+        }
     }
    
 }

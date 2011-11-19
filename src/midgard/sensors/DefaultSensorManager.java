@@ -24,6 +24,7 @@ import midgard.app.IApp;
 import midgard.app.IAppRepositoryManager;
 import midgard.componentmodel.IComponent;
 import midgard.components.IComponentManager;
+import midgard.kernel.Debug;
 import midgard.kernel.MicroKernel;
 import midgard.naming.INameService;
 import midgard.sensors.accelerometer.IAccelerometerSensor;
@@ -41,7 +42,7 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
     private Vector userSensors;
     private IAppRepositoryManager appRepositoryManager;
     private IComponentManager componentManager;
-    private boolean isRunning;
+    protected boolean isRunning;
 
     public String[] getRequiredInterfaces() {
         return new String [] {IAppRepositoryManager.class.getName(),
@@ -83,23 +84,21 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
         return (ITemperatureSensor) naming.resolveName(ITemperatureSensor.class.getName());
     }
 
-    public void run() {
-        
-    }
-
+    
     public void collect() {
         ISensor sensor;
         for (int i=0; i<userSensors.size(); i++){
             sensor = (ISensor )userSensors.elementAt(i);
             sensor.collect();
         }
+        Debug.showMemoryStats("after life cycle");
     }
 
     public void disableSensor() {
         ISensor sensor;
         for (int i=0; i<userSensors.size(); i++){
             sensor = (ISensor )userSensors.elementAt(i);
-            sensor.disableSensor();
+            //sensor.disableSensor();
         }
 
         userSensors.removeAllElements();
@@ -148,14 +147,21 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
         }
     }
 
+    
+
     public void stopService() {
-        super.stopService();
         isRunning = false;
+        super.stopService();
+        
     }
 
     public void destroy() {
-        super.destroy();
+
+        if (!isPaused()){
+            stopService();
+        }
         disableSensor();
+        super.destroy();
     }
 
     public void initialize() {
@@ -165,12 +171,12 @@ public class DefaultSensorManager extends Service implements ISensorManager, ISe
 
     public void pause() {
         super.pause();
-        disableSensor();
+        stopService();
     }
 
     public void resume() {
         super.resume();
-        initSensor();
+        startService();
     }
 
 

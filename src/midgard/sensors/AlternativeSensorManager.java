@@ -19,6 +19,7 @@
 package midgard.sensors;
 
 import com.sun.spot.util.Utils;
+import midgard.kernel.Debug;
 
 
 
@@ -26,15 +27,30 @@ import com.sun.spot.util.Utils;
  *
  * @author fenrrir
  */
-public class AlternativeSensorManager extends DefaultSensorManager {
+public class AlternativeSensorManager extends DefaultSensorManager implements Runnable {
     
-    private int sleepTime = 10000;
+    private int sleepTime = 1000;
 
-    public void run() {
-        while (true){
+    public void initialize() {
+        super.initialize();
+        Thread thread = new Thread(this);
+        thread.start();
+    }
+
+    public void startService() {
+        isRunning = true;
+        while (isRunning){
             collect();
             Utils.sleep(sleepTime);
-        }
+        }        
+    }
+
+
+
+
+    public void run() {
+        startService();
+ 
     }
 
 }
