@@ -1,10 +1,6 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 {
-    "sleep": 5000,
-    "AdaptationProfileRepositoryPath": "/evaluation/full/adaptationProfile.json",
-    "AppRepositoryPath": "/evaluation/full/appsFull.json"
+    "sleep": 2000,
+    "AppRepositoryPath": "/evaluation/scenario4/apps.json",
+    "AdaptationProfileRepositoryPath" : "/evaluation/scenario4/adaptationProfile.json"
+  
 }

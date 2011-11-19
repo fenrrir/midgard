@@ -4,7 +4,7 @@
             "class" : "midgard.app.tests.MyAggregateWebApp",
             "sensors" : [
                             "midgard.sensors.network.INetworkSensor",
-                            "midgard.sensors.battery.IBatterySensor",
+                            "midgard.sensors.battery.IBatterySensor"
                         ]
         }
     },
@@ -16,5 +16,5 @@
         "midgard.app.tests.MyAggregateWebApp",
         "midgard.web.apps.sensors.BatteryWebApp"
     ],
-    "sleep" : 2000,
+    "sleep" : 2000
 }

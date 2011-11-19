@@ -5,3 +5,7 @@ MIDlet-1: Midgard, , midgard.kernel.Midgard
 MicroEdition-Profile: IMP-1.0
 MicroEdition-Configuration: CLDC-1.1
 UseProxy: true
+debugEnable: false
+memoryDebug: true
+debugLevel: 0
+packetLog: true

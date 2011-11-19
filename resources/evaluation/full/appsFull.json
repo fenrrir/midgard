@@ -12,6 +12,7 @@
         }
     },
     "services" : [
+        "midgard.web.IWebServer",
         "midgard.pubsubhubbub.IHub",
         "midgard.pubsubhubbub.IPublisher",
         "midgard.pubsubhubbub.ISubscriber",
@@ -39,7 +40,7 @@
     "customEvents" : [
         "midgard.events.tests.TestCustomEvent"
     ],
-    "sleep" : 2000,
+    "sleep" : 2000
 }
 
 

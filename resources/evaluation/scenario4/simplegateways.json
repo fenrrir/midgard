@@ -10,8 +10,5 @@
     "services" : [
         "midgard.pubsubhubbub.IHub",
         "midgard.tasks.ITaskManager"
-    ],
-    "tasks" : [
-        "midgard.tasks.TestScenarioFourTask"
     ]
 }

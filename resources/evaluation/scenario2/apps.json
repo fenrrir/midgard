@@ -18,5 +18,5 @@
         "midgard.web.apps.sensors.TemperatureWebApp",
         "midgard.web.apps.sensors.LightWebApp"
     ],
-    "sleep" : 2000,
+    "sleep" : 2000
 }
