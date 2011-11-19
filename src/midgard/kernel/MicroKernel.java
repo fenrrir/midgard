@@ -38,6 +38,7 @@ public class MicroKernel {
     private ComponentManager componentManager;
 
     private MicroKernel(){
+        Debug.showMemoryStats("before boot");
         boolean useProxy = Midgard.getProperty("UseProxy").equals("true");
         if (useProxy){
             Debug.debug("UseProxy=on");

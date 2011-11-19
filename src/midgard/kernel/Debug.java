@@ -18,7 +18,10 @@
 
 package midgard.kernel;
 
+import java.util.Hashtable;
 import midgard.utils.NetworkUtils;
+import midgard.web.Request;
+import midgard.web.Response;
 
 /**
  *
@@ -26,17 +29,24 @@ import midgard.utils.NetworkUtils;
  */
 public class Debug {
     private static String address = "";
-    public static boolean on = true;
-    public static int level = 0;
+    private static boolean enabled = false;
+    private static boolean userEnabled = false;
+    private static boolean memoryDebug = false;
+    private static boolean userMemoryDebug = false;
+    private static int level = 0;
+    private static boolean userLevel = false;
+
+    private static boolean userPacketLog =  false;
+    private static boolean packetLog =  false;
 
     private static void print(String msg, int i_level){
 
-        if (on && (i_level >= level)){
+        if (isEnabled() && (i_level >= getLevel())){
             if(address.equals("")){
                 address = NetworkUtils.getAddress();
             }
 
-            System.err.println(address + " " + level + " " + msg);
+            System.err.println(address + " " + getLevel() + " " + msg);
         }
     }
 
@@ -47,5 +57,114 @@ public class Debug {
     public static void debug(String msg, int i_level){
             print(msg, i_level);
     }
+
+    public static void showMemoryStats(String context){
+
+        if (memoryDebugEnabled()){
+
+            Runtime runtime = Runtime.getRuntime();
+            long free, total;
+
+            runtime.gc();
+            free = runtime.freeMemory();
+            total = runtime.totalMemory();
+            
+
+            debug("###");
+            debug("### Context=" + context);
+            debug("### Free memory=" + free);
+            debug("### Total memory=" + total);
+            debug("### Used memory=" + (total - free));
+            debug("###");
+        }
+    }
+
+    /**
+     * @return the on
+     */
+    public static boolean isEnabled() {
+        if(!userEnabled){
+            if (Midgard.getProperty("debugEnable").equals("true")){
+                return true;
+            }
+            else
+                return false;
+        }
+        return enabled;
+    }
+
+
+    public static void setEnable(boolean enable) {
+        enabled = enable;
+    }
+
+    public static boolean memoryDebugEnabled() {
+        if(!userMemoryDebug){
+            if (Midgard.getProperty("memoryDebug").equals("true")){
+                return true;
+            }
+            else
+                return false;
+        }
+        return memoryDebug;
+    }
+
+    
+    public static void setMemoryDebug(boolean aMemoryDebug) {
+        userMemoryDebug = true;
+        memoryDebug = aMemoryDebug;
+    }
+
+    
+    public static int getLevel() {
+        if(!userLevel){
+            if (Midgard.getProperty("debugLevel") != null){
+                return Integer.parseInt(Midgard.getProperty("debugLevel"));
+            }
+            else
+                return -1;
+        }
+        return level;
+    }
+
+    
+    public static void setLevel(int aLevel) {
+        userLevel = true;
+        level = aLevel;
+    }
+
+    
+    public static boolean packetLogEnabled(){
+        if(!userPacketLog){
+            if (Midgard.getProperty("packetLog") != null){
+                return Midgard.getProperty("packetLog").equals("true");
+            }
+            else
+                return false;
+        }
+        return packetLog;
+    }
+
+    public static void enablePacketLog(){
+        userPacketLog = true;
+        packetLog = true;
+    }
+
+    public static long getPacketStartTime(){
+        if (packetLogEnabled()){
+            return System.currentTimeMillis();
+        }
+        else
+            return 0;
+    }
+
+    public static void showPacketTimeStats(long startTime){
+        if(packetLogEnabled()){
+            long time = System.currentTimeMillis() - startTime;
+            debug("PacketTime: " + time);
+        }
+    }
+
+
 
 }

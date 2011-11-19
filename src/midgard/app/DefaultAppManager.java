@@ -19,6 +19,7 @@ package midgard.app;
 
 import java.util.Vector;
 import midgard.components.IComponentManager;
+import midgard.kernel.Debug;
 import midgard.sensors.ISensorManager;
 import midgard.services.IService;
 import midgard.services.Service;
@@ -39,7 +40,7 @@ public class DefaultAppManager extends Service implements IAppManager {
         };
     }
 
-        public void initialize() {
+    public void initialize() {
         super.initialize();
         repository = (IAppRepositoryManager) getConnectedComponents()
                 .get(IAppRepositoryManager.class.getName());
@@ -76,6 +77,8 @@ public class DefaultAppManager extends Service implements IAppManager {
                 thread.start();
             }
         }
+
+        Debug.showMemoryStats("after apps initialized");
     }
 
     public void pauseApps() {
