@@ -31,7 +31,8 @@ public interface IMailBox {
     public void removeOutboxMessage(IReplyMessage message);
     public void putOutboxMessage(IReplyMessage message);
     public void putInboxMessage(IMessage message);
-    public void waitOutboxMessages();
+    public void waitOutboxMessages() throws InterruptedException ;
+    public void waitInboxMessages() throws InterruptedException ;
     public int sizeInbox();
     public int sizeOutbox();
 }

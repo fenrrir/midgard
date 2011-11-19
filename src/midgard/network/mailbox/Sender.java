@@ -18,6 +18,7 @@
 package midgard.network.mailbox;
 
 import java.io.IOException;
+import midgard.kernel.Debug;
 
 /**
  *
@@ -37,17 +38,19 @@ public class Sender implements Runnable {
         isRunning = true;
 
         while (isRunning) {
-
-            mailbox.waitOutboxMessages();
-
-            for (int i = 0; i < mailbox.sizeOutbox(); i++) {
-                try {
-                    IReplyMessage message = (IReplyMessage) mailbox.getOutboxMessage(i);
-                    message.send();
-                    mailbox.removeOutboxMessage(message);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
+            try {
+                mailbox.waitOutboxMessages();
+                for (int i = 0; i < mailbox.sizeOutbox(); i++) {
+                    try {
+                        IReplyMessage message = (IReplyMessage) mailbox.getOutboxMessage(i);
+                        message.send();
+                        mailbox.removeOutboxMessage(message);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                 }
+            } catch (InterruptedException ex) {
+                //ex.printStackTrace(); TODO FIX
             }
         }
 

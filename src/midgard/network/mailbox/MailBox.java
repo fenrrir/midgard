@@ -18,62 +18,59 @@
 
 package midgard.network.mailbox;
 
-import java.util.Vector;
+import midgard.kernel.Debug;
 
 /**
  *
  * @author fenrrir
  */
 public class MailBox implements IMailBox{
-    private Vector inbox, outbox;
+    private Box inbox, outbox;
 
     public MailBox(){
-        inbox = new Vector();
-        outbox = new Vector();
+        inbox = new Box();
+        outbox = new Box();
     }
 
 
-    public synchronized void putOutboxMessage(IReplyMessage message) {
+    public void putOutboxMessage(IReplyMessage message) {
         outbox.addElement(message);
-        notify();
     }
 
-    public synchronized void putInboxMessage(IMessage message) {
+    public void putInboxMessage(IMessage message) {
         inbox.addElement(message);
     }
 
-    public synchronized int sizeInbox() {
+    public int sizeInbox() {
         return inbox.size();
     }
 
-    public synchronized int sizeOutbox() {
+    public int sizeOutbox() {
         return outbox.size();
     }
 
-    public synchronized IMessage getInboxMessage(int index) {
+    public IMessage getInboxMessage(int index) {
         return (IMessage)inbox.elementAt(index);
     }
 
-    public synchronized IReplyMessage getOutboxMessage(int index) {
+    public IReplyMessage getOutboxMessage(int index) {
         return (IReplyMessage)outbox.elementAt(index);
     }
 
-    public synchronized void removeInboxMessage(IMessage message) {
+    public void removeInboxMessage(IMessage message) {
         inbox.removeElement(message);
     }
 
-    public synchronized void removeOutboxMessage(IReplyMessage message) {
+    public void removeOutboxMessage(IReplyMessage message) {
         outbox.removeElement(message);
     }
 
-    public synchronized void waitOutboxMessages() {
-        if(outbox.size() == 0){
-            try {
-                wait();
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
-        }
+    public void waitOutboxMessages() throws InterruptedException  {
+        outbox.waitMessages();
+    }
+
+    public void waitInboxMessages() throws InterruptedException  {
+        inbox.waitMessages();
     }
 
 }

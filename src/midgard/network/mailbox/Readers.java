@@ -58,7 +58,7 @@ public class Readers {
     }
 
     public void stop(){
-        for(int i=0; i< size; i++){
+        for(int i=0; i< nextThread; i++){
             Reader reader = readers[i];
             reader.stop();
         }
