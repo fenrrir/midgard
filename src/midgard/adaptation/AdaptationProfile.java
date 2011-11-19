@@ -21,9 +21,9 @@ package midgard.adaptation;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
-import midgard.componentmodel.Component;
 import midgard.events.IEvent;
 import midgard.events.IListener;
+import midgard.kernel.Debug;
 import midgard.utils.NumericUtils;
 import midgard.web.json.JSONArray;
 import midgard.web.json.JSONException;
@@ -173,7 +173,7 @@ public class AdaptationProfile
     }
 
     public void newEventArrived(IEvent event) {
-        
+    
         String name = event.getClass().getName();
 
         if (map.containsKey(name)){
@@ -206,7 +206,7 @@ public class AdaptationProfile
                 }
 
             } catch (JSONException ex) {
-                ex.printStackTrace();
+                //ex.printStackTrace(); FIX TODO
             }
             try {
                 JSONObject call = action.getJSONObject("call");

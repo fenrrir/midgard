@@ -27,6 +27,7 @@ import midgard.components.IComponentProfileManager;
 import midgard.events.IEvent;
 import midgard.events.IEventManager;
 import midgard.kernel.ClassLoader;
+import midgard.kernel.Debug;
 import midgard.repositories.adaptation.IAdaptationProfileRepositoryManager;
 import midgard.services.IService;
 import midgard.tasks.ITaskManager;
