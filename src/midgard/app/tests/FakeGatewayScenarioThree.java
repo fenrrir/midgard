@@ -18,6 +18,11 @@
 
 package midgard.app.tests;
 
+import midgard.kernel.Debug;
+import midgard.pubsubhubbub.events.SubscriptionEvent;
+import midgard.sensors.events.NetworkEvent;
+import midgard.web.Request;
+
 /**
  *
  * @author fenrrir
@@ -26,7 +31,18 @@ public class FakeGatewayScenarioThree extends FakeGatewayScenarioTwo {
 
     public void subscribesInTopics() {
         super.subscribesInTopics();
-        subscribes("/battery/level");
+        subscribe("/battery/state");
     }
+
+    
+
+    public String getServerAddress() {
+        return "c0a8.0F66.0000.1002";
+    }
+
+
+
+
+
 
 }

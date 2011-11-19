@@ -26,7 +26,7 @@ public class FakeGatewayScenarioTwo extends FakeGatewayScenarioOne {
 
     public void subscribesInTopics() {
         super.subscribesInTopics();
-        subscribes("/sensor/light");
+        subscribe("/sensor/light");
     }
 
 

@@ -19,13 +19,9 @@
 package midgard.app.tests;
 
 import midgard.app.App;
+import midgard.kernel.Debug;
 import midgard.pubsubhubbub.ISubscriber;
-import midgard.pubsubhubbub.events.SubscriptionEvent;
 import midgard.sensors.events.NetworkEvent;
-import midgard.web.Request;
-import midgard.web.events.AsyncMessageEvent;
-import midgard.web.json.JSONException;
-import midgard.web.json.JSONObject;
 
 /**
  *
@@ -74,6 +70,7 @@ subscriber.register(this, "/sensor/temperature", "c0a8.0080.0000.1005");
     }
 
     public void handleNetworkEvent(NetworkEvent event) {
+        Debug.debug("@@@@network event" + event);
 
         /*
         if (event instanceof SubscriptionEvent){

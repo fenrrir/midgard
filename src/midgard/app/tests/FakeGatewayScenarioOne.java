@@ -17,7 +17,11 @@
  */
 package midgard.app.tests;
 
+import midgard.kernel.Debug;
 import midgard.pubsubhubbub.ISubscriber;
+import midgard.pubsubhubbub.events.SubscriptionEvent;
+import midgard.sensors.events.NetworkEvent;
+import midgard.web.Request;
 
 /**
  *
@@ -28,7 +32,7 @@ public class FakeGatewayScenarioOne extends TestApp {
     private ISubscriber subscriber;
     private final int numClients = 1;
     private final int clientId = 0x1001;
-    private final String clientsAddress = "c0a8.0080.0000.";
+    private final String clientsAddress = "c0a8.0F66.0000.";
 
     public String[] getRequiredInterfaces() {
         return new String[]{
@@ -40,12 +44,13 @@ public class FakeGatewayScenarioOne extends TestApp {
         super.initialize();
 
         subscriber = (ISubscriber) getConnectedComponents().get(ISubscriber.class.getName());
+        subscribesInTopics();
 
 
     }
 
     public void subscribesInTopics() {
-        subscribes("/sensor/temperature");
+        subscribe("/sensor/temperature");
     }
 
     public void subscribes(String topic) {
@@ -54,6 +59,31 @@ public class FakeGatewayScenarioOne extends TestApp {
             String address = Integer.toHexString(id);
             subscriber.register(this, topic, clientsAddress + address);
             id +=1;
+        }
+
+    }
+
+
+    public void subscribe(String topic) {
+        Debug.debug("Subscribing to " + getServerAddress());
+        subscriber.register(this, topic, getServerAddress());
+    }
+
+
+    public String getServerAddress(){
+        return "c0a8.0F66.0000.1001";
+    }
+
+
+    public void handleNetworkEvent(NetworkEvent event) {
+        super.handleNetworkEvent(event);
+
+        if (event instanceof SubscriptionEvent){
+
+            Request request = (Request) event.getContentObject();
+            Debug.debug("topic=" + request.parms.getProperty("topic"));
+            Debug.debug("value=" + request.parms.getProperty("value"));
+
         }
 
     }

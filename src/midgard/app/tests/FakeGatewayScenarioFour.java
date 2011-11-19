@@ -19,6 +19,7 @@
 package midgard.app.tests;
 
 import java.io.IOException;
+import midgard.kernel.Debug;
 import midgard.web.http.HttpConnector;
 
 /**
@@ -28,10 +29,11 @@ import midgard.web.http.HttpConnector;
 public class FakeGatewayScenarioFour extends FakeGatewayScenarioThree{
 
     public void callRemoteAdaptation(){
+        Debug.debug("calling remote adaptation");
         String response;
         HttpConnector conn = new HttpConnector();
         try {
-            conn.connect("c0a8.0f66.0000.1001");
+            conn.connect("c0a8.0f66.0000.1002");
             response = conn.get("/sensor/changeSensorManager");
             conn.closeConnection();
             //TODO: catch error

@@ -3,8 +3,8 @@ package midgard.app.tests;
 
 import java.util.Vector;
 import midgard.app.App;
-import midgard.app.events.ChangeSleepTimeEvent;
 import midgard.kernel.Debug;
+import midgard.pubsubhubbub.IPublisher;
 import midgard.pubsubhubbub.ISubscriber;
 import midgard.pubsubhubbub.events.SubscriptionEvent;
 import midgard.sensors.battery.BatterySensorData;
@@ -23,26 +23,27 @@ public class MyAggregateWebApp extends App implements IWebApplication{
     private double temperature;
     private double light;
     private ISubscriber subscriber;
+    private IPublisher publisher;
     private String [] topics = {"/sensor/temperature", "/sensor/light"};
 
     public void initialize() {
         super.initialize();
         subscriber = (ISubscriber) getConnectedComponents().get(ISubscriber.class.getName());
-        //subscriber.register(this, "/sensor/temperature", "c0a8.0f66.0000.1001");
-        //subscriber.register(this, "/sensor/light", "c0a8.0f66.0000.1001");
+        publisher = (IPublisher) getConnectedComponents().get(IPublisher.class.getName());
         subscriber.register(this, topics, "c0a8.0f66.0000.1001");
     }
 
 
     public String[] getRequiredInterfaces() {
         return new String[]{
-                    ISubscriber.class.getName()
+                    ISubscriber.class.getName(),
+                    IPublisher.class.getName()
                 };
     }
 
     public void handleBatteryEvent(BatteryEvent event) {
         BatterySensorData data = (BatterySensorData) event.getContentObject();
-        Debug.debug("battery " + data.getAvailableCapacity() );
+        Debug.debug("battery " + data.getStateAsString() );
     }
 
 
@@ -61,10 +62,12 @@ public class MyAggregateWebApp extends App implements IWebApplication{
                 if (request.parms.get("topic").equals("/sensor/temperature")) {
                     temperature = json.getDouble("value");
                     Debug.debug("Remote temperature " + temperature,1 );
+                    publisher.publish("/sensor/temperature", (String) request.parms.get("value"));
                 }
                 else {
                     light = json.getDouble("value");
                     Debug.debug("Remote light " + light,1 );
+                    publisher.publish("/sensor/light", (String) request.parms.get("value"));
                 }
             } catch (JSONException ex) {
                 ex.printStackTrace();
@@ -92,11 +95,8 @@ public class MyAggregateWebApp extends App implements IWebApplication{
         response.put("value", light);
         return ResponseUtils.getResponse(response);
     }
-    else{
-        param = request.parms.getProperty("md5");
-        fireEvent(new ChangeSleepTimeEvent(""));
-        response.put("value", "ok");
-        return ResponseUtils.getResponse(response);
+
+    return ResponseUtils.getResponse("error");
+    
     }
-}
 }

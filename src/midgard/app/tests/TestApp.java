@@ -51,7 +51,7 @@ public class TestApp extends App{
 
     public void handleBatteryEvent(BatteryEvent event) {
         BatterySensorData data = (BatterySensorData) event.getContentObject();
-        Debug.debug("battery" + data.getAvailableCapacity());
+        Debug.debug("battery " + data.getStateAsString());
     }
 
     public void handleAccelerometerEvent(AccelerometerEvent event) {
