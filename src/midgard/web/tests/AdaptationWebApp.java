@@ -18,14 +18,14 @@
 
 package midgard.web.tests;
 
+import com.sun.spot.util.Utils;
 import java.util.Vector;
 import midgard.app.events.DeepSleepModeEvent;
-import midgard.app.events.LightSleepModeEvent;
 import midgard.componentmodel.Component;
+import midgard.kernel.Debug;
 import midgard.web.IWebApplication;
 import midgard.web.Request;
 import midgard.web.Response;
-import midgard.utils.ResponseUtils;
 import midgard.utils.ResponseUtils;
 import midgard.web.json.JSONObject;
 
@@ -43,11 +43,7 @@ public class AdaptationWebApp extends Component implements IWebApplication{
 
     public Response serve(Request request) throws Exception {
         JSONObject response = new JSONObject();
-        String mode =request.parms.getProperty("mode");
-        if (mode.equals("deep"))
-           fireEvent(new DeepSleepModeEvent(mode));
-        else
-            fireEvent(new LightSleepModeEvent(mode));
+        fireEvent(new DeepSleepModeEvent("sleep"));
         response.put("value", "ok");
         return ResponseUtils.getResponse(response);
     }
