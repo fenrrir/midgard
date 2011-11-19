@@ -69,12 +69,11 @@ public class DefaultComponentManager extends Service implements IComponentManage
         changeImplementation(proxy, comp);
     }
 
-    public void changeImplementation(String old, String newc) {
-        IProxyComponent oldComponent = (IProxyComponent) resolveComponent(old);
-        oldComponent.pause();
-        oldComponent.destroy();
-        freeComponent(oldComponent.getConcreteComponent());
-        IComponent newComponent = resolveComponent(newc);
+    public void changeImplementation(String iface, String component) {
+        IProxyComponent proxy = (IProxyComponent) resolveComponent(iface);
+        freeComponent(proxy.getConcreteComponent());
+        IComponent newComponent = resolveComponent(component);
+        proxy.setConcreteComponent(newComponent);
     }
 
 

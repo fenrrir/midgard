@@ -74,7 +74,7 @@ public class DefaultComponentRepositoryManager extends Component implements ICom
         else{
             try {
                 Object obj = ClassLoader.newInstanceOf(name);
-                Debug.debug("new instance of " + name, -1);
+                Debug.debug("new instance of " + name);
                 table.put(name, obj);
                 return (IComponent) obj;
             } catch (IllegalAccessException ex) {

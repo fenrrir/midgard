@@ -103,8 +103,8 @@ public class ComponentManager extends ProxyService implements IComponentManager 
         concreteComponent.freeComponent(component);
     }
 
-    public void changeImplementation(String old, String newc) {
-        concreteComponent.changeImplementation(old, newc);
+    public void changeImplementation(String iface, String component) {
+        concreteComponent.changeImplementation(iface, component);
     }
 
     
