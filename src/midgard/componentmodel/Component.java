@@ -40,6 +40,9 @@ public class Component implements IComponent {
         events = null;
         listeners = null;
         params = null;
+        loaded = false;
+        paused = false;
+        initialized = false;
     }
 
     public boolean isInitialized() {
