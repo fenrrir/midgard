@@ -57,7 +57,7 @@ public class TestCustomEvent extends BaseCustomEvent {
 
     public void newEventArrived(IEvent event) {
 
-        System.err.println("TestCustomEvent received event");
+        //System.err.println("TestCustomEvent received event");
 
         if (event instanceof LightEvent){
             light = (Integer) event.getContentObject();
@@ -77,7 +77,7 @@ public class TestCustomEvent extends BaseCustomEvent {
     }
 
     public void fireEvent(IEvent event) {
-        System.err.println("fireEvent on TestCustomEvent: " + event.getContentObject().toString());
+        //System.err.println("fireEvent on TestCustomEvent: " + event.getContentObject().toString());
         super.fireEvent(event);
     }
 
