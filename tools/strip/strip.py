@@ -7,6 +7,7 @@ import os
 from os.path import join, dirname, abspath
 import pprint
 import simplejson
+from simplejson.decoder import JSONDecodeError
 
 
 ROOT = abspath(join( dirname( __file__ ), "..", ".." ))
@@ -14,17 +15,13 @@ ROOT = abspath(join( dirname( __file__ ), "..", ".." ))
 TARGET_DIRECTORY = join(ROOT, "build")
 SRC_DIRECTORY = join(ROOT, "src")
 RESOURCES_DIRECTORY = join(ROOT, "resources")
-APPCONF = join(RESOURCES_DIRECTORY, "apps.json")
+DEFAULTCONF = join(RESOURCES_DIRECTORY, "defaultConf.json")
 
 COMPONENTS_REPOSITORY = join(RESOURCES_DIRECTORY, 
                             "midgard", 
                             "components", 
                             "components.json")
 
-ADAPTATION_REPOSITORY = join(RESOURCES_DIRECTORY, 
-                             "midgard", 
-                             "adaptation", 
-                             "profiles.json")
 
 DEPENDENCIES = join(ROOT, "tools", "strip", "dependencies.json")
 
@@ -121,8 +118,12 @@ def get_javaclass_from_file(filename):
     classname = classname_from_qualifiedname( qualifiedname )
 
 def load_dict_from_json(filename):
-    with file(filename) as f:
-        dct = simplejson.load(f)
+    try:
+        with file(filename) as f:
+            dct = simplejson.load(f)
+    except (IOError, JSONDecodeError), error:
+        print error
+        dct = {}
 
     return dct
 
@@ -304,12 +305,29 @@ class JavaClass(object):
 class Stripper(object):
 
     def __init__(self):
-        self.adaptations_repository =\
-                load_dict_from_json(ADAPTATION_REPOSITORY)
+        self.default_conf = load_dict_from_json(DEFAULTCONF)
+
         self.middleware_dependencies = load_dict_from_json(DEPENDENCIES)
-        self.app_conf = load_dict_from_json(APPCONF)
+
+        self.app_conf = self.open_app_conf_file()
+
+        self.adaptations_repository =  self.open_adaptation_repository_file()
+        print self.adaptations_repository
+
         self.classes = self.build_dependencies_dict()
         self.dont_strip = set()
+
+
+    def open_app_conf_file(self):
+        filename = RESOURCES_DIRECTORY + self.default_conf["AppRepositoryPath"]
+        return load_dict_from_json(filename)
+
+    def open_adaptation_repository_file(self):
+        if "AdaptationProfileRepositoryPath" in self.default_conf:
+            filename = RESOURCES_DIRECTORY + self.default_conf["AdaptationProfileRepositoryPath"]
+            return load_dict_from_json(filename)
+        return {}
+
 
     def run(self):
         self.load_apps_conf()
@@ -346,8 +364,12 @@ class Stripper(object):
 
 
     def load_adaptation_profile(self):
-        for profile in self.adaptations_repository:
-            for call in profile['actions']:
+        for profile_name in self.adaptations_repository:
+            profile = self.adaptations_repository[profile_name]
+            print profile
+            for action_name in profile['actions']:
+                action = profile['actions'][action_name]
+                call = action['call']
                 try:
                     self.add_deps_of( call['param'] )
 
@@ -619,3 +641,4 @@ class Stripper(object):
 
 if __name__ == "__main__":
     Stripper().run()
+    #Stripper().generate_middleware_dependencies()
