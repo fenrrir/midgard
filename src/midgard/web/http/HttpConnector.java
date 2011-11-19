@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import javax.microedition.io.Connector;
+import midgard.kernel.Debug;
 
 /**
  *
@@ -62,12 +63,23 @@ public class HttpConnector {
 
     public String get(String uri) throws IOException {
         String request, response;
+        long time;
+
+
+
+
+        time = Debug.getPacketStartTime();
+
+
         request = "GET " + uri + " HTTP/1.0\r\n\r\n";
         tin = conn.openDataInputStream();
         ton = conn.openDataOutputStream();
 
         ton.writeUTF(request);
         response = tin.readUTF();
+
+        Debug.showPacketTimeStats(time);
+
         return response;
     }
 
@@ -76,6 +88,10 @@ public class HttpConnector {
         String response;
         StringBuffer request = new StringBuffer();
         StringBuffer content = new StringBuffer();
+        long time;
+
+
+
         request.append("POST " + uri + " HTTP/1.0\r\n");
         content.append("\r\n");
 
@@ -92,12 +108,17 @@ public class HttpConnector {
         request.append(content.toString());
 
 
+        time = Debug.getPacketStartTime();
+
         tin = conn.openDataInputStream();
         ton = conn.openDataOutputStream();
 
         ton.writeUTF(request.toString());
 
         response = tin.readUTF();
+
+        Debug.showPacketTimeStats(time);
+
         return response;
 
     }
