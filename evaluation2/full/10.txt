@@ -1,0 +1,1323 @@
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@1d4
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@1d5
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@1d6
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@1d7
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15998104
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=208488
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@1d9
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@1da
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@1db
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@1dc
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15996016
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=210576
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1007
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1de
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1007
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1e0
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;address=C0A8.0F66.0000.1007
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1e2
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@1e3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@1e4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@1e5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@1e6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15985596
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=220996
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1008
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1e9
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1008
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1eb
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;address=C0A8.0F66.0000.1008
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1ed
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@1ee
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@1ef
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@1f0
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@1f1
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15973232
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=233360
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@1f2
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@1f3
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@1f4
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@1f5
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15973260
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=233332
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1009
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1f8
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1009
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1fa
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;address=C0A8.0F66.0000.1009
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@1fc
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@1fd
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@1fe
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@1ff
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@200
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15961344
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=245248
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@202
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@203
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@204
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@205
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15959480
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=247112
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.100A
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@207
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.100A
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@209
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;address=C0A8.0F66.0000.100A
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@20b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@20c
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@20d
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@20e
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@20f
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15949120
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=257472
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.100B
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@212
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.100B
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@214
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@215
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@216
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@217
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@218
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932364
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274228
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;address=C0A8.0F66.0000.100B
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@21a
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@21b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@21c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@21d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@21e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15933280
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=273312
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@21f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@220
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@221
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@222
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932644
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=273948
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@223
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@224
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@225
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@226
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932584
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274008
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@227
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@228
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@229
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@22a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932612
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=273980
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@22b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@22c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@22d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@22e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932552
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274040
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@22f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@230
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@231
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@232
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932684
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=273908
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@233
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@234
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@235
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@236
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932528
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274064
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@237
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@238
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@239
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@23a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932564
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274028
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@23b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@23c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@23d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@23e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932408
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274184
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@23f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@240
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@241
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@242
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15932252
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=274340
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 vou notificar client
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005, C0A8.0F66.0000.1007, C0A8.0F66.0000.1008, C0A8.0F66.0000.1009, C0A8.0F66.0000.100A, C0A8.0F66.0000.100B]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 99
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 97
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 93
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 90
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 88
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 89
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 88
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 98
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@243
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@244
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@245
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@246
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15925896
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=280696
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@247
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@248
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@249
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@24a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15930932
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=275660
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@24b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@24c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@24d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@24e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15930776
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=275816
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@24f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@250
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@251
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@252
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15930620
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=275972
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@253
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@254
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@255
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@256
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15930464
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=276128
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 vou notificar client
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005, C0A8.0F66.0000.1007, C0A8.0F66.0000.1008, C0A8.0F66.0000.1009, C0A8.0F66.0000.100A, C0A8.0F66.0000.100B]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 90
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 103
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 84
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 101
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 108
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 124
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 88
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 105
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 101
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@257
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@258
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@259
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@25a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15924056
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=282536
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@25b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@25c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@25d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@25e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928828
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=277764
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@25f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@260
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@261
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@262
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15929916
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=276676
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@263
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@264
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005, C0A8.0F66.0000.1007, C0A8.0F66.0000.1008, C0A8.0F66.0000.1009, C0A8.0F66.0000.100A, C0A8.0F66.0000.100B]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 93
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 100
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 102
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 88
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 86
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@265
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@266
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928720
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=277872
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@267
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@268
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@269
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@26a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928612
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=277980
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] [TCP] FIN_WAIT_1 port:80 total duplicate todrop:77082 rcv_wnd:2048
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@26b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005, C0A8.0F66.0000.1007, C0A8.0F66.0000.1008, C0A8.0F66.0000.1009, C0A8.0F66.0000.100A, C0A8.0F66.0000.100B]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 136
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 94
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 87
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 90
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 98
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 90
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 85
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@26c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@26d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@26e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15922220
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284372
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@26f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@270
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@271
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@272
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928044
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278548
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@273
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@274
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@275
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@276
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928080
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278512
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@277
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@278
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@279
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@27a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928264
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278328
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 vou notificar client
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005, C0A8.0F66.0000.1007, C0A8.0F66.0000.1008, C0A8.0F66.0000.1009, C0A8.0F66.0000.100A, C0A8.0F66.0000.100B]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 93
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 100
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 142
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 87
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 89
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 121
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@27b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@27c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@27d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@27e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15922672
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=283920
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@27f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@280
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@281
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@282
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927900
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278692
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@283
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@284
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@285
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@286
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927744
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278848
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@287
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@288
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@289
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@28a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928568
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278024
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@28b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@28c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@28d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@28e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928412
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278180
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@28f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@290
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@291
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@292
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928256
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278336
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@293
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@294
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@295
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@296
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928100
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278492
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@297
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@298
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@299
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@29a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928444
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278148
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@29b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@29c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@29d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@29e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928672
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=277920
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@29f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2a0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2a1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2a2
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928516
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278076
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2a3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2a4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2a5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2a6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928360
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278232
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2a7
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2a8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2a9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2aa
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927932
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278660
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2ab
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2ac
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2ad
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2ae
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15928048
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278544
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2af
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2b0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2b1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2b2
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927892
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278700
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2b3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2b4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2b5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2b6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927736
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=278856
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2b7
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2b8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2b9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2ba
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927580
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279012
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2bb
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2bc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2bd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2be
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927424
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279168
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2bf
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2c0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2c1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2c2
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927268
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279324
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2c3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2c4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2c5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2c6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15927112
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279480
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2c7
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2c8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2c9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2ca
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15926956
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279636
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2cb
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2cc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2cd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2ce
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15926800
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279792
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2cf
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2d0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2d1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2d2
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15926644
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=279948
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2d3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2d4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2d5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2d6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15926488
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=280104
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2d7
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery externally powered
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2d8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2d9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2da
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15926332
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=280260
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 vou notificar client
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/battery/state;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005, C0A8.0F66.0000.1007, C0A8.0F66.0000.1008, C0A8.0F66.0000.1009, C0A8.0F66.0000.100A, C0A8.0F66.0000.100B]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 106
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 102
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 109
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 89
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 105
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2db
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2dc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2dd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2de
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15919716
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=286876
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2df
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2e0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2e1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2e2
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15924740
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=281852
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2e3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2e4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2e5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2e6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15924964
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=281628
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2e7
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2e8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2e9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2ea
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15924808
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=281784
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2eb
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2ec
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2ed
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2ee
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15924652
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=281940
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2ef
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2f0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2f1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2f2
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921936
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284656
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2f3
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2f4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2f5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2f6
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921780
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284812
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2f7
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2f8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2f9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2fa
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15922024
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284568
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2fb
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2fc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2fd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@2fe
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15922352
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284240
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@2ff
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@300
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@301
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@302
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15922196
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284396
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@303
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@304
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@305
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@306
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15922040
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284552
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@307
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@308
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@309
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@30a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921884
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284708
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@30b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@30c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@30d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@30e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921728
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=284864
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@30f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@310
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@311
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@312
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921572
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285020
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@313
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@314
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@315
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@316
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921416
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285176
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@317
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@318
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@319
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@31a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15921260
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285332
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@31b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@31c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@31d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@31e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15920840
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285752
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@31f
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@320
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@321
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@322
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15920948
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285644
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@323
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@324
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@325
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@326
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15920792
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285800
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@327
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@328
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@329
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@32a
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15920636
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=285956
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery web app event
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.BatteryEvent@32b
+[Emulator System.err] C0A8.0F66.0000.1001 0 battery discharging
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@32c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature -1.6666666666666667
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@32d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 497
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.AccelerometerEvent@32e
+[Emulator System.err] C0A8.0F66.0000.1001 0 accelerometer 1.0
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=15920480
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=286112
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###

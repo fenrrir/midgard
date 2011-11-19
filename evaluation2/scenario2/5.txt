@@ -1,0 +1,1832 @@
+init:
+Checking for shared basestation...
+Shared basestation result: false
+WARNING: Your Linux installation does not
+include the 'hal-device' application. The
+spotfinder utility will treat all devices
+matching the pattern:
+     /dev/ttyACM*
+as Sun SPOT devices. If no Sun SPOT device
+is connected but another device matching this
+pattern is available, that device will be 
+selected automatically.
+
+
+Java Runtime Environment version: 1.6.0_24
+CompilerOracle: exclude com/sun/squawk/Method.getParameterTypes
+CompilerOracle: exclude com/sun/squawk/SymbolParser.getSignatureTypeAt
+CompilerOracle: exclude com/sun/squawk/SymbolParser.stripMethods
+Looking for basestation on host: 192.168.15.102
+[translating suite app0 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/app0.sym
+  /tmp/app0.suite
+  /tmp/app0.suite.metadata
+  /tmp/app0.suite.api
+[translating suite gateway1 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway1.sym
+  /tmp/gateway1.suite
+  /tmp/gateway1.suite.metadata
+  /tmp/gateway1.suite.api
+[translating suite gateway2 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway2.sym
+  /tmp/gateway2.suite
+  /tmp/gateway2.suite.metadata
+  /tmp/gateway2.suite.api
+[translating suite gateway3 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway3.sym
+  /tmp/gateway3.suite
+  /tmp/gateway3.suite.metadata
+  /tmp/gateway3.suite.api
+[translating suite gateway4 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway4.sym
+  /tmp/gateway4.suite
+  /tmp/gateway4.suite.metadata
+  /tmp/gateway4.suite.api
+[translating suite gateway5 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway5.sym
+  /tmp/gateway5.suite
+  /tmp/gateway5.suite.metadata
+  /tmp/gateway5.suite.api
+[translating suite gateway6 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway6.sym
+  /tmp/gateway6.suite
+  /tmp/gateway6.suite.metadata
+  /tmp/gateway6.suite.api
+[translating suite gateway7 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway7.sym
+  /tmp/gateway7.suite
+  /tmp/gateway7.suite.metadata
+  /tmp/gateway7.suite.api
+[translating suite gateway8 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway8.sym
+  /tmp/gateway8.suite
+  /tmp/gateway8.suite.metadata
+  /tmp/gateway8.suite.api
+[translating suite gateway9 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway9.sym
+  /tmp/gateway9.suite
+  /tmp/gateway9.suite.metadata
+  /tmp/gateway9.suite.api
+[translating suite gateway10 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway10.sym
+  /tmp/gateway10.suite
+  /tmp/gateway10.suite.metadata
+  /tmp/gateway10.suite.api
+[translating suite gateway11 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway11.sym
+  /tmp/gateway11.suite
+  /tmp/gateway11.suite.metadata
+  /tmp/gateway11.suite.api
+[translating suite gateway12 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway12.sym
+  /tmp/gateway12.suite
+  /tmp/gateway12.suite.metadata
+  /tmp/gateway12.suite.api
+[translating suite gateway13 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway13.sym
+  /tmp/gateway13.suite
+  /tmp/gateway13.suite.metadata
+  /tmp/gateway13.suite.api
+[translating suite gateway14 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway14.sym
+  /tmp/gateway14.suite
+  /tmp/gateway14.suite.metadata
+  /tmp/gateway14.suite.api
+[translating suite gateway15 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway15.sym
+  /tmp/gateway15.suite
+  /tmp/gateway15.suite.metadata
+  /tmp/gateway15.suite.api
+[translating suite gateway16 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway16.sym
+  /tmp/gateway16.suite
+  /tmp/gateway16.suite.metadata
+  /tmp/gateway16.suite.api
+[translating suite gateway17 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway17.sym
+  /tmp/gateway17.suite
+  /tmp/gateway17.suite.metadata
+  /tmp/gateway17.suite.api
+[translating suite gateway18 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway18.sym
+  /tmp/gateway18.suite
+  /tmp/gateway18.suite.metadata
+  /tmp/gateway18.suite.api
+[translating suite gateway19 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway19.sym
+  /tmp/gateway19.suite
+  /tmp/gateway19.suite.metadata
+  /tmp/gateway19.suite.api
+[translating suite gateway20 [closed: false, parent: emulator] ...]
+### Excluding compile: com.sun.squawk.Method::getParameterTypes
+### Excluding compile: com.sun.squawk.SymbolParser::getSignatureTypeAt
+[Including resource: evaluation/full/adaptationProfile.json]
+[Including resource: midgard/components/customevents.json]
+[Including resource: midgard/adaptation/newjson.json]
+[Including resource: midgard/components/tasks.json]
+[Including resource: evaluation/scenario3/gateway.json]
+[Including resource: evaluation/scenario1/apps.json]
+[Including resource: evaluation/scenario1/gateway.json]
+[Including resource: evaluation/full/tasks.json]
+[Including resource: apps2.json]
+[Including resource: evaluation/scenario2/apps.json]
+[Including resource: evaluation/scenario3/apps.json]
+[Including resource: evaluation/scenario4/simplegateways.json]
+[Including resource: midgard/components/profiles.json]
+[Including resource: evaluation/scenario4/apps.json]
+[Including resource: apps.json]
+[Including resource: midgard/adaptation/profiles.json]
+[Including resource: evaluation/scenario4/gateway.json]
+[Including resource: apps3.json]
+[Including resource: evaluation/scenario4/adaptationProfile.json]
+[Including resource: defaultConf.json]
+[Including resource: META-INF/MANIFEST.MF]
+[Including resource: evaluation/scenario2/gateway.json]
+[Including resource: evaluation/full/events.json]
+[Including resource: evaluation/full/appsFull.json]
+[Including resource: midgard/components/components.json]
+Romizer processed 226 classes and generated these files:
+  /tmp/gateway20.sym
+  /tmp/gateway20.suite
+  /tmp/gateway20.suite.metadata
+  /tmp/gateway20.suite.api
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=before boot
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16150364
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=56228
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 UseProxy=on
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.components.ComponentManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.components.DefaultComponentManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.app.AppManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.app.DefaultAppManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.app.AppRepositoryManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.app.DefaultAppRepositoryManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.config.DefaultConfig
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.config.DefaultDefaultConfig
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.app.tests.TestApp
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after apps initialized
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16131988
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=74604
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.web.WebServer
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.web.DefaultWebServer
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.web.HTTPServer
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.web.NanoHttp
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.network.NetworkSensor
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.network.DefaultNetworkSensor
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.web.apps.sensors.TemperatureWebApp
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.temperature.TemperatureSensor
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.temperature.DefaultTemperatureSensor
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.pubsubhubbub.Publisher
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.pubsubhubbub.DefaultPublisher
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.web.apps.sensors.LightWebApp
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.light.LightSensor
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.light.DefaultLightSensor
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.pubsubhubbub.Hub
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.pubsubhubbub.DefaultHub
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.SensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 new instance of midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 @@@@@@@@Initialize sensormanager
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;listeners=null
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@16
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;listeners=null
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@18
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16121452
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=85140
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Socket opened and listening
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@24
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@25
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16099716
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=106876
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1003
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@2b
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1003
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@2d
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@2e
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@2f
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16083432
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=123160
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1006
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@33
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1006
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@35
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@36
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@37
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16073192
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=133400
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@38
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@39
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16073108
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=133484
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1002
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@3d
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1002
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@3f
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@40
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@41
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16063004
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=143588
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1004
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@44
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1004
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@46
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@47
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@48
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16049416
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=157176
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@49
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@4a
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16054428
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=152164
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;address=C0A8.0F66.0000.1005
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@4d
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] Connection started.
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve call
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;address=C0A8.0F66.0000.1005
+[Emulator System.err] C0A8.0F66.0000.1001 0 [APP] serve response
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.NetworkEvent@4f
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@50
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@51
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16045960
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=160632
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@52
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@53
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16045972
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=160620
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@54
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@55
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16046000
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=160592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@56
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@57
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16046012
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=160580
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@58
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@59
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16046024
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=160568
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@5a
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 21.11111111111111
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@5b
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16046032
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=160560
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 98
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 112
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 87
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 89
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@5c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@5d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039580
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167012
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@5e
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@5f
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 450
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16044880
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=161712
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@60
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 109
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 105
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 88
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 93
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 93
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@61
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039120
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167472
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@62
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@63
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16044228
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162364
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@64
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@65
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16044144
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162448
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@66
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@67
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16044060
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162532
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@68
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@69
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043816
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162776
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@6a
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@6b
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16044020
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162572
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@6c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@6d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16044128
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162464
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 94
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 98
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 101
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 91
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@6e
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@6f
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038564
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=168028
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@70
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@71
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043864
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162728
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@72
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@73
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043780
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162812
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@74
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@75
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043696
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162896
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@76
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@77
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043612
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=162980
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@78
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@79
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043528
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163064
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@7a
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@7b
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043444
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163148
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@7c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@7d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043284
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163308
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@7e
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@7f
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043584
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163008
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@80
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@81
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043500
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163092
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@82
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@83
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043416
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163176
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@84
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@85
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043332
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163260
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@86
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@87
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043316
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163276
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@88
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@89
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 511
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16043232
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163360
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@8a
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 86
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 87
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 90
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@8b
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037716
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=168876
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@8c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@8d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042824
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163768
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@8e
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@8f
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042740
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=163852
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@90
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@91
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042336
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164256
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@92
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@93
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042252
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164340
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@94
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@95
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042168
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164424
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@96
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@97
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042084
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164508
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@98
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@99
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042000
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@9a
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 18.333333333333336
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@9b
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16042300
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164292
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 114
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@9c
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@9d
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16036580
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=170012
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@9e
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@9f
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16041688
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164904
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@a0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@a1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16041604
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=164988
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@a2
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@a3
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16041520
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=165072
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@a4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@a5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040764
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=165828
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@a6
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@a7
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040680
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=165912
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@a8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@a9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040596
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=165996
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@aa
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@ab
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040512
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166080
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ac
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@ad
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 394
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040812
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=165780
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ae
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 96
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 94
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 95
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 113
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 93
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@af
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16035112
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=171480
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@b0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@b1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040220
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166372
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@b2
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@b3
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040136
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166456
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@b4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@b5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040052
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166540
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@b6
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@b7
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039968
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166624
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@b8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@b9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039884
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166708
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ba
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@bb
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039800
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166792
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@bc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@bd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039716
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166876
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@be
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 26.666666666666668
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@bf
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16040016
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=166576
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/temperature;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 98
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 86
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 94
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 94
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 100
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@c0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@c1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16034296
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=172296
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@c2
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@c3
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039404
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167188
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@c4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@c5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039320
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167272
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@c6
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@c7
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039236
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167356
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@c8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@c9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039152
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167440
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ca
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@cb
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038804
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167788
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@cc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@cd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038984
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167608
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ce
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@cf
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038900
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167692
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@d0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@d1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039200
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167392
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@d2
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@d3
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039116
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167476
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@d4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@d5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 463
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16039032
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=167560
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@d6
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 topic=/sensor/light;listeners=[C0A8.0F66.0000.1003, C0A8.0F66.0000.1006, C0A8.0F66.0000.1002, C0A8.0F66.0000.1004, C0A8.0F66.0000.1005]
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 92
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 94
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 88
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 97
+[Emulator System.err] C0A8.0F66.0000.1001 0 PacketTime: 85
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@d7
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16033276
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=173316
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@d8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@d9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038384
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=168208
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@da
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@db
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038300
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=168292
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@dc
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@dd
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038216
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=168376
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@de
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@df
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16038132
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=168460
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@e0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@e1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037408
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169184
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@e2
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@e3
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037324
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169268
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@e4
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@e5
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037240
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169352
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@e6
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@e7
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037556
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169036
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@e8
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@e9
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037472
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169120
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ea
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@eb
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037388
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169204
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ec
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@ed
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037304
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169288
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@ee
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@ef
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037220
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169372
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 sleep midgard.sensors.DefaultSensorManager
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.TemperatureEvent@f0
+[Emulator System.err] C0A8.0F66.0000.1001 0 temperature 37.22222222222222
+[Emulator System.err] C0A8.0F66.0000.1001 0 Event arrived midgard.sensors.events.LightEvent@f1
+[Emulator System.err] C0A8.0F66.0000.1001 0 light 331
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Context=after life cycle
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Free memory=16037136
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Total memory=16206592
+[Emulator System.err] C0A8.0F66.0000.1001 0 ### Used memory=169456
+[Emulator System.err] C0A8.0F66.0000.1001 0 ###

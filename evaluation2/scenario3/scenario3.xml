@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- first version using hand generated XML -->
+<virtual-config keep-addresses="false" run-midlets="false">
+  <gridview x="2603.900358854439" y="1611.042222050825" zoom="0.18702273521194487"/>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario2/app.jar"/>
+    <position x="-658.06136174907124" y="-1033.5723231232523"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/app.jar"/>
+    <position x="300.06136174907124" y="-1033.5723231232523"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-973.0825887349051" y="57.20415262882943"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-454.4290684018074" y="-301.0410624466092"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-112.2246838521346" y="41.16332210306359"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="449.2043845496719" y="-39.04083052576607"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="844.878204185231" y="-306.38800595519797"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-1694.919962394371" y="345.9391020926157"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-662.9598652367642" y="388.7146501613249"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="165.66289520351222" y="373.9522575437618"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="850.22514769382" y="383.36770665273616"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="1689.6952785422354" y="228.30634490366583"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-925.4005820974553" y="783.801936379864"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-340.37358557556354" y="772.3308188010035"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="294.3615871213906" y="783.801936379864"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="883.2122895029029" y="799.0967598183449"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="1495.005227042136" y="714.9752309067003"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-1780.4710585317894" y="1228.1847810097408"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="-785.9395659343029" y="1254.919498552684"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="80.26528245705595" y="1270.9603290784496"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="834.1843171680539" y="1276.3072725870386"/>
+  </virtual-spot>
+  <virtual-spot>
+    <jar file="NetBeansProjects/Midgard/evaluation2/scenario3/gateway.jar"/>
+    <position x="1593.45029538764" y="1308.3889336385703"/>
+  </virtual-spot>
+ <description>
+    <![CDATA[test 2]]>
+  </description>
+</virtual-config>
