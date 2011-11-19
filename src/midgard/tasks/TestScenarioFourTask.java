@@ -23,6 +23,7 @@ import java.util.Vector;
 import midgard.app.IAppRepositoryManager;
 import midgard.app.tests.FakeGatewayScenarioFour;
 import midgard.componentmodel.Component;
+import midgard.kernel.Debug;
 
 /**
  *
@@ -33,6 +34,11 @@ public class TestScenarioFourTask extends Component implements ITask {
     private IAppRepositoryManager appManager;
 
 
+    public String[] getRequiredInterfaces() {
+        return new String[]{
+                    IAppRepositoryManager.class.getName(),
+                };
+    }
 
 
     public void initialize() {
@@ -49,11 +55,9 @@ public class TestScenarioFourTask extends Component implements ITask {
 
 
     public void run() {
-        while(true){
-            Utils.sleep(10000);
-            app.callRemoteAdaptation();
-
-        }
+        Debug.debug("task going to sleep");
+        Utils.sleep(10000);
+        app.callRemoteAdaptation();
     }
 
     public Vector connectAtComponents() {

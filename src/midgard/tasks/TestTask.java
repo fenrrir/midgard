@@ -41,7 +41,7 @@ public class TestTask extends Component implements ITask {
 
     public void run() {
         while(true){
-            System.err.println("task tick");
+            //System.err.println("task tick");
             Utils.sleep(1000);
         }
     }
